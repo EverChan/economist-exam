@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第一章：需求与供给</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    width: 33%;
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+
+  /* Section */
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+
+  /* Hot tag */
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Example box */
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong {
+    color: #444441;
+  }
+
+  /* Key point */
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong {
+    color: #185FA5;
+  }
+
+  /* Comparison table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td {
+    background: #fafafa;
+  }
+
+  /* Summary card */
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul {
+    margin-left: 18px;
+  }
+  .summary li {
+    font-size: 13px;
+    color: #0C447C;
+    margin-bottom: 8px;
+  }
+
+  /* Quiz */
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q {
+    margin-bottom: 20px;
+  }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num {
+    color: #0F6E56;
+    margin-right: 6px;
+  }
+  .quiz-q .options {
+    margin-left: 8px;
+  }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input {
+    margin-right: 6px;
+  }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show {
+    display: block;
+  }
+  .answer .label {
+    font-weight: 600;
+    color: #0F6E56;
+  }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover {
+    background: #9FE1CB;
+  }
+
+  /* Next preview */
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label {
+    font-size: 12px;
+    color: #888780;
+    margin-bottom: 6px;
+  }
+  .next-preview h3 {
+    font-size: 15px;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .next-preview p {
+    font-size: 13px;
+    color: #888780;
+  }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<!-- Header -->
+<div class="header">
+  <span class="label">经济基础知识 · 第一部分 经济学基础</span>
+  <h1>第一章：市场需求、供给与均衡价格</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · 需求与供给 | 预计学习时长 40 分钟</p>
+  <div class="progress-bar"><div class="fill"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+
+<!-- 学习目标 -->
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>理解需求的定义，区分"需求量变动"与"需求变动" <span class="hot">高频考点</span></li>
+    <li>理解供给的定义，区分"供给量变动"与"供给变动" <span class="hot">高频考点</span></li>
+    <li>掌握影响需求和供给的非价格因素</li>
+    <li>记住需求曲线和供给曲线的形状与方向</li>
+  </ul>
+</div>
+
+<!-- 知识点1：需求 -->
+<div class="section">
+  <h2>一、需求理论</h2>
+
+  <h3>1. 什么是需求</h3>
+  <p>需求是指消费者在一定时期内，在各种可能的价格水平上<strong>愿意而且能够购买</strong>的某种商品的数量。</p>
+  <div class="example">
+    <strong>关键点：</strong>"愿意" + "能够"缺一不可。你想买一套别墅（愿意），但买不起（不能够），这不叫需求，叫<strong>需要</strong>或<strong>欲望</strong>。只有你既想买又买得起，才是经济学意义上的<strong>有效需求</strong>。
+  </div>
+
+  <h3>2. 需求曲线 <span class="hot">必考</span></h3>
+  <p>需求曲线反映价格（P）与需求量（Q）之间的关系：</p>
+  <ul>
+    <li><strong>纵轴</strong>是价格 P，<strong>横轴</strong>是需求量 Q</li>
+    <li>需求曲线<strong>向右下方倾斜</strong>（从左上到右下）</li>
+    <li><strong>需求定理</strong>：价格上升 → 需求量下降；价格下降 → 需求量上升（反方向变动）</li>
+  </ul>
+  <div class="keypoint">
+    <strong>记忆口诀：</strong>需求曲线"右下倾"——价格越低，买的人越多。这和日常直觉一致：打折了多买点。
+  </div>
+
+  <h3>3. 需求量的变动 vs 需求的变动 <span class="hot">高频考点 · 每年必出</span></h3>
+  <p>这是本章<strong>最容易混淆也是考试最爱考</strong>的 distinction，务必记牢：</p>
+
+  <table class="compare-table">
+    <tr>
+      <th style="width:20%">对比项</th>
+      <th style="width:40%">需求量的变动</th>
+      <th style="width:40%">需求的变动</th>
+    </tr>
+    <tr>
+      <td><strong>引起原因</strong></td>
+      <td>商品<strong>本身价格</strong>变动</td>
+      <td><strong>非价格因素</strong>变动</td>
+    </tr>
+    <tr>
+      <td><strong>曲线表现</strong></td>
+      <td>沿同一条需求曲线<strong>移动</strong>（点在曲线上滑动）</td>
+      <td>整条需求曲线<strong>平移</strong>（左移或右移）</td>
+    </tr>
+    <tr>
+      <td><strong>方向</strong></td>
+      <td>价格↑→需求量↓（沿曲线向上移）<br>价格↓→需求量↑（沿曲线向下移）</td>
+      <td>右移 = 需求增加<br>左移 = 需求减少</td>
+    </tr>
+  </table>
+
+  <div class="example">
+    <strong>例子：</strong><br>
+    咖啡涨价了，你少买了两杯 → 这是<strong>需求量的变动</strong>（本身价格引起，沿曲线移动）<br>
+    你的工资涨了，咖啡没涨价但你多买了 → 这是<strong>需求的变动</strong>（收入引起，整条曲线右移）<br>
+    茶降价了，你不喝咖啡改喝茶了 → 这是<strong>需求的变动</strong>（替代品价格引起，咖啡需求曲线左移）
+  </div>
+
+  <h3>4. 影响需求变动的因素（非价格因素） <span class="hot">多选题常考</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:25%">因素</th>
+      <th style="width:40%">说明</th>
+      <th style="width:35%">对需求的影响</th>
+    </tr>
+    <tr>
+      <td><strong>消费者偏好</strong></td>
+      <td>突然喜欢上某样东西</td>
+      <td>偏好↑ → 需求右移</td>
+    </tr>
+    <tr>
+      <td><strong>消费者收入</strong></td>
+      <td>收入增加，购买力增强</td>
+      <td>正常品：收入↑ → 需求右移<br>低档品：收入↑ → 需求左移</td>
+    </tr>
+    <tr>
+      <td><strong>替代品价格</strong></td>
+      <td>能互相替代的商品（咖啡 vs 茶）</td>
+      <td>替代品涨价 → 本商品需求右移</td>
+    </tr>
+    <tr>
+      <td><strong>互补品价格</strong></td>
+      <td>配套使用的商品（汽车 vs 汽油）</td>
+      <td>互补品涨价 → 本商品需求左移</td>
+    </tr>
+    <tr>
+      <td><strong>预期</strong></td>
+      <td>预期未来价格会涨</td>
+      <td>预期涨价 → 现在需求右移（提前买）</td>
+    </tr>
+    <tr>
+      <td><strong>消费者数量</strong></td>
+      <td>人口增加、市场扩大</td>
+      <td>人数↑ → 需求右移</td>
+    </tr>
+  </table>
+
+  <div class="keypoint">
+    <strong>考试技巧：</strong>看到题目说"价格变动"→ 需求量的变动（沿曲线移动）；看到"收入/偏好/替代品/互补品/预期"→ 需求的变动（曲线平移）。<strong>记住这个判断逻辑，选择题秒选。</strong>
+  </div>
+</div>
+
+<!-- 知识点2：供给 -->
+<div class="section">
+  <h2>二、供给理论</h2>
+
+  <h3>1. 什么是供给</h3>
+  <p>供给是指生产者在一定时期内，在各种可能的价格水平上<strong>愿意而且能够提供</strong>的某种商品的数量。</p>
+  <div class="example">
+    <strong>关键点：</strong>和需求一样，"愿意" + "能够"缺一不可。工厂有产能但不想卖（价格太低不划算），不算供给。
+  </div>
+
+  <h3>2. 供给曲线 <span class="hot">必考</span></h3>
+  <ul>
+    <li>供给曲线<strong>向右上方倾斜</strong>（从左下到右上）</li>
+    <li><strong>供给定理</strong>：价格上升 → 供给量上升；价格下降 → 供给量下降（同方向变动）</li>
+  </ul>
+  <div class="keypoint">
+    <strong>记忆口诀：</strong>供给曲线"右上倾"——价格越高，卖方越愿意多卖。也很好理解：利润高了，当然多生产。
+  </div>
+
+  <div class="keypoint" style="background:#E1F5EE; color:#085041;">
+    <strong>对比记忆：</strong><br>
+    需求曲线 → 右下倾（价格↓ 买得↑）<br>
+    供给曲线 → 右上倾（价格↑ 卖得↑）<br>
+    两者方向<strong>相反</strong>，这是均衡价格能够形成的基础。
+  </div>
+
+  <h3>3. 供给量的变动 vs 供给的变动 <span class="hot">高频考点</span></h3>
+  <p>逻辑和需求完全一样，只是主体从消费者变成了生产者：</p>
+
+  <table class="compare-table">
+    <tr>
+      <th style="width:20%">对比项</th>
+      <th style="width:40%">供给量的变动</th>
+      <th style="width:40%">供给的变动</th>
+    </tr>
+    <tr>
+      <td><strong>引起原因</strong></td>
+      <td>商品<strong>本身价格</strong>变动</td>
+      <td><strong>非价格因素</strong>变动</td>
+    </tr>
+    <tr>
+      <td><strong>曲线表现</strong></td>
+      <td>沿同一条供给曲线<strong>移动</strong></td>
+      <td>整条供给曲线<strong>平移</strong></td>
+    </tr>
+    <tr>
+      <td><strong>方向</strong></td>
+      <td>价格↑→供给量↑（沿曲线向上移）</td>
+      <td>右移 = 供给增加<br>左移 = 供给减少</td>
+    </tr>
+  </table>
+
+  <h3>4. 影响供给变动的因素（非价格因素） <span class="hot">多选题常考</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:25%">因素</th>
+      <th style="width:40%">说明</th>
+      <th style="width:35%">对供给的影响</th>
+    </tr>
+    <tr>
+      <td><strong>生产成本</strong></td>
+      <td>原材料涨价、人工成本上升</td>
+      <td>成本↑ → 供给左移（减少）</td>
+    </tr>
+    <tr>
+      <td><strong>生产技术</strong></td>
+      <td>技术进步提高效率</td>
+      <td>技术↑ → 供给右移（增加）</td>
+    </tr>
+    <tr>
+      <td><strong>相关产品价格</strong></td>
+      <td>替代品的利润变化</td>
+      <td>替代品涨价 → 本品供给左移（转去生产替代品）</td>
+    </tr>
+    <tr>
+      <td><strong>预期</strong></td>
+      <td>预期未来价格会涨</td>
+      <td>预期涨价 → 现在供给左移（囤货等高价再卖）</td>
+    </tr>
+    <tr>
+      <td><strong>生产者数量</strong></td>
+      <td>更多企业进入市场</td>
+      <td>企业↑ → 供给右移</td>
+    </tr>
+  </table>
+
+  <div class="example">
+    <strong>例子：</strong><br>
+    牛奶收购价提高了，牧场多养了牛 → <strong>供给量的变动</strong>（本身价格引起）<br>
+    饲料涨价了，牛奶没涨价但牧场减产了 → <strong>供给的变动</strong>（成本引起，左移）<br>
+    引入了自动化挤奶设备，效率提高了 → <strong>供给的变动</strong>（技术引起，右移）
+  </div>
+</div>
+
+<!-- 高频考点速记 -->
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li><strong>需求曲线右下倾，供给曲线右上倾</strong>——方向相反</li>
+    <li><strong>需求定理</strong>：价格与需求量反方向变动；<strong>供给定理</strong>：价格与供给量同方向变动</li>
+    <li>"本身价格变动" → 量的变动（沿曲线移动）；"非价格因素变动" → 曲线变动（整条平移）</li>
+    <li>需求的影响因素：偏好、收入、替代品价格、互补品价格、预期、消费者数量</li>
+    <li>供给的影响因素：生产成本、生产技术、相关产品价格、预期、生产者数量</li>
+    <li>正常品：收入↑需求↑；低档品：收入↑需求↓</li>
+    <li>替代品：替代品涨价 → 本品需求↑；互补品：互补品涨价 → 本品需求↓</li>
+  </ul>
+</div>
+
+<!-- 练习题 -->
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>某商品价格下降，导致该商品需求量增加。这种现象属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 需求的变动</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 需求量的变动</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 供给的变动</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 供给量的变动</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1">
+      <p><span class="label">答案：B</span></p>
+      <p>解析：商品<strong>本身价格</strong>下降引起的需求量增加，属于需求量的变动，表现为沿同一条需求曲线向右下方移动。非价格因素引起的才是"需求的变动"。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>消费者收入增加，对低档品的需求会：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 增加</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 减少</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 不变</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 先增后减</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2">
+      <p><span class="label">答案：B</span></p>
+      <p>解析：<strong>低档品</strong>是指收入增加时需求反而减少的商品（如公交卡、廉价方便面）。收入增加 → 消费者转向更好的替代品 → 低档品需求减少，需求曲线左移。与低档品相对的是<strong>正常品</strong>（收入↑需求↑）。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>下列因素中，不会引起供给曲线移动的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 生产技术进步</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 原材料价格上涨</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 该商品本身价格上涨</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 生产者预期未来价格上涨</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3">
+      <p><span class="label">答案：C</span></p>
+      <p>解析：商品<strong>本身价格</strong>变动引起的是<strong>供给量的变动</strong>（沿曲线移动），不是供给曲线的移动（平移）。A、B、D都是非价格因素，会引起供给曲线平移。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>下列哪些因素会引起某商品需求的增加（需求曲线右移）？</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 消费者收入增加（正常品）</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 该商品的替代品价格上涨</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 该商品的互补品价格上涨</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 消费者预期该商品未来价格上涨</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4">
+      <p><span class="label">答案：ABD</span></p>
+      <p>解析：<br>A. 正常品收入↑ → 需求右移 ✓<br>B. 替代品涨价 → 消费者转向本品 → 需求右移 ✓<br>C. 互补品涨价 → 两者搭配使用，一起买才划算，互补品贵了本品需求反而左移 ✗<br>D. 预期未来涨价 → 提前购买 → 现在需求右移 ✓</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>汽油价格上涨，对汽车需求的影响是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 汽车需求增加（需求曲线右移）</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 汽车需求减少（需求曲线左移）</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 汽车需求量增加（沿曲线移动）</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 汽车需求量减少（沿曲线移动）</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5">
+      <p><span class="label">答案：B</span></p>
+      <p>解析：汽油和汽车是<strong>互补品</strong>（配套使用）。汽油涨价 → 用车成本上升 → 汽车需求减少 → 需求曲线<strong>左移</strong>。注意：这不是汽车本身价格变动，所以是"需求的变动"而非"需求量的变动"，排除C和D。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 下次预告 -->
+<div class="next-preview">
+  <p class="label">下节预告</p>
+  <h3>第 2 节：均衡价格与价格管制</h3>
+  <p>需求曲线和供给曲线放在一起会发生什么？均衡价格怎么形成？最高限价和保护价格有什么区别？</p>
+</div>
+
+</body>
+</html>

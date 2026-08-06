@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济师学习 · 第一章 第2节 · 均衡价格与价格管制</title>
+<style>
+  :root {
+    --bg: #faf9f7;
+    --card: #ffffff;
+    --primary: #2c5f7f;
+    --primary-light: #e8f1f8;
+    --accent: #d4a04c;
+    --accent-light: #fdf6e8;
+    --danger: #c0504d;
+    --danger-light: #fbeaea;
+    --text: #333333;
+    --text-light: #666666;
+    --border: #e0ddd8;
+    --green: #4a8a5c;
+    --green-light: #ecf5ef;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .header {
+    background: linear-gradient(135deg, #2c5f7f, #1a4060);
+    color: #fff;
+    padding: 30px 28px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+  }
+  .header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .header h1 { font-size: 24px; font-weight: 700; }
+  .header .subtitle { font-size: 14px; opacity: 0.8; margin-top: 6px; }
+  .section {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .section h2 {
+    font-size: 20px;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 14px;
+    margin-bottom: 18px;
+  }
+  .section h3 {
+    font-size: 16px;
+    color: var(--text);
+    margin: 20px 0 10px;
+    font-weight: 600;
+  }
+  .section p { margin-bottom: 12px; font-size: 15px; }
+  .highlight {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 14px 0;
+  }
+  .highlight strong { color: #8a6d2a; }
+  .hot-tag {
+    display: inline-block;
+    background: var(--danger);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .freq-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: center;
+  }
+  th {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+  }
+  td:first-child { text-align: left; font-weight: 500; }
+  .diagram-box {
+    background: var(--primary-light);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .diagram-box .label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 8px;
+  }
+  .case-box {
+    background: var(--green-light);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 14px 0;
+    border: 1px solid #c8e0d0;
+  }
+  .case-box .case-title {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .case-box p { font-size: 14px; margin-bottom: 0; }
+  .quiz-section {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .quiz-section h2 {
+    font-size: 20px;
+    color: var(--primary);
+    border-left: 4px solid var(--green);
+    padding-left: 14px;
+    margin-bottom: 18px;
+  }
+  .quiz-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .quiz-item:hover { border-color: var(--primary); }
+  .quiz-num {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .quiz-q { font-size: 15px; margin-bottom: 12px; }
+  .quiz-options { list-style: none; }
+  .quiz-options li {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+    font-size: 14px;
+  }
+  .quiz-options li:hover { background: var(--primary-light); border-color: var(--primary); }
+  .quiz-options li.selected { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 500; }
+  .answer-box {
+    display: none;
+    margin-top: 12px;
+    padding: 14px 16px;
+    background: var(--danger-light);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .answer-box.show { display: block; }
+  .answer-box .ans-label { color: var(--danger); font-weight: 700; }
+  .answer-box.correct { background: var(--green-light); }
+  .answer-box.correct .ans-label { color: var(--green); }
+  .show-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .show-btn:hover { background: #1a4060; }
+  .flashcard {
+    background: linear-gradient(135deg, #2c5f7f, #3a7596);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 12px 0;
+  }
+  .flashcard .fc-title {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+  .flashcard .fc-content { font-size: 15px; line-height: 1.9; }
+  .flashcard .fc-content strong { color: var(--accent); }
+  .progress-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  .progress-bar .step {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border);
+  }
+  .progress-bar .step.done { background: var(--green); }
+  .progress-bar .step.current { background: var(--accent); }
+  .nav-tip {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 16px;
+  }
+  .compare-box {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .compare-card {
+    flex: 1;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+  }
+  .compare-card.left { background: var(--danger-light); border: 1px solid #f0c8c6; }
+  .compare-card.right { background: var(--green-light); border: 1px solid #c8e0d0; }
+  .compare-card .cc-title { font-weight: 700; margin-bottom: 8px; font-size: 15px; }
+  .compare-card.left .cc-title { color: var(--danger); }
+  .compare-card.right .cc-title { color: var(--green); }
+  .compare-card ul { padding-left: 18px; margin: 0; }
+  .compare-card li { margin-bottom: 4px; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="badge">第一章 · 第2节 / 共3节</span>
+  <h1>均衡价格与价格管制</h1>
+  <p class="subtitle">中级经济师 · 经济基础知识 · 高频考点密集区</p>
+</div>
+
+<div class="progress-bar">
+  <div class="step done"></div>
+  <div class="step current"></div>
+  <div class="step"></div>
+</div>
+
+<!-- 知识点1：均衡价格 -->
+<div class="section">
+  <h2>一、均衡价格的形成<span class="hot-tag">高频考点</span></h2>
+
+  <h3>1. 什么是均衡价格</h3>
+  <p>市场上需求量和供给量相等时的价格，就是<strong>均衡价格</strong>。在这个价格下，消费者想买的数量正好等于生产者想卖的数量，市场"出清"。</p>
+
+  <div class="highlight">
+    <strong>一句话记忆：</strong>均衡价格 = 需求量 = 供给量时的价格。此时既没有过剩，也没有短缺。
+  </div>
+
+  <div class="diagram-box">
+    <svg width="400" height="220" viewBox="0 0 400 220">
+      <!-- 坐标轴 -->
+      <line x1="50" y1="180" x2="380" y2="180" stroke="#333" stroke-width="1.5"/>
+      <line x1="50" y1="20" x2="50" y2="180" stroke="#333" stroke-width="1.5"/>
+      <text x="385" y="184" font-size="12" fill="#666">Q（数量）</text>
+      <text x="35" y="16" font-size="12" fill="#666">P（价格）</text>
+
+      <!-- 需求曲线 D -->
+      <line x1="80" y1="40" x2="350" y2="170" stroke="#c0504d" stroke-width="2.5"/>
+      <text x="330" y="185" font-size="14" fill="#c0504d" font-weight="bold">D</text>
+
+      <!-- 供给曲线 S -->
+      <line x1="80" y1="170" x2="350" y2="40" stroke="#4a8a5c" stroke-width="2.5"/>
+      <text x="330" y="38" font-size="14" fill="#4a8a5c" font-weight="bold">S</text>
+
+      <!-- 均衡点 E -->
+      <circle cx="215" cy="105" r="5" fill="#d4a04c"/>
+      <text x="225" y="100" font-size="13" fill="#d4a04c" font-weight="bold">E（均衡点）</text>
+
+      <!-- 虚线 -->
+      <line x1="50" y1="105" x2="215" y2="105" stroke="#d4a04c" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="215" y1="105" x2="215" y2="180" stroke="#d4a04c" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <text x="20" y="109" font-size="12" fill="#d4a04c">Pe</text>
+      <text x="210" y="197" font-size="12" fill="#d4a04c">Qe</text>
+    </svg>
+    <div class="label">需求曲线（D）与供给曲线（S）的交点 E 就是均衡点</div>
+  </div>
+
+  <h3>2. 均衡价格怎么形成的</h3>
+  <p>不是谁规定的，是市场力量<strong>自发调节</strong>的结果：</p>
+  <p>• 价格 <strong>高于</strong> 均衡价格 → 供给量 > 需求量 → 过剩 → 卖方降价 → 价格回落</p>
+  <p>• 价格 <strong>低于</strong> 均衡价格 → 需求量 > 供给量 → 短缺 → 买方加价 → 价格上升</p>
+  <p>反复博弈，最终稳定在均衡价格。这就是"看不见的手"。</p>
+
+  <div class="case-box">
+    <div class="case-title">💡 例子帮助理解</div>
+    <p>猪肉市场：如果猪肉20元/斤，养殖户想多养多卖（供给大），但消费者嫌贵少买（需求小）→ 供大于求 → 猪肉卖不出去 → 降价。降到15元/斤时，消费者愿意买的量 = 养殖户愿意卖的量 → 15元就是均衡价格。</p>
+  </div>
+</div>
+
+<!-- 知识点2：均衡价格的变动 -->
+<div class="section">
+  <h2>二、均衡价格的变动<span class="hot-tag">每年必考</span></h2>
+
+  <p>这是第1节"需求变动 vs 需求量变动"的延续。关键区别：曲线<strong>移动</strong>会改变均衡点，沿曲线<strong>滑动</strong>不会。</p>
+
+  <h3>需求变动对均衡的影响</h3>
+  <p>需求增加（D右移）→ 均衡价格<strong>上升</strong>，均衡数量<strong>增加</strong></p>
+  <p>需求减少（D左移）→ 均衡价格<strong>下降</strong>，均衡数量<strong>减少</strong></p>
+  <div class="highlight">
+    <strong>记忆口诀：</strong>需求变动 → 均衡价格和均衡数量<strong>同方向变动</strong>。需求增则都增，需求减则都减。
+  </div>
+
+  <h3>供给变动对均衡的影响</h3>
+  <p>供给增加（S右移）→ 均衡价格<strong>下降</strong>，均衡数量<strong>增加</strong></p>
+  <p>供给减少（S左移）→ 均衡价格<strong>上升</strong>，均衡数量<strong>减少</strong></p>
+  <div class="highlight">
+    <strong>记忆口诀：</strong>供给变动 → 均衡价格和均衡数量<strong>反方向变动</strong>。供给增则价跌量增，供给减则价涨量减。
+  </div>
+
+  <table>
+    <tr>
+      <th>变动类型</th>
+      <th>曲线方向</th>
+      <th>均衡价格</th>
+      <th>均衡数量</th>
+    </tr>
+    <tr>
+      <td>需求增加</td>
+      <td>D 右移</td>
+      <td style="color:#c0504d;font-weight:700">↑ 上升</td>
+      <td style="color:#c0504d;font-weight:700">↑ 增加</td>
+    </tr>
+    <tr>
+      <td>需求减少</td>
+      <td>D 左移</td>
+      <td style="color:#4a8a5c;font-weight:700">↓ 下降</td>
+      <td style="color:#4a8a5c;font-weight:700">↓ 减少</td>
+    </tr>
+    <tr>
+      <td>供给增加</td>
+      <td>S 右移</td>
+      <td style="color:#4a8a5c;font-weight:700">↓ 下降</td>
+      <td style="color:#c0504d;font-weight:700">↑ 增加</td>
+    </tr>
+    <tr>
+      <td>供给减少</td>
+      <td>S 左移</td>
+      <td style="color:#c0504d;font-weight:700">↑ 上升</td>
+      <td style="color:#4a8a5c;font-weight:700">↓ 减少</td>
+    </tr>
+  </table>
+
+  <div class="case-box">
+    <div class="case-title">💡 考题常见场景</div>
+    <p><strong>场景1：</strong>消费者收入增加（需求增加）→ 均衡价格↑，均衡数量↑</p>
+    <p><strong>场景2：</strong>原材料涨价（供给减少）→ 均衡价格↑，均衡数量↓</p>
+    <p><strong>场景3：</strong>技术进步成本下降（供给增加）→ 均衡价格↓，均衡数量↑</p>
+    <p><strong>做题三步法：</strong>①判断是需求还是供给变动 → ②判断增加还是减少 → ③套用上面的表格。</p>
+  </div>
+
+  <h3>需求和供给同时变动<span class="freq-tag">易错</span></h3>
+  <p>如果需求和供给同时变动，均衡价格的走向取决于<strong>两者力量的对比</strong>：</p>
+  <p>• 需求增加 + 供给增加 → 数量一定↑，价格<strong>不确定</strong>（取决于谁力量大）</p>
+  <p>• 需求增加 + 供给减少 → 价格一定↑，数量<strong>不确定</strong></p>
+  <p>• 需求减少 + 供给增加 → 价格一定↓，数量<strong>不确定</strong></p>
+  <p>• 需求减少 + 供给减少 → 数量一定↓，价格<strong>不确定</strong></p>
+  <div class="highlight">
+    <strong>规律：</strong>同方向变动时，数量方向确定、价格不确定；反方向变动时，价格方向确定、数量不确定。
+  </div>
+</div>
+
+<!-- 知识点3：价格管制 -->
+<div class="section">
+  <h2>三、价格管制<span class="hot-tag">高频考点</span></h2>
+
+  <p>政府有时候不让市场自由定价，人为设定价格上限或下限。这是考试的高频区，两种管制一定要分清楚。</p>
+
+  <div class="compare-box">
+    <div class="compare-card left">
+      <div class="cc-title">🚫 最高限价（限制价格）</div>
+      <ul>
+        <li><strong>低于</strong>均衡价格</li>
+        <li>目的：保护消费者</li>
+        <li>结果：供不应求→短缺</li>
+        <li>例子：房租管制、限价房</li>
+        <li>副作用：排队、黑市、走后门</li>
+      </ul>
+    </div>
+    <div class="compare-card right">
+      <div class="cc-title">✅ 最低保护价（支持价格）</div>
+      <ul>
+        <li><strong>高于</strong>均衡价格</li>
+        <li>目的：保护生产者</li>
+        <li>结果：供过于求→过剩</li>
+        <li>例子：粮食最低收购价</li>
+        <li>副作用：政府收购、财政负担</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <strong>记忆核心：</strong><br>
+    最高限价 → 限的是"最高" → 只能低不能高 → 价格被压低 → 保护消费者 → 但东西不够卖（短缺）<br>
+    最低保护价 → 保的是"最低" → 只能高不能低 → 价格被抬高 → 保护生产者 → 但东西卖不完（过剩）
+  </div>
+
+  <div class="case-box">
+    <div class="case-title">💡 生活类比</div>
+    <p><strong>最高限价：</strong>政府规定猪肉最多卖12元/斤（市场均衡价是15元）。消费者高兴了，但养殖户觉得亏不愿意养 → 猪肉短缺 → 超市限购、排队、黑市上偷偷卖18元。</p>
+    <p><strong>最低保护价：</strong>政府规定小麦最低收购价1.5元/斤（市场均衡价是1.2元）。农民愿意多种了，但市场消化不了那么多 → 过剩 → 政府花钱收购存仓库 → 财政压力大。</p>
+  </div>
+
+  <h3>最高限价的副作用<span class="freq-tag">常考多选</span></h3>
+  <p>最高限价低于均衡价格，会导致：</p>
+  <p>① <strong>短缺</strong>（供给量 < 需求量）</p>
+  <p>② <strong>排队</strong>和<strong>配给</strong>（先来先得、凭票供应）</p>
+  <p>③ <strong>黑市</strong>（非法高价交易）</p>
+  <p>④ <strong>产品质量下降</strong>（生产者在低价下偷工减料）</p>
+  <p>⑤ <strong>变相涨价</strong>（搭配销售、服务费等）</p>
+
+  <h3>最低保护价的副作用</h3>
+  <p>最低保护价高于均衡价格，会导致：</p>
+  <p>① <strong>过剩</strong>（供给量 > 需求量）</p>
+  <p>② <strong>政府财政负担</strong>（收购过剩产品需要花钱）</p>
+  <p>③ <strong>仓储和损耗成本</strong>（存粮食要仓库、会坏）</p>
+  <p>④ 可能导致生产者<strong>缺乏效率改进动力</strong>（反正有保护价兜底）</p>
+</div>
+
+<!-- 知识点4：价格机制的作用 -->
+<div class="section">
+  <h2>四、价格机制的作用<span class="freq-tag">了解</span></h2>
+
+  <p>在没有政府干预的情况下，市场价格机制（"看不见的手"）有三项基本功能：</p>
+  <p>① <strong>传递信息</strong>——价格变化告诉生产者和消费者供需状况</p>
+  <p>② <strong>调节利益</strong>——价格升降影响买卖双方的利益分配</p>
+  <p>③ <strong>配置资源</strong>——引导资源流向效率更高的领域</p>
+
+  <div class="highlight">
+    <strong>考试提示：</strong>这个知识点偶尔出选择题，记住"信息、利益、资源"三个关键词就够。
+  </div>
+</div>
+
+<!-- 练习题 -->
+<div class="quiz-section">
+  <h2>📝 练习题（6题）</h2>
+  <p style="color:var(--text-light);font-size:14px;margin-bottom:18px;">做完每题点"查看答案"核对，错了回头看对应知识点。</p>
+
+  <div class="quiz-item">
+    <div class="quiz-num">第1题 · 单选</div>
+    <div class="quiz-q">某商品的市场均衡价格为10元，现政府规定最高售价为8元。这一政策会导致：</div>
+    <ul class="quiz-options">
+      <li>A. 市场过剩</li>
+      <li>B. 市场短缺</li>
+      <li>C. 均衡价格上升</li>
+      <li>D. 供给量增加</li>
+    </ul>
+    <button class="show-btn" onclick="toggleAnswer(this)">查看答案</button>
+    <div class="answer-box">
+      <span class="ans-label">答案：B</span><br>
+      最高限价（8元）低于均衡价格（10元），价格被人为压低 → 生产者不愿意多生产（供给减少），消费者愿意多买（需求增加）→ 供不应求 → 短缺。最高限价不会让均衡价格上升（C错），也不会让供给增加（D错），过剩是最低保护价的结果（A错）。
+    </div>
+  </div>
+
+  <div class="quiz-item">
+    <div class="quiz-num">第2题 · 单选</div>
+    <div class="quiz-q">当某商品的供给增加时，在其他条件不变的情况下，均衡价格和均衡数量会如何变化？</div>
+    <ul class="quiz-options">
+      <li>A. 价格上升，数量增加</li>
+      <li>B. 价格下降，数量减少</li>
+      <li>C. 价格下降，数量增加</li>
+      <li>D. 价格上升，数量减少</li>
+    </ul>
+    <button class="show-btn" onclick="toggleAnswer(this)">查看答案</button>
+    <div class="answer-box">
+      <span class="ans-label">答案：C</span><br>
+      供给增加（S右移）→ 均衡价格和均衡数量<strong>反方向变动</strong> → 价格下降，数量增加。这是"供给变动法则"的直接应用。记住：需求同向，供给反向。
+    </div>
+  </div>
+
+  <div class="quiz-item">
+    <div class="quiz-num">第3题 · 单选</div>
+    <div class="quiz-q">政府为保护粮食生产者利益，实施粮食最低收购价政策。该价格应设在：</div>
+    <ul class="quiz-options">
+      <li>A. 低于均衡价格的水平</li>
+      <li>B. 高于均衡价格的水平</li>
+      <li>C. 等于均衡价格的水平</li>
+      <li>D. 不需要考虑均衡价格</li>
+    </ul>
+    <button class="show-btn" onclick="toggleAnswer(this)">查看答案</button>
+    <div class="answer-box">
+      <span class="ans-label">答案：B</span><br>
+      最低保护价（支持价格）必须<strong>高于</strong>均衡价格才能起到保护生产者的作用。如果低于或等于均衡价，市场价格自然就在那个水平，保护价没有意义。高于均衡价 → 农民有积极性多种粮 → 但会产生过剩 → 政府收购消化。
+    </div>
+  </div>
+
+  <div class="quiz-item">
+    <div class="quiz-num">第4题 · 单选</div>
+    <div class="quiz-q">某地区因人口大量流入导致住房需求增加，同时政府预期将出台房产税政策（增加持有成本），这会抑制部分购房需求。在其他条件不变的情况下，这两种力量对住房市场均衡价格和均衡数量的共同影响是：</div>
+    <ul class="quiz-options">
+      <li>A. 均衡价格一定上升，均衡数量一定增加</li>
+      <li>B. 均衡价格一定下降，均衡数量一定减少</li>
+      <li>C. 均衡数量方向不确定，均衡价格方向也不确定</li>
+      <li>D. 均衡数量一定增加，均衡价格方向不确定</li>
+    </ul>
+    <button class="show-btn" onclick="toggleAnswer(this)">查看答案</button>
+    <div class="answer-box">
+      <span class="ans-label">答案：C</span><br>
+      这题考的是"需求和供给同时变动"中一个特殊场景——<strong>同一个因素（需求）既增又减</strong>。人口流入推高需求（D右移），房产税预期抑制需求（D左移），两者作用在<strong>同一条需求曲线</strong>上，方向相反，相互抵消。最终需求曲线是右移还是左移取决于哪股力量更大，所以均衡价格和均衡数量的方向都<strong>不确定</strong>。<br><br>
+      <strong>关键提醒：</strong>这题的陷阱在于——不是"需求增+供给增"的同向变动，而是"需求增+需求减"的力量抵消。考的就是你对"变动来源"的判断。如果题目改成"需求增加+供给增加"，那就是数量一定增加、价格不确定（选D）。
+    </div>
+  </div>
+
+  <div class="quiz-item">
+    <div class="quiz-num">第5题 · 多选</div>
+    <div class="quiz-q">实施最高限价可能带来的后果包括：</div>
+    <ul class="quiz-options" data-multi="true">
+      <li>A. 市场出现短缺</li>
+      <li>B. 出现排队和黑市交易</li>
+      <li>C. 产品质量下降</li>
+      <li>D. 生产者利润增加，积极性提高</li>
+      <li>E. 政府需要收购过剩产品</li>
+    </ul>
+    <button class="show-btn" onclick="toggleAnswer(this)">查看答案</button>
+    <div class="answer-box">
+      <span class="ans-label">答案：A、B、C</span><br>
+      最高限价低于均衡价 → 短缺（A对）→ 排队配给、黑市（B对）→ 低价下生产者偷工减料、质量下降（C对）。D错：最高限价压低了价格，生产者利润减少而非增加。E错：政府收购过剩产品是最低保护价（支持价格）的后果，不是最高限价的。<br><br>
+      <strong>易错提醒：</strong>最高限价和最低保护价的副作用经常混在一起考，记住：短缺→最高限价，过剩→最低保护价。
+    </div>
+  </div>
+
+  <div class="quiz-item">
+    <div class="quiz-num">第6题 · 单选</div>
+    <div class="quiz-q">当需求和供给同时增加时，可以确定的是：</div>
+    <ul class="quiz-options">
+      <li>A. 均衡价格一定上升</li>
+      <li>B. 均衡价格一定下降</li>
+      <li>C. 均衡数量一定增加</li>
+      <li>D. 均衡数量一定减少</li>
+    </ul>
+    <button class="show-btn" onclick="toggleAnswer(this)">查看答案</button>
+    <div class="answer-box">
+      <span class="ans-label">答案：C</span><br>
+      需求增加 → 数量增加；供给增加 → 数量也增加。两者同方向推动数量增加，所以均衡数量<strong>一定增加</strong>（C对）。但价格方面，需求增加推高价格，供给增加压低价格，两者力量相反，<strong>价格方向不确定</strong>（A、B都错）。<br><br>
+      <strong>规律复述：</strong>需求和供给同方向变动时，数量方向确定，价格方向不确定；反方向变动时，价格方向确定，数量方向不确定。
+    </div>
+  </div>
+</div>
+
+<!-- 速记卡 -->
+<div class="section">
+  <h2>⚡ 高频考点速记卡</h2>
+
+  <div class="flashcard">
+    <div class="fc-title">速记卡 ① · 均衡价格变动法则</div>
+    <div class="fc-content">
+      <strong>需求变动</strong>→价格和数量<strong>同方向</strong>变动<br>
+      <strong>供给变动</strong>→价格和数量<strong>反方向</strong>变动<br>
+      <strong>同向变动</strong>（需求供给同时增/减）→数量确定，价格不确定<br>
+      <strong>反向变动</strong>（一增一减）→价格确定，数量不确定
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="fc-title">速记卡 ② · 两种价格管制</div>
+    <div class="fc-content">
+      <strong>最高限价</strong>（限制价格）：< 均衡价 → 保护消费者 → 短缺 → 排队/黑市/质量降<br>
+      <strong>最低保护价</strong>（支持价格）:> 均衡价 → 保护生产者 → 过剩 → 政府收购/财政负担
+    </div>
+  </div>
+
+  <div class="flashcard">
+    <div class="fc-title">速记卡 ③ · 做题三步法</div>
+    <div class="fc-content">
+      第①步：判断是<strong>需求</strong>还是<strong>供给</strong>在变<br>
+      第②步：判断是<strong>增加</strong>还是<strong>减少</strong><br>
+      第③步：套表——需求同向，供给反向
+    </div>
+  </div>
+</div>
+
+<div class="nav-tip">
+  ✅ 第一章 第2节完成 · 下一节：弹性理论（需求弹性/供给弹性）<br>
+  <span style="font-size:13px;">做完练习题后告诉我对了多少道，我帮你分析薄弱点</span>
+</div>
+
+<script>
+function toggleAnswer(btn) {
+  var box = btn.nextElementSibling;
+  if (box.classList.contains('show')) {
+    box.classList.remove('show');
+    btn.textContent = '查看答案';
+  } else {
+    box.classList.add('show');
+    btn.textContent = '收起答案';
+  }
+}
+
+document.querySelectorAll('.quiz-options li').forEach(function(li) {
+  li.addEventListener('click', function() {
+    var ul = this.parentElement;
+    if (ul.getAttribute('data-multi') === 'true') {
+      this.classList.toggle('selected');
+    } else {
+      ul.querySelectorAll('li').forEach(function(s) { s.classList.remove('selected'); });
+      this.classList.add('selected');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

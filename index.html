@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中级经济师备考 · 学习总览</title>
+<style>
+  :root {
+    --bg: #f5f4f1;
+    --card: #ffffff;
+    --primary: #2c5f7f;
+    --primary-light: #e8f1f8;
+    --accent: #d4a04c;
+    --accent-light: #fdf6e8;
+    --green: #4a8a5c;
+    --green-light: #ecf5ef;
+    --text: #333333;
+    --text-light: #888888;
+    --border: #e8e6e2;
+    --danger: #c0504d;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 20px 16px 60px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .top-header {
+    background: linear-gradient(135deg, #2c5f7f, #1a4060);
+    color: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 24px;
+  }
+  .top-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  .top-header .subtitle { font-size: 14px; opacity: 0.82; }
+
+  .progress-overview {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .progress-bar-total {
+    flex: 1;
+    height: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-bar-total .fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    width: 4%;
+    transition: width 0.4s;
+  }
+  .progress-text-total {
+    font-size: 13px;
+    opacity: 0.9;
+    white-space: nowrap;
+  }
+
+  /* Subject tabs */
+  .subject-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .subject-tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .subject-tab.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+  .subject-tab:not(.active) {
+    color: var(--text-light);
+  }
+  .subject-tab .tab-sub {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 2px;
+    opacity: 0.7;
+  }
+
+  /* Module section */
+  .module {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .module-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .module-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .module-progress {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .module-progress .done-count {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  /* Chapter list */
+  .chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .chapter-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: all 0.15s;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .chapter-item:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+  }
+  .chapter-item.done {
+    border-color: #c8e0d0;
+    background: var(--green-light);
+  }
+  .chapter-item.done:hover {
+    background: #e0f0e6;
+  }
+  .chapter-item.pending {
+    opacity: 0.55;
+  }
+  .chapter-item.pending:hover {
+    opacity: 0.75;
+  }
+  .chapter-num {
+    font-size: 13px;
+    color: var(--text-light);
+    width: 40px;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+  .chapter-item.done .chapter-num {
+    color: var(--green);
+  }
+  .chapter-name {
+    flex: 1;
+    font-size: 14px;
+  }
+  .chapter-status {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+  .status-done {
+    background: var(--green);
+    color: #fff;
+  }
+  .status-pending {
+    background: var(--border);
+    color: var(--text-light);
+  }
+
+  /* Section links within done chapters */
+  .section-links {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+  }
+  .section-link {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .section-link:hover {
+    background: #3a7048;
+  }
+
+  /* Subject content panels */
+  .subject-panel { display: none; }
+  .subject-panel.active { display: block; }
+
+  /* Tips */
+  .tips-box {
+    background: var(--accent-light);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #f0e0c0;
+    font-size: 14px;
+  }
+  .tips-box strong { color: #8a6d2a; }
+
+  .footer-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 30px;
+    padding: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-header">
+  <h1>📚 中级经济师备考 · 学习总览</h1>
+  <p class="subtitle">考试时间：2026年11月初 ｜ 备考策略：84分过线 ｜ 主攻经济基础</p>
+  <div class="progress-overview">
+    <div class="progress-bar-total">
+      <div class="fill" id="totalFill" style="width:6%"></div>
+    </div>
+    <span class="progress-text-total" id="totalText">已完成 3 节 / 共 48 节</span>
+  </div>
+</div>
+
+<div class="tips-box">
+  <strong>💡 使用说明：</strong>点击已完成的章节可直接进入学习资料页面。每个资料页面左上角都有「← 目录总览」按钮可以返回本页。持续更新中，学完一节就解锁一节的链接。
+</div>
+
+<!-- 科目切换 -->
+<div class="subject-tabs">
+  <div class="subject-tab active" onclick="switchSubject('economics')">
+    经济基础知识
+    <div class="tab-sub">37章 · 6大模块</div>
+  </div>
+  <div class="subject-tab" onclick="switchSubject('business')">
+    工商管理专业
+    <div class="tab-sub">11章</div>
+  </div>
+</div>
+
+<!-- ========== 经济基础知识 ========== -->
+<div class="subject-panel active" id="panel-economics">
+
+  <!-- 模块一：经济学基础 -->
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">一、经济学基础（第1-10章）</span>
+      <span class="module-progress"><span class="done-count">1</span>/10 章进行中</span>
+    </div>
+    <div class="chapter-list">
+      <!-- 第一章 -->
+      <a href="经济师学习_第一章_第1节_需求与供给.html" class="chapter-item done">
+        <span class="chapter-num">第1章</span>
+        <span class="chapter-name">市场需求、供给与均衡价格</span>
+        <div class="section-links">
+          <span class="section-link">第1节</span>
+          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第一章_第2节_均衡价格与价格管制.html'" style="background:var(--accent);">第2节</span>
+          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第一章_第3节_弹性理论.html'" style="background:var(--green);">第3节</span>
+        </div>
+      </a>
+      <!-- 第二章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第2章</span>
+        <span class="chapter-name">消费者行为理论</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第三章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第3章</span>
+        <span class="chapter-name">生产和成本理论</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第四章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第4章</span>
+        <span class="chapter-name">市场结构理论</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第五章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第5章</span>
+        <span class="chapter-name">生产要素市场理论</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第六章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第6章</span>
+        <span class="chapter-name">市场失灵和政府的干预</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第七章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第7章</span>
+        <span class="chapter-name">国民收入核算和简单的宏观经济模型</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第八章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第8章</span>
+        <span class="chapter-name">经济增长和经济发展理论</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第九章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第9章</span>
+        <span class="chapter-name">价格总水平和就业、失业</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+      <!-- 第十章 -->
+      <div class="chapter-item pending">
+        <span class="chapter-num">第10章</span>
+        <span class="chapter-name">国际贸易理论和政策</span>
+        <span class="chapter-status status-pending">未开始</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模块二：财政 -->
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">二、财政（第11-17章）</span>
+      <span class="module-progress"><span class="done-count">0</span>/7 章</span>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item pending"><span class="chapter-num">第11章</span><span class="chapter-name">公共物品与财政职能</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第12章</span><span class="chapter-name">财政支出</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第13章</span><span class="chapter-name">财政收入</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第14章</span><span class="chapter-name">税收制度</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第15章</span><span class="chapter-name">政府预算</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第16章</span><span class="chapter-name">财政管理体制</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第17章</span><span class="chapter-name">财政政策</span><span class="chapter-status status-pending">未开始</span></div>
+    </div>
+  </div>
+
+  <!-- 模块三：货币与金融 -->
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">三、货币与金融（第18-22章）</span>
+      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item pending"><span class="chapter-num">第18章</span><span class="chapter-name">货币供求与货币均衡</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第19章</span><span class="chapter-name">中央银行与货币政策</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第20章</span><span class="chapter-name">商业银行与金融市场</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第21章</span><span class="chapter-name">金融风险与金融监管</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第22章</span><span class="chapter-name">对外金融关系与政策</span><span class="chapter-status status-pending">未开始</span></div>
+    </div>
+  </div>
+
+  <!-- 模块四：统计 -->
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">四、统计（第23-27章）</span>
+      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item pending"><span class="chapter-num">第23章</span><span class="chapter-name">统计与统计数据</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第24章</span><span class="chapter-name">描述统计</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第25章</span><span class="chapter-name">抽样调查</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第26章</span><span class="chapter-name">回归分析</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第27章</span><span class="chapter-name">时间序列分析</span><span class="chapter-status status-pending">未开始</span></div>
+    </div>
+  </div>
+
+  <!-- 模块五：会计 -->
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">五、会计（第28-32章）</span>
+      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item pending"><span class="chapter-num">第28章</span><span class="chapter-name">会计概论</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第29章</span><span class="chapter-name">会计循环</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第30章</span><span class="chapter-name">会计报表</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第31章</span><span class="chapter-name">财务报表分析</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第32章</span><span class="chapter-name">政府会计</span><span class="chapter-status status-pending">未开始</span></div>
+    </div>
+  </div>
+
+  <!-- 模块六：法律 -->
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">六、法律（第33-37章）</span>
+      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item pending"><span class="chapter-num">第33章</span><span class="chapter-name">法律对经济关系的调整</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第34章</span><span class="chapter-name">物权法律制度</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第35章</span><span class="chapter-name">合同法律制度</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第36章</span><span class="chapter-name">公司法律制度</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第37章</span><span class="chapter-name">其他法律制度</span><span class="chapter-status status-pending">未开始</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========== 工商管理专业 ========== -->
+<div class="subject-panel" id="panel-business">
+
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">工商管理专业知识和实务（第1-11章）</span>
+      <span class="module-progress"><span class="done-count">0</span>/11 章</span>
+    </div>
+    <div class="chapter-list">
+      <div class="chapter-item pending"><span class="chapter-num">第1章</span><span class="chapter-name">企业战略与经营决策</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第2章</span><span class="chapter-name">公司法人治理结构</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第3章</span><span class="chapter-name">市场营销与品牌管理</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第4章</span><span class="chapter-name">分销渠道管理</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第5章</span><span class="chapter-name">生产管理</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第6章</span><span class="chapter-name">物流管理</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第7章</span><span class="chapter-name">技术创新管理</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第8章</span><span class="chapter-name">人力资源规划与薪酬管理</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第9章</span><span class="chapter-name">企业投融资决策及重组</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第10章</span><span class="chapter-name">电子商务</span><span class="chapter-status status-pending">未开始</span></div>
+      <div class="chapter-item pending"><span class="chapter-num">第11章</span><span class="chapter-name">国际商务运营</span><span class="chapter-status status-pending">未开始</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  📖 学习资料持续更新中 · 每学完一节解锁对应链接<br>
+  经济基础 37章 + 工商管理 11章 = 全部考点覆盖
+</div>
+
+<script>
+function switchSubject(subject) {
+  document.querySelectorAll('.subject-tab').forEach(function(tab, i) {
+    tab.classList.toggle('active', (subject === 'economics' && i === 0) || (subject === 'business' && i === 1));
+  });
+  document.getElementById('panel-economics').classList.toggle('active', subject === 'economics');
+  document.getElementById('panel-business').classList.toggle('active', subject === 'business');
+}
+</script>
+
+</body>
+</html>

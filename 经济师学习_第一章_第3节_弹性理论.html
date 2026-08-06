@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第一章：弹性理论</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    width: 100%;
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+
+  /* Section */
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+
+  /* Hot tag */
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Example box */
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong {
+    color: #444441;
+  }
+
+  /* Key point */
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong {
+    color: #185FA5;
+  }
+
+  /* Comparison table */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td {
+    background: #fafafa;
+  }
+
+  /* Summary card */
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul {
+    margin-left: 18px;
+  }
+  .summary li {
+    font-size: 13px;
+    color: #0C447C;
+    margin-bottom: 8px;
+  }
+
+  /* Quiz */
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q {
+    margin-bottom: 20px;
+  }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num {
+    color: #0F6E56;
+    margin-right: 6px;
+  }
+  .quiz-q .options {
+    margin-left: 8px;
+  }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input {
+    margin-right: 6px;
+  }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show {
+    display: block;
+  }
+  .answer .label {
+    font-weight: 600;
+    color: #0F6E56;
+  }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover {
+    background: #9FE1CB;
+  }
+
+  /* Next preview */
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label {
+    font-size: 12px;
+    color: #888780;
+    margin-bottom: 6px;
+  }
+  .next-preview h3 {
+    font-size: 15px;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .next-preview p {
+    font-size: 13px;
+    color: #888780;
+  }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<!-- Header -->
+<div class="header">
+  <span class="label">经济基础知识 · 第一部分 经济学基础</span>
+  <h1>第一章：市场需求、供给与均衡价格</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 弹性理论 | 预计学习时长 45 分钟</p>
+  <div class="progress-bar"><div class="fill"></div></div>
+  <p class="progress-text">本章进度 3/3 · 本章最后一节 🎉</p>
+</div>
+
+<!-- 学习目标 -->
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握需求价格弹性的定义、公式和五种类型 <span class="hot">高频考点</span></li>
+    <li>理解影响需求价格弹性的因素 <span class="hot">多选题常考</span></li>
+    <li>掌握需求收入弹性的定义和分类（正常品/低档品/奢侈品/必需品） <span class="hot">高频考点</span></li>
+    <li>掌握需求交叉弹性的定义和分类（替代品/互补品/无关品） <span class="hot">高频考点</span></li>
+    <li>理解供给价格弹性及其影响因素</li>
+  </ul>
+</div>
+
+<!-- 知识点1：需求价格弹性 -->
+<div class="section">
+  <h2>一、需求价格弹性 <span class="hot">本章最重要 · 每年必考</span></h2>
+
+  <h3>1. 什么是需求价格弹性</h3>
+  <p>需求价格弹性衡量的是：<strong>价格变动1%时，需求量变动百分之几</strong>。它反映需求量对价格变动的敏感程度。</p>
+  <div class="example">
+    <strong>大白话：</strong>涨价了，你买不买？如果"涨一点就不买了"→ 弹性大；如果"涨多少都得买"→ 弹性小。
+  </div>
+
+  <h3>2. 计算公式 <span class="hot">必考</span></h3>
+  <p>需求价格弹性系数 Ed = 需求量的相对变动 / 价格的相对变动</p>
+  <div class="keypoint">
+    <strong>公式：</strong>Ed = (ΔQ / Q) ÷ (ΔP / P)<br>
+    其中 ΔQ 是需求量变化量，Q 是原需求量；ΔP 是价格变化量，P 是原价格。<br>
+    <strong>注意：</strong>由于需求量与价格反方向变动，ΔQ 和 ΔP 符号相反，所以 Ed 通常为<strong>负值</strong>。但习惯上我们<strong>取绝对值</strong>来比较弹性大小。
+  </div>
+
+  <h3>3. 需求价格弹性的五种类型 <span class="hot">高频考点 · 必背</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:18%">类型</th>
+      <th style="width:15%">弹性系数</th>
+      <th style="width:37%">含义</th>
+      <th style="width:30%">典型商品</th>
+    </tr>
+    <tr>
+      <td><strong>富有弹性</strong></td>
+      <td>Ed > 1</td>
+      <td>需求量变动幅度 > 价格变动幅度（价格小变，需求大变）</td>
+      <td>奢侈品、高档耐用品（珠宝、旅游）</td>
+    </tr>
+    <tr>
+      <td><strong>缺乏弹性</strong></td>
+      <td>Ed < 1</td>
+      <td>需求量变动幅度 < 价格变动幅度（价格大变，需求小变）</td>
+      <td>必需品（粮食、食盐、药品）</td>
+    </tr>
+    <tr>
+      <td><strong>单位弹性</strong></td>
+      <td>Ed = 1</td>
+      <td>需求量变动幅度 = 价格变动幅度（同步变动）</td>
+      <td>理论上的特殊情况，现实中少见</td>
+    </tr>
+    <tr>
+      <td><strong>完全无弹性</strong></td>
+      <td>Ed = 0</td>
+      <td>无论价格怎么变，需求量都不变（需求曲线垂直）</td>
+      <td>救命药、不可替代的必需品</td>
+    </tr>
+    <tr>
+      <td><strong>完全有弹性</strong></td>
+      <td>Ed = ∞</td>
+      <td>价格微小变动，需求量无限变动（需求曲线水平）</td>
+      <td>完全竞争市场中的单个企业</td>
+    </tr>
+  </table>
+
+  <div class="keypoint">
+    <strong>记忆技巧：</strong><br>
+    "富有" = 弹性大 = 敏感 = 奢侈品（买不买都行，贵了就不买）<br>
+    "缺乏" = 弹性小 = 不敏感 = 必需品（不买不行，涨多少都得买）<br>
+    "完全无" = 死活不变 = 救命药<br>
+    "完全有" = 一点就炸 = 完全竞争
+  </div>
+
+  <h3>4. 影响需求价格弹性的因素 <span class="hot">多选题常考</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:25%">因素</th>
+      <th style="width:45%">说明</th>
+      <th style="width:30%">对弹性的影响</th>
+    </tr>
+    <tr>
+      <td><strong>替代品数量</strong></td>
+      <td>替代品越多，消费者选择余地越大</td>
+      <td>替代品多 → 弹性大</td>
+    </tr>
+    <tr>
+      <td><strong>商品用途广泛性</strong></td>
+      <td>用途越广，价格变动影响越大</td>
+      <td>用途广 → 弹性大</td>
+    </tr>
+    <tr>
+      <td><strong>时间长短</strong></td>
+      <td>时间越长，消费者越能调整行为</td>
+      <td>长期 > 短期（长期弹性大）</td>
+    </tr>
+    <tr>
+      <td><strong>商品重要性</strong></td>
+      <td>生活必需品 vs 非必需品</td>
+      <td>必需品 → 弹性小；非必需品 → 弹性大</td>
+    </tr>
+    <tr>
+      <td><strong>消费支出占比</strong></td>
+      <td>该商品支出占总支出的比重</td>
+      <td>占比大 → 弹性大（如买房）；占比小 → 弹性小（如食盐）</td>
+    </tr>
+  </table>
+
+  <div class="example">
+    <strong>例子对比：</strong><br>
+    食盐：替代品少、用途单一、必需、支出占比小 → <strong>缺乏弹性</strong>（Ed < 1）<br>
+    黄金首饰：替代品多（可买其他投资品）、非必需、支出占比大 → <strong>富有弹性</strong>（Ed > 1）
+  </div>
+
+  <h3>5. 价格弹性与总收益的关系 <span class="hot">计算题常考</span></h3>
+  <p>总收益 = 价格 × 销量。价格变动会影响销量，而销量变化取决于弹性：</p>
+  <table class="compare-table">
+    <tr>
+      <th style="width:25%">弹性类型</th>
+      <th style="width:37%">降价的影响</th>
+      <th style="width:37%">涨价的影响</th>
+    </tr>
+    <tr>
+      <td><strong>富有弹性</strong>（Ed > 1）</td>
+      <td>销量大增 → <strong>总收益增加</strong></td>
+      <td>销量大减 → <strong>总收益减少</strong></td>
+    </tr>
+    <tr>
+      <td><strong>缺乏弹性</strong>（Ed < 1）</td>
+      <td>销量微增 → <strong>总收益减少</strong></td>
+      <td>销量微减 → <strong>总收益增加</strong></td>
+    </tr>
+  </table>
+  <div class="keypoint">
+    <strong>核心逻辑（必记）：</strong><br>
+    富有弹性 → "薄利多销"有效 → 降价能增收（奢侈品打折促销）<br>
+    缺乏弹性 → "薄利多销"无效 → 涨价能增收（粮食、药品不能随便降价）
+  </div>
+</div>
+
+<!-- 知识点2：需求收入弹性 -->
+<div class="section">
+  <h2>二、需求收入弹性 <span class="hot">高频考点</span></h2>
+
+  <h3>1. 定义与公式</h3>
+  <p>需求收入弹性衡量的是：<strong>收入变动1%时，需求量变动百分之几</strong>。</p>
+  <div class="keypoint">
+    <strong>公式：</strong>Ey = (ΔQ / Q) ÷ (ΔY / Y)<br>
+    其中 Y 表示收入（Income），Q 表示需求量。
+  </div>
+
+  <h3>2. 需求收入弹性的分类 <span class="hot">必背</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:20%">弹性系数</th>
+      <th style="width:20%">类型</th>
+      <th style="width:35%">含义</th>
+      <th style="width:25%">典型商品</th>
+    </tr>
+    <tr>
+      <td>Ey > 1</td>
+      <td><strong>奢侈品</strong></td>
+      <td>需求增长幅度 > 收入增长幅度</td>
+      <td>珠宝、豪车、旅游</td>
+    </tr>
+    <tr>
+      <td>0 < Ey < 1</td>
+      <td><strong>必需品</strong></td>
+      <td>需求增长幅度 < 收入增长幅度（收入增加也多买一点，但增幅小）</td>
+      <td>粮食、服装、日用品</td>
+    </tr>
+    <tr>
+      <td>Ey = 1</td>
+      <td>收入单位弹性</td>
+      <td>需求增长幅度 = 收入增长幅度</td>
+      <td>理论特殊情况</td>
+    </tr>
+    <tr>
+      <td>Ey < 0</td>
+      <td><strong>低档品</strong></td>
+      <td>收入增加，需求反而减少</td>
+      <td>公交卡、廉价方便面、二手商品</td>
+    </tr>
+    <tr>
+      <td>Ey = 0</td>
+      <td>收入无弹性</td>
+      <td>收入变动不影响需求</td>
+      <td>火柴、食盐（极端情况）</td>
+    </tr>
+  </table>
+
+  <div class="keypoint">
+    <strong>关键记忆点：</strong><br>
+    Ey > 0 → 正常品（收入↑需求↑），其中 Ey > 1 是奢侈品，0 < Ey < 1 是必需品<br>
+    Ey < 0 → 低档品（收入↑需求↓）<br>
+    <strong>与第1节的联系：</strong>收入弹性正负决定了商品是"正常品"还是"低档品"，这和第1节讲的收入因素对需求的影响完全一致。
+  </div>
+</div>
+
+<!-- 知识点3：需求交叉弹性 -->
+<div class="section">
+  <h2>三、需求交叉弹性 <span class="hot">高频考点</span></h2>
+
+  <h3>1. 定义与公式</h3>
+  <p>需求交叉弹性衡量的是：<strong>商品Y的价格变动1%时，商品X的需求量变动百分之几</strong>。它用来判断两种商品之间的关系。</p>
+  <div class="keypoint">
+    <strong>公式：</strong>Exy = (ΔQx / Qx) ÷ (ΔPy / Py)<br>
+    X 的需求量变化率 ÷ Y 的价格变化率。
+  </div>
+
+  <h3>2. 需求交叉弹性的分类 <span class="hot">必背</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:20%">弹性系数</th>
+      <th style="width:20%">商品关系</th>
+      <th style="width:35%">含义</th>
+      <th style="width:25%">典型例子</th>
+    </tr>
+    <tr>
+      <td>Exy > 0</td>
+      <td><strong>替代品</strong></td>
+      <td>Y涨价 → 消费者转向X → X需求增加（同方向变动）</td>
+      <td>咖啡与茶、牛肉与猪肉</td>
+    </tr>
+    <tr>
+      <td>Exy < 0</td>
+      <td><strong>互补品</strong></td>
+      <td>Y涨价 → X需求也减少（反方向变动）</td>
+      <td>汽车与汽油、打印机与墨盒</td>
+    </tr>
+    <tr>
+      <td>Exy = 0</td>
+      <td><strong>无关品</strong></td>
+      <td>Y的价格变动不影响X的需求</td>
+      <td>面包与鞋子</td>
+    </tr>
+  </table>
+
+  <div class="keypoint">
+    <strong>判断技巧：</strong><br>
+    交叉弹性 <strong>正数</strong> → 替代品（Y涨了你去买X，X需求↑，同向）<br>
+    交叉弹性 <strong>负数</strong> → 互补品（Y涨了X也少买，反向）<br>
+    交叉弹性 <strong>零</strong> → 无关<br>
+    <strong>与第1节的联系：</strong>这就是第1节"替代品价格"和"互补品价格"对需求影响的量化版本。
+  </div>
+</div>
+
+<!-- 知识点4：供给价格弹性 -->
+<div class="section">
+  <h2>四、供给价格弹性</h2>
+
+  <h3>1. 定义与公式</h3>
+  <p>供给价格弹性衡量的是：<strong>价格变动1%时，供给量变动百分之几</strong>。</p>
+  <div class="keypoint">
+    <strong>公式：</strong>Es = (ΔQs / Qs) ÷ (ΔP / P)<br>
+    由于供给量与价格同方向变动，Es 通常为<strong>正值</strong>。
+  </div>
+
+  <h3>2. 供给价格弹性的类型</h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:20%">类型</th>
+      <th style="width:20%">弹性系数</th>
+      <th style="width:60%">含义</th>
+    </tr>
+    <tr>
+      <td>富有弹性</td>
+      <td>Es > 1</td>
+      <td>供给量变动幅度 > 价格变动幅度（供给敏感）</td>
+    </tr>
+    <tr>
+      <td>缺乏弹性</td>
+      <td>Es < 1</td>
+      <td>供给量变动幅度 < 价格变动幅度（供给不敏感）</td>
+    </tr>
+    <tr>
+      <td>单位弹性</td>
+      <td>Es = 1</td>
+      <td>供给量变动幅度 = 价格变动幅度</td>
+    </tr>
+    <tr>
+      <td>完全无弹性</td>
+      <td>Es = 0</td>
+      <td>供给曲线垂直，价格怎么变供给都不变（如绝版艺术品）</td>
+    </tr>
+    <tr>
+      <td>完全有弹性</td>
+      <td>Es = ∞</td>
+      <td>供给曲线水平，价格微小变动供给无限变动</td>
+    </tr>
+  </table>
+
+  <h3>3. 影响供给价格弹性的因素 <span class="hot">多选题常考</span></h3>
+  <table class="compare-table">
+    <tr>
+      <th style="width:25%">因素</th>
+      <th style="width:45%">说明</th>
+      <th style="width:30%">对弹性的影响</th>
+    </tr>
+    <tr>
+      <td><strong>时间</strong></td>
+      <td>短期产能固定，长期可调整</td>
+      <td>长期 > 短期（长期弹性大）</td>
+    </tr>
+    <tr>
+      <td><strong>生产周期</strong></td>
+      <td>生产周期越长，调整越慢</td>
+      <td>周期长 → 弹性小（如房地产）</td>
+    </tr>
+    <tr>
+      <td><strong>生产成本</strong></td>
+      <td>增产导致成本大幅上升则弹性小</td>
+      <td>成本上升快 → 弹性小</td>
+    </tr>
+    <tr>
+      <td><strong>资源供给</strong></td>
+      <td>生产所需资源是否充足</td>
+      <td>资源充足 → 弹性大；资源稀缺 → 弹性小</td>
+    </tr>
+  </table>
+
+  <div class="example">
+    <strong>例子对比：</strong><br>
+    农产品：生产周期长（一季庄稼几个月）、受自然条件限制 → <strong>供给缺乏弹性</strong><br>
+    工业流水线产品：产能可快速调整、技术成熟 → <strong>供给富有弹性</strong>
+  </div>
+</div>
+
+<!-- 四种弹性总对比 -->
+<div class="section">
+  <h2>五、四种弹性总对比 <span class="hot">考前必看</span></h2>
+  <table class="compare-table">
+    <tr>
+      <th style="width:18%">弹性类型</th>
+      <th style="width:22%">衡量什么</th>
+      <th style="width:20%">公式</th>
+      <th style="width:20%">系数符号</th>
+      <th style="width:20%">核心用途</th>
+    </tr>
+    <tr>
+      <td><strong>需求价格弹性</strong></td>
+      <td>需求量对自身价格的敏感度</td>
+      <td>Ed = (ΔQ/Q)/(ΔP/P)</td>
+      <td>负值（取绝对值）</td>
+      <td>判断涨价/降价策略</td>
+    </tr>
+    <tr>
+      <td><strong>需求收入弹性</strong></td>
+      <td>需求量对收入的敏感度</td>
+      <td>Ey = (ΔQ/Q)/(ΔY/Y)</td>
+      <td>正：正常品<br>负：低档品</td>
+      <td>区分商品档次</td>
+    </tr>
+    <tr>
+      <td><strong>需求交叉弹性</strong></td>
+      <td>X需求量对Y价格的敏感度</td>
+      <td>Exy = (ΔQx/Qx)/(ΔPy/Py)</td>
+      <td>正：替代品<br>负：互补品</td>
+      <td>判断商品关系</td>
+    </tr>
+    <tr>
+      <td><strong>供给价格弹性</strong></td>
+      <td>供给量对价格的敏感度</td>
+      <td>Es = (ΔQs/Qs)/(ΔP/P)</td>
+      <td>正值</td>
+      <td>判断供给调整能力</td>
+    </tr>
+  </table>
+</div>
+
+<!-- 高频考点速记 -->
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li><strong>需求价格弹性 Ed：</strong>取绝对值。Ed > 1 富有弹性（奢侈品），Ed < 1 缺乏弹性（必需品），Ed = 0 完全无弹性（救命药）</li>
+    <li><strong>富有弹性 → 降价增收；缺乏弹性 → 涨价增收</strong>。这就是"薄利多销"只对弹性大的商品有效的原因</li>
+    <li><strong>影响需求价格弹性的因素：</strong>替代品数量、用途广泛性、时间长短、商品重要性、支出占比</li>
+    <li><strong>需求收入弹性 Ey：</strong>Ey > 0 正常品（Ey > 1 奢侈品，0 < Ey < 1 必需品），Ey < 0 低档品</li>
+    <li><strong>需求交叉弹性 Exy：</strong>正数 = 替代品，负数 = 互补品，零 = 无关品</li>
+    <li><strong>供给价格弹性 Es：</strong>正值。影响因素：时间、生产周期、生产成本、资源供给</li>
+    <li><strong>口诀：</strong>收入弹正正常品、负低档品；交叉弹正替代品、负互补品。价格弹负取绝对值比较大小</li>
+  </ul>
+</div>
+
+<!-- 练习题 -->
+<div class="quiz">
+  <h2>练习题（6题）</h2>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>某商品价格上升5%，需求量下降10%。该商品的需求价格弹性为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 0.5，缺乏弹性</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 2，富有弹性</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 0.5，富有弹性</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 2，缺乏弹性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1">
+      <p><span class="label">答案：B</span></p>
+      <p>解析：Ed = |ΔQ/Q| ÷ |ΔP/P| = 10% ÷ 5% = 2。Ed = 2 > 1，所以是<strong>富有弹性</strong>。计算时取绝对值，不看负号。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>下列商品中，需求价格弹性最大的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 食盐</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 大米</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 高档化妆品</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 某品牌救命药</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2">
+      <p><span class="label">答案：C</span></p>
+      <p>解析：弹性大小看"替代品多少 + 必需程度 + 支出占比"。<br>食盐（A）：替代品少、必需、支出占比极小 → 弹性极小<br>大米（B）：必需品、替代品少 → 弹性小<br>高档化妆品（C）：非必需、替代品多（不同品牌/可不用）、支出占比大 → <strong>弹性最大</strong><br>救命药（D）：完全无弹性（Ed = 0），价格再贵也得买</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>某商品需求缺乏弹性，如果企业想增加总收益，应该：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 降价促销（薄利多销）</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 适当涨价</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 保持价格不变</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 先降后涨</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3">
+      <p><span class="label">答案：B</span></p>
+      <p>解析：缺乏弹性（Ed < 1）意味着价格变动大但需求量变动小。涨价 → 销量只微减 → 总收益（P×Q）增加。降价 → 销量只微增 → 总收益减少。"薄利多销"只对<strong>富有弹性</strong>的商品有效，对缺乏弹性的商品反而吃亏。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>某商品需求收入弹性系数 Ey = -0.5，说明该商品是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 奢侈品</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 必需品</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 低档品</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 无关品</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4">
+      <p><span class="label">答案：C</span></p>
+      <p>解析：Ey < 0 表示收入增加时需求反而减少，这是<strong>低档品</strong>的特征。Ey > 1 奢侈品，0 < Ey < 1 必需品，Ey = 0 收入无弹性。-0.5 说明收入每增加1%，需求减少0.5%，属于低档品。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>商品X和商品Y的需求交叉弹性系数 Exy = -1.2，说明X和Y是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 替代品</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 互补品</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 无关品</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 无法判断</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5">
+      <p><span class="label">答案：B</span></p>
+      <p>解析：Exy < 0（负数）→ <strong>互补品</strong>。Y的价格变动和X的需求量反方向变动：Y涨价 → X需求减少。-1.2 表示Y涨价1%，X需求减少1.2%。如果是替代品，Exy > 0；如果是无关品，Exy = 0。</p>
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">6.（多选）</span>下列哪些因素会使某商品的需求价格弹性增大（变得更富有弹性）？</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q6"> A. 该商品的替代品增多</label><br>
+      <label class="option"><input type="checkbox" name="q6"> B. 观察时间变长（从短期到长期）</label><br>
+      <label class="option"><input type="checkbox" name="q6"> C. 该商品成为生活必需品</label><br>
+      <label class="option"><input type="checkbox" name="q6"> D. 该商品在消费者总支出中占比增大</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a6').classList.add('show')">查看答案</button>
+    <div class="answer" id="a6">
+      <p><span class="label">答案：ABD</span></p>
+      <p>解析：<br>A. 替代品增多 → 消费者选择余地大 → 弹性增大 ✓<br>B. 时间变长 → 消费者有更多时间调整行为 → 弹性增大 ✓<br>C. 成为必需品 → 不买不行 → 弹性<strong>减小</strong> ✗（方向相反）<br>D. 支出占比增大 → 价格变动对生活影响大 → 消费者更敏感 → 弹性增大 ✓</p>
+    </div>
+  </div>
+</div>
+
+<!-- 下次预告 -->
+<div class="next-preview">
+  <p class="label">下章预告</p>
+  <h3>第二章：消费者行为理论</h3>
+  <p>第一章全部学完了！接下来进入消费者行为理论——效用、边际效用递减、无差异曲线、预算线，理解消费者是怎么做选择的。</p>
+</div>
+
+</body>
+</html>
