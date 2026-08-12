@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第5章：物流管理 · 章节练习</title>
+<style>
+  .nav-back {
+    position: fixed; top: 14px; left: 14px; z-index: 999;
+    background: rgba(44, 95, 127, 0.92); color: #fff; padding: 7px 14px;
+    border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: all 0.2s; backdrop-filter: blur(4px);
+  }
+  .nav-back:hover { background: rgba(44, 95, 127, 1); transform: translateY(-1px); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85;
+    padding: 20px 16px 60px; max-width: 780px; margin: 0 auto;
+  }
+  .header {
+    background: #fff; border-radius: 14px; padding: 28px 24px;
+    margin-bottom: 20px; border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block; font-size: 12px; color: #2c5f7f;
+    background: #e8f1f8; padding: 3px 10px; border-radius: 4px;
+    margin-bottom: 10px; font-weight: 500;
+  }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .header .stats {
+    display: flex; gap: 20px; margin-top: 14px;
+    font-size: 13px; color: #555;
+  }
+  .header .stats span { display: inline-flex; align-items: center; gap: 4px; }
+  .header .stats .badge {
+    background: #e8f1f8; color: #2c5f7f; padding: 2px 8px;
+    border-radius: 4px; font-weight: 600;
+  }
+  .section {
+    background: #fff; border-radius: 14px; padding: 24px;
+    margin-bottom: 16px; border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px; font-weight: 600; color: #1a1a1a;
+    margin-bottom: 16px; padding-bottom: 10px;
+    border-bottom: 2px solid #e8f1f8;
+  }
+  .quiz-q { margin-bottom: 24px; }
+  .quiz-q .q-text {
+    font-size: 14px; color: #1a1a1a; margin-bottom: 10px; font-weight: 500;
+  }
+  .quiz-q .q-text .num {
+    color: #2c5f7f; margin-right: 6px; font-weight: 600;
+  }
+  .quiz-q .q-text .type-tag {
+    font-size: 11px; color: #888; background: #f5f5f3;
+    padding: 1px 6px; border-radius: 3px; margin-left: 6px; font-weight: 400;
+  }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px; color: #444441; padding: 4px 0; cursor: pointer;
+    display: block;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #ecf5ef; border-radius: 8px; padding: 12px 14px;
+    margin-top: 8px; font-size: 13px; color: #085041; display: none;
+  }
+  .answer.show { display: block; }
+  .answer .ans-label { font-weight: 600; color: #4a8a5c; }
+  .answer .exp-label { font-weight: 600; color: #4a8a5c; margin-top: 6px; display: block; }
+  .btn-reveal {
+    font-size: 12px; color: #4a8a5c; background: #ecf5ef;
+    border: 1px solid #9fd4b0; border-radius: 6px;
+    padding: 4px 12px; cursor: pointer; margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9fd4b0; }
+  .btn-reveal-all {
+    font-size: 13px; color: #2c5f7f; background: #e8f1f8;
+    border: 1px solid #b5d4f4; border-radius: 8px;
+    padding: 8px 16px; cursor: pointer; margin-bottom: 16px;
+    display: block; width: 100%; text-align: center;
+  }
+  .btn-reveal-all:hover { background: #b5d4f4; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+<div class="header">
+  <span class="label">工商管理专业知识与实务</span>
+  <h1>第5章：物流管理</h1>
+  <div class="subtitle">章节练习题 · 共 54 题</div>
+  <div class="stats">
+    <span>单选题 <span class="badge">31</span></span>
+    <span>多选题 <span class="badge">23</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>一、单项选择题（共 31 题）</h2>
+  <button class="btn-reveal-all" onclick="toggleAllAnswers('single')">显示/隐藏全部答案</button>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">1.</span>全球物流与国内物流相比具有的特点是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_1" value="A"> A. 运输距离长 B.保管时间短 C.信息量小 D.风险小</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_1').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_1">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>全球物流中的运输活动与国内物流中的运输活动的最大差异在于前者的 运输距离长且运输方式多样。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">2.</span>第三方物流兴起于()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_2" value="A"> A. 20世纪80年代末90年代初 B.20世纪70年代末80年代初 C.20世纪60年代末70年代初 D.20世纪50年代末60年代初</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_2').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_2">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>第三方物流兴起于20世纪80年代末90年代初。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">3.</span>世界范围内最初萌生的“物流”现象出现在()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_3" value="A"> A. 美国 B.日本 C.英国 D.德国</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_3').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_3">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>美国物流业的初创阶段是世界范围内最初萌生的“物流”现象。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">4.</span>企业物流是以()为核心的物流活动。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_4" value="A"> A. 企业服务 B.企业经营 C.客户满意 D.客户需求</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_4').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_4">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>企业物流是以企业经营为核心的物流活动。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">5.</span>搞好物流管理的先决条件是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_5" value="A"> A. 高效的流通加工 B.顺畅的装卸搬运 C.准确掌握物流信息 D.安全的储存</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_5').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_5">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>准确掌握物流信息，是搞好物流管理的先决条件。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">6.</span>物流活动中，配送的本质是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_6" value="A"> A. 送货 B.送达 C.配货 D.配齐</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_6').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_6">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>配送的本质是送货。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">7.</span>物流过程中“质”的升华指的是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_7" value="A"> A. 包装 B.储存 C.物流信息 D.流通加工</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_7').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_7">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>流通加工是物流过程中“质”的升华。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">8.</span>物流活动中，运输、保管、包装等物流作业得以顺利实现的根本保证是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_8" value="A"> A. 配送 B.流通加工 C.物流信息 D.装卸搬运</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_8').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_8">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>装卸、搬运是运输、保管、包装等物流作业得以顺利实现的根本保证。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">9.</span>物流活动中，储存合理化的含义包括()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_9" value="A"> A. 储存合理化的原则和储存的安全化 B.储存合理化的原则和储存的现代化 C.储存合理化的内容和储存的现代化 D.储存合理化的内容和储存的安全化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_9').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_9">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>储存的合理化的含义，一是储存合理化的原则;二是储存的现代化。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">10.</span>物流各环节中最重要的部分是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_10" value="A"> A. 储存 B.包装 C.运输 D.配送</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_10').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_10">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>运输是物流各环节中最重要的部分，是物流的关键。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">11.</span>物流活动的运输功能可以划分为两段，其中一段称为“配送”，其实质在于()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_11" value="A"> A. “拣选”和“配齐” B.“组配”和“拣选” C.“拣选”和“送达” D.“配齐”和“送达”</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_11').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_11">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>物流活动的运输功能可以划分为两段，其中一段称为“配送”，其实质 在于“配齐”和“送达”。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">12.</span>物流管理的根本目标是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_12" value="A"> A. 以最低的成本向用户提供满意的服务，达到最佳的经济效益 B.创造价值，满足顾客及社会需要 C.提供优质服务 D.获得最大利润</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_12').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_12">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>物流管理的根本目标是以最低的成本向用户提供满意的服务，达到最佳 的经济效益。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">13.</span>物流的本质是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_13" value="A"> A. 配送 B.运输 C.服务 D.流通</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_13').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_13">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>物流的本质是服务。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">14.</span>最早对物流概念进行定义的是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_14" value="A"> A. 日本工业标准 B.美国物流管理协会 C.美国后勤管理协会 D.美国销售学会</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_14').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_14">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>1935 年，美国销售学会对物流进行的定义被人们认为是最早的物流概念。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">15.</span>金属加工碎屑、不复用破璃器皿、碎废布采用的物流方式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_15" value="A"> A. 以废玻璃瓶为代表的回送复用物流系统 B.以废纸为代表的收集集货物流系统 C.以粉煤灰为代表的联产供应物流系统 D.以废玻璃为代表的原厂复用物流系统</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_15').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_15">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>金属加工碎屑、不复用破璃器皿、碎废布等再生资源采用的物流方式是 以废纸为代表的收集集货物流系统。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">16.</span>陶瓷工业的泥料，冶金工业中的金属渣、块，机械工业中的边角料等再生资源 一般采取()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_16" value="A"> A. 以废纸为代表的收集集货物流系统 B.以废玻璃瓶为代表的回送复用物流系统 C.以粉煤灰为代表的联产供应物流系统 D.以废玻璃为代表的原厂复用物流系统</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_16').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_16">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>陶瓷工业的泥料，冶金工业中的金属渣、块，机械工业中的边角料等再 生资源一般采取以废玻璃为代表的原厂复用物流系统。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">17.</span>适用于净化处理加工的废弃物是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_17" value="A"> A. 有机物含量高的垃圾 B.造纸厂排放的废水 C.经过分类处理使有机物集中的垃圾 D.对地下水无毒害的固体垃圾</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_17').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_17">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>选项AC适用于垃圾焚烧，选项D适用于垃圾掩埋。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">18.</span>适用于有机物含量高的垃圾的物流方式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_18" value="A"> A. 垃圾掩埋 B.垃圾堆放 C.垃圾焚烧 D.净化处理加工</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_18').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_18">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>垃圾焚烧只适用于有机物含量高的垃圾或经过分类处理使有机物集中的 垃圾。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">19.</span>关于回收物流与废弃物流特点的说法，正确的是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_19" value="A"> A. 回收物流与废弃物流的物流成本高昂 B.回收物流与废弃物流常使用大型化、通用化装运设备 C.回收物流与废弃物流储存、包装要求复杂 D.回收物流与废弃物流流通加工方式多样化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_19').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_19">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>回收物流与废弃物流特点有小型化、专用化的装运设备，简易的储存、 包装要求，多样化的流通加工，低成本的要求。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">20.</span>下列关于物流循环过程的表述错误的是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_20" value="A"> A. 排泄物的生产来自生产过程、流通过程、消费三个方面 B.生产过程和流通过程产生的废弃物称为工业废物 C.工业废物按照法律规定由产业部门自行处理，处理费用计入生产成本 D.消费后产生的废弃物称为一般废弃物或生活废弃物、垃圾，主要由消费者个人 支付其处理费用</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_20').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_20">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>消费后产生的废弃物称为一般废弃物或生活废弃物、垃圾，主要由政府 财政支付其处理费用。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">21.</span>MRP在流通领域应用的直接结果是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_21" value="A"> A. MRPⅡ B.ERP C.ERPⅡ D.DRP</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_21').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_21">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>DRP是MRP在流通领域应用的直接结果。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">22.</span>成品储存的作业内容除仓储作业和物品养护外，还应包括()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_22" value="A"> A. 包装加固 B.库存控制 C.产品检验 D.合理分类</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_22').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_22">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>成品储存包括仓储作业、物品养护和库存控制。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">23.</span>()可视为生产物流系统的终点，也是销售物流系统的起点。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_23" value="A"> A. 产成品的发送 B.包装 C.信息处理 D.成品储存</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_23').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_23">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>包装可视为生产物流系统的终点，也是销售物流系统的起点。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">24.</span>准时制生产的出发点是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_24" value="A"> A. 降低库存，最终降为零库存 B.获取最大利润 C.最大限度降低浪费 D.降低成本</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_24').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_24">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查准时制生产的出发点——最大限度降低浪费，进行不断改善。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">25.</span>准时制生产方式的最终目标是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_25" value="A"> A. 降低成本 B.降低库存 C.消除浪费 D.获取最大利润</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_25').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_25">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>准时制生产方式将获取最大利润作为企业经营的最终目标，将降低成本 作为基本目标。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">26.</span>将必要的零件以必要的数量在必要的时间送到生产线的生产方式称为()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_26" value="A"> A. DRP B.CAD C.JIT D.IPO</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_26').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_26">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>JIT即准时制生产，是指将必要的零件以必要的数量在必要的时间送到生 产线的生产方式。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">27.</span>准时制采购的极限目标是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_27" value="A"> A. 使原材料与外购件的质量最好 B.使原材料与外购件的采购费用最低 C.大幅度减少原材料与外购件的库存 D.原材料和外购件的库存为零、缺陷为零</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_27').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_27">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>准时制采购的极限目标是原材料和外购件的库存为零、缺陷为零。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">28.</span>管理当局对某些物品采取不准缺货的策略这属于库存系统中的()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_28" value="A"> A. 需求 B.补给 C.约束 D.成本</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_28').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_28">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>管理当局对某些物品采取不准缺货的策略这属于库存系统中的约束。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">29.</span>最优经济订购批量只考虑()两个因素。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_29" value="A"> A. 物资价格和进货时间 B.采购费用和进货时间 C.保管费用和采购费用 D.保管费用和物资价格</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_29').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_29">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>最优经济订购批量只考虑保管费用和采购费用两个因素。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">30.</span>供应物流的核心部分是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_30" value="A"> A. 供应 B.采购 C.库存管理 D.仓库管理</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_30').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_30">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>库存管理是供应物流的核心部分。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">31.</span>供应物流与生产物流的衔接点是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_31" value="A"> A. 采购 B.供应 C.库存管理 D.仓库管理</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_31').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_31">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>供应是供应物流与生产物流的衔接点。
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>二、多项选择题（共 23 题）</h2>
+  <button class="btn-reveal-all" onclick="toggleAllAnswers('multi')">显示/隐藏全部答案</button>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">1.</span>下列属于商业包装对象的有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_1" value="A"> A. 棉花 B.食品 C.粮食 D.礼品 E.服装</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_1').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_1">
+      <span class="ans-label">答案：BDE</span>
+      <span class="exp-label">解析：</span>选项AC属于工业包装的对象。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">2.</span>物流活动的功能要素主要包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_2" value="A"> A. 运输、储存 B.生产、包装 C.流通加工 D.装卸搬运 E.物流信息</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_2').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_2">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>物流活动的功能要素主要有：运输、储存、装卸搬运、包装、流通加工、 配送和物流信息。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">3.</span>企业物流管理包括的层面有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_3" value="A"> A. 物流战略管理 B.物流系统设计与运营管理 C.人力资源管理 D.物流作业管理 E.财务管理</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_3').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_3">
+      <span class="ans-label">答案：ABD</span>
+      <span class="exp-label">解析：</span>根据企业物流活动的特点，企业物流管理可以从物流战略管理、物流作 业管理、物流系统设计与运营管理三个层面上展开。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">4.</span>可以采用以废玻璃为代表的原厂复用物流系统的遗弃物有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_4" value="A"> A. 陶瓷工业的泥料 B.冶金工业中的金属渣 C.不复用破璃器皿 D.包装箱 E.碎废布</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_4').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_4">
+      <span class="ans-label">答案：AB</span>
+      <span class="exp-label">解析：</span>陶瓷工业的泥料，冶金工业中的金属渣、块，机械工业中的边角料可以 采取以废玻璃为代表的原厂复用物流系统。选项CE可以采取以废纸为代表的收集集货 物流系统，选项D可以采取以废玻璃瓶为代表的回送复用物流系统。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">5.</span>可以采用以废纸为代表的收集集货物流系统的遗弃物有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_5" value="A"> A. 陶瓷工业的泥料 B.金属加工碎屑 C.不复用破璃器皿 D.包装箱 E.碎废布</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_5').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_5">
+      <span class="ans-label">答案：BCE</span>
+      <span class="exp-label">解析：</span>选项A适用于以废玻璃为代表的原厂复用物流系统，选项D适用于以废 玻璃瓶为代表的回送复用物流系统。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">6.</span>回收物流与废弃物流的特点包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_6" value="A"> A. 小型化、专用化的装运设备 B.简易的储存、包装要求 C.多样化的流通加工 D.低成本的要求 E.固定的流通线路</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_6').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_6">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>回收物流与废弃物流的特点共有四点，即选项ABCD。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">7.</span>与分销需求计划(DRP)相比，DRPⅡ在内容上增加了()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_7" value="A"> A. 车辆管理 B.仓储管理 C.物流能力计划 D.安全生产管理 E.成本核算系统</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_7').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_7">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>在具体内容上，DRPⅡ增加了车辆管理、仓储管理、物流能力计划、物 流优化辅助决策系统和成本核算系统。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">8.</span>分销需求计划输出的文件有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_8" value="A"> A. 生产企业资源文件 B.送货计划 C.库存处理信息 D.社会需求文件 E.订货进货计划</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_8').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_8">
+      <span class="ans-label">答案：BE</span>
+      <span class="exp-label">解析：</span>分销需求计划输出的文件有送货计划和订货进货计划。选项ACD属于输 入文件。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">9.</span>销售渠道的结构包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_9" value="A"> A. 生产者—消费者 B.供应者—生产者—消费者 C.生产者—零售商或批发商—消费者 D.生产者—批发商—零售商—消费者 E.供应者—生产者—批发商—零售商—消费者</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_9').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_9">
+      <span class="ans-label">答案：ACD</span>
+      <span class="exp-label">解析：</span>销售渠道的结构有三种，即选项ACD。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">10.</span>企业销售物流活动包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_10" value="A"> A. 信息处理 B.在制品储存 C.销售渠道 D.产品发送 E.包装</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_10').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_10">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>企业销售物流通过包装、成品储存、销售渠道、产品发送及相关信息的 处理等一系列环节实现销售活动。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">11.</span>准时制生产的基本方法包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_11" value="A"> A. 适时适量生产 B.质量保证 C.标准作业 D.生产进度看板 E.弹性配置作业人数</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_11').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_11">
+      <span class="ans-label">答案：ABE</span>
+      <span class="exp-label">解析：</span>准时制生产的基本方法包括适时适量生产、弹性配置作业人数、质量保 证。选项CD属于准时制生产的管理内容。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">12.</span>准时制生产方式定义的浪费包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_12" value="A"> A. 过量生产的浪费 B.搬运的浪费 C.库存的浪费 D.等待的浪费 E.人员的浪费</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_12').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_12">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>准时制生产方式定义的浪费包括过量生产的浪费、搬运的浪费、库存的 浪费、等待的浪费、过程的浪费、动作的浪费、产品缺陷的浪费。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">13.</span>影响生产物流的主要因素是()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_13" value="A"> A. 生产的类型 B.生产的规模 C.企业专业化与协作水平 D.原材料的质量 E.原材料的成本</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_13').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_13">
+      <span class="ans-label">答案：ABC</span>
+      <span class="exp-label">解析：</span>影响生产物流的主要因素有三个：生产的类型、生产规模、企业的专业 化与协作水平。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">14.</span>准时制采购的策略有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_14" value="A"> A. 减少供货商的数量 B.保证采购的质量 C.合理选择供货方 D.可靠的送货和特定的包装要求 E.大批量采购</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_14').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_14">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>本题考查准时制采购的策略。准时制采购的策略包括减少供货商的数量、 小批量采购、保证采购的质量、合理选择供货方、可靠的送货和特定的包装要求。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">15.</span>所有库存系统共有的组成部分有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_15" value="A"> A. 需求 B.补给 C.约束 D.成本 E.缺陷</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_15').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_15">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>在研究库存系统性质时，需求、补给、约束和成本是任何库存系统都共 有的组成部分。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">16.</span>库存物资的成本包含()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_16" value="A"> A. 物资价格 B.资金成本 C.人工成本 D.采购费用 E.保管费用</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_16').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_16">
+      <span class="ans-label">答案：ADE</span>
+      <span class="exp-label">解析：</span>库存物资的成本包含物资价格、采购费用和保管费用。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">17.</span>供应物流系统的结构构成包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_17" value="A"> A. 采购 B.供应 C.库存管理 D.仓库管理 E.销售管理</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_17').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_17">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>供应物流系统的结构构成包括采购、供应、库存管理、仓库管理。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">18.</span>企业界推进绿色物流的手段主要有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_18" value="A"> A. 通过车辆的有效利用减少车辆运行，提高配送效率和积载率 B.通过缩短商品检验时间、确保停车场地及配送工具等来缩短配送时间 C.通过同产业共同配送、异产业共同配送、地域内共同配送或由第三方物流企业 统一集发货，实现运输配送的合理化与最优化 D.通过联合运输、装载工具的标准化、包装尺寸的标准化等来实现物流个性化 E.通过第三方物流来实现运输集约化和库存集约化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_18').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_18">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>选项D的正确表述是“通过联合运输、装载工具的标准化、包装尺寸的 标准化等来实现物流标准化”。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">19.</span>第三方物流的基本特征有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_19" value="A"> A. 服务多样化 B.关系契约化 C.功能专业化 D.信息网络化 E.管理系统化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_19').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_19">
+      <span class="ans-label">答案：BCDE</span>
+      <span class="exp-label">解析：</span>第三方物流的基本特征之一是服务个性化，所以不选A。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">20.</span>现代物流的最新发展趋势有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_20" value="A"> A. 第二方物流 B.第三方物流 C.全球物流 D.关系物流 E.绿色物流</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_20').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_20">
+      <span class="ans-label">答案：BCE</span>
+      <span class="exp-label">解析：</span>现代物流的最新发展趋势有第三方物流、全球物流、绿色物流。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">21.</span>我国物流的发展可分为四个阶段，即()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_21" value="A"> A. 物流初期发展阶段 B.物流停滞阶段 C.物流复苏阶段 D.物流较快发展阶段 E.现代物流起步阶段</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_21').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_21">
+      <span class="ans-label">答案：ABDE</span>
+      <span class="exp-label">解析：</span>我国物流的发展可分为四个阶段，即物流初期发展阶段、物流停滞阶段、 物流较快发展阶段、现代物流起步阶段。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">22.</span>在理论上，人们认识到支撑企业竞争力的三大支柱是()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_22" value="A"> A. 物流 B.包装 C.生产 D.经营 E.营销</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_22').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_22">
+      <span class="ans-label">答案：ACD</span>
+      <span class="exp-label">解析：</span>在理论上，人们越来越清楚地认识到物流与经营、生产紧密相连，成为 支撑企业竞争力的三大支柱。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">23.</span>按主体物流活动的区别，企业生产活动中具体的物流活动主要有()<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_23" value="A"> A. 供应物流 B.销售物流 C.本地物流 D.电子物流 E.回收物流</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_23').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_23">
+      <span class="ans-label">答案：ABE</span>
+      <span class="exp-label">解析：</span>按主体物流活动的区别，企业物流可以区分为供应物流、销售物流、生 产物流、回收物流、废弃物流五种具体的物流活动。
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleAllAnswers(prefix) {
+  var answers = document.querySelectorAll('.quiz-q .answer');
+  answers.forEach(function(a, idx) {
+    if (a.id && a.id.startsWith('a_' + prefix + '_')) {
+      a.classList.toggle('show');
+    }
+  });
+}
+</script>
+</body>
+</html>

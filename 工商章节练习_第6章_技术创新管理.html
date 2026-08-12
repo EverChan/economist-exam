@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第6章：技术创新管理 · 章节练习</title>
+<style>
+  .nav-back {
+    position: fixed; top: 14px; left: 14px; z-index: 999;
+    background: rgba(44, 95, 127, 0.92); color: #fff; padding: 7px 14px;
+    border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: all 0.2s; backdrop-filter: blur(4px);
+  }
+  .nav-back:hover { background: rgba(44, 95, 127, 1); transform: translateY(-1px); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85;
+    padding: 20px 16px 60px; max-width: 780px; margin: 0 auto;
+  }
+  .header {
+    background: #fff; border-radius: 14px; padding: 28px 24px;
+    margin-bottom: 20px; border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block; font-size: 12px; color: #2c5f7f;
+    background: #e8f1f8; padding: 3px 10px; border-radius: 4px;
+    margin-bottom: 10px; font-weight: 500;
+  }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .header .stats {
+    display: flex; gap: 20px; margin-top: 14px;
+    font-size: 13px; color: #555;
+  }
+  .header .stats span { display: inline-flex; align-items: center; gap: 4px; }
+  .header .stats .badge {
+    background: #e8f1f8; color: #2c5f7f; padding: 2px 8px;
+    border-radius: 4px; font-weight: 600;
+  }
+  .section {
+    background: #fff; border-radius: 14px; padding: 24px;
+    margin-bottom: 16px; border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px; font-weight: 600; color: #1a1a1a;
+    margin-bottom: 16px; padding-bottom: 10px;
+    border-bottom: 2px solid #e8f1f8;
+  }
+  .quiz-q { margin-bottom: 24px; }
+  .quiz-q .q-text {
+    font-size: 14px; color: #1a1a1a; margin-bottom: 10px; font-weight: 500;
+  }
+  .quiz-q .q-text .num {
+    color: #2c5f7f; margin-right: 6px; font-weight: 600;
+  }
+  .quiz-q .q-text .type-tag {
+    font-size: 11px; color: #888; background: #f5f5f3;
+    padding: 1px 6px; border-radius: 3px; margin-left: 6px; font-weight: 400;
+  }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px; color: #444441; padding: 4px 0; cursor: pointer;
+    display: block;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #ecf5ef; border-radius: 8px; padding: 12px 14px;
+    margin-top: 8px; font-size: 13px; color: #085041; display: none;
+  }
+  .answer.show { display: block; }
+  .answer .ans-label { font-weight: 600; color: #4a8a5c; }
+  .answer .exp-label { font-weight: 600; color: #4a8a5c; margin-top: 6px; display: block; }
+  .btn-reveal {
+    font-size: 12px; color: #4a8a5c; background: #ecf5ef;
+    border: 1px solid #9fd4b0; border-radius: 6px;
+    padding: 4px 12px; cursor: pointer; margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9fd4b0; }
+  .btn-reveal-all {
+    font-size: 13px; color: #2c5f7f; background: #e8f1f8;
+    border: 1px solid #b5d4f4; border-radius: 8px;
+    padding: 8px 16px; cursor: pointer; margin-bottom: 16px;
+    display: block; width: 100%; text-align: center;
+  }
+  .btn-reveal-all:hover { background: #b5d4f4; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+<div class="header">
+  <span class="label">工商管理专业知识与实务</span>
+  <h1>第6章：技术创新管理</h1>
+  <div class="subtitle">章节练习题 · 共 80 题</div>
+  <div class="stats">
+    <span>单选题 <span class="badge">46</span></span>
+    <span>多选题 <span class="badge">34</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>一、单项选择题（共 46 题）</h2>
+  <button class="btn-reveal-all" onclick="toggleAllAnswers('single')">显示/隐藏全部答案</button>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">1.</span>我国《专利法》规定，发明专利权保护期限为()年，实用新型和外观设计专利 保护期限均为()年。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_1" value="A"> A. 10，20 B.10，10 C.20，10 D.20，20</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_1').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_1">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>我国《专利法》规定，发明专利权保护期限为20年，实用新型和外观设 计专利保护期限均为10年。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">2.</span>我国《商标法》规定，注册商标的有效期为()年。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_2" value="A"> A. 25 B.20 C.15 D.10</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_2').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_2">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>我国商标法规定，注册商标的有效期为 10 年，但期满前可以续展 10 年， 并且也可以一直续展下去。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">3.</span>知识产权的组成部分中，保护费用最高的是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_3" value="A"> A. 商标 B.专利 C.商业秘密 D.技术措施</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_3').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_3">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查企业知识产权的保护策略。在实施过程中，专利的保护费用最 高，其次是商标、技术措施、商业秘密保护。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">4.</span>当事人之间共同就新技术、新产品、新工艺或者新材料及其系统的研究开发所 订立的合同称为()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_4" value="A"> A. 委托开发合同 B.合作开发合同 C.技术咨询合同 D.技术服务合同</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_4').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_4">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>委托开发合同是指当事人之间共同就新技术、新产品、新工艺或者新材 料及其系统的研究开发所订立的合同。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">5.</span>专利权转让合同必须经过()方才有效。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_5" value="A"> A. 专利局登记和公告 B.专利行政部门登记 C.工商局登记 D.税务局登记并公告</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_5').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_5">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>专利权转让合同必须经过专利行政部门登记方才有效。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">6.</span>一方当事人(受托方)以技术知识为另一方(委托方)解决特定技术问题所订立的合 同称为()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_6" value="A"> A. 技术咨询合同 B.技术服务合同 C.技术开发合同 D.技术中介合同</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_6').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_6">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查技术服务合同的含义。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">7.</span>适宜于产品创新而不适宜于工艺创新的组织结构是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_7" value="A"> A. 直线制组织结构 B.事业部制组织结构 C.矩阵制组织结构 D.规划—目标结构组织</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_7').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_7">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查技术创新与企业组织结构。事业部制组织结构适宜于产品创新 而不适宜于工艺创新。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">8.</span>既适宜于产品创新而适宜于工艺创新的组织结构是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_8" value="A"> A. 规划—目标结构组织 B.事业部制组织结构 C.矩阵制组织结构 D.直线制组织结构</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_8').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_8">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>矩阵结构既有利于产品创新，也适宜开展工艺创新。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">9.</span>如果企业的资金比较充足，实力雄厚，企业内部又有较多的技术人员，可以采 用的内部技术创新组织模式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_9" value="A"> A. 内企业家 B.技术创新小组 C.新事业发展部 D.企业技术中心</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_9').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_9">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>如果企业的资金比较充足，实力雄厚，企业内部又有较多的技术人员， 可以采用的内部技术创新组织模式是内企业家。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">10.</span>所谓()，是指为完成某一创新项目临时从各部门抽调若干专业人员而成立的一 种创新组织。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_10" value="A"> A. 内企业家 B.技术创新小组 C.新事业发展部 D.企业技术中心</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_10').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_10">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查技术创新小组的含义。所谓技术创新小组是指为完成某一创新 项目临时从各部门抽调若干专业人员而成立的一种创新组织。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">11.</span>()在本企业的科技开发活动中，起着主导和牵头作用，具有权威性，处于核心 和中心地位。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_11" value="A"> A. 内企业家 B.技术创新小组 C.新事业发展部 D.企业技术中心</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_11').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_11">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>本题考查企业技术中心的地位。企业技术中心在本企业的科技开发活动 中，起着主导和牵头作用，具有权威性，处于核心和中心地位。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">12.</span>企业联盟的主要形式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_12" value="A"> A. 创新联盟 B.生产联盟 C.人员联盟 D.技术联盟</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_12').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_12">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>企业联盟的主要形式是技术联盟。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">13.</span>垂直供应链型的企业适宜采用的企业联盟模式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_13" value="A"> A. 平行模式 B.联邦模式 C.星形模式 D.网络模式</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_13').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_13">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查企业联盟的模式。垂直供应链型的企业适宜采用星形模式。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">14.</span>企业联盟有若干组织运行模式，适用于快速开发高新技术产品的模式是()<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_14" value="A"> A. 星形模式 B.链形模式 C.平行模式 D.联邦模式</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_14').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_14">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>联邦模式可用于高新技术产品的快速联合开发。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">15.</span>在R&amp;D项目管理实施过程，()是项目生命周期中时间最长、完成的工作量最 大、资源消耗最多的阶段。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_15" value="A"> A. 开发阶段 B.概念阶段 C.实施阶段 D.结束阶段</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_15').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_15">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>实施阶段是项目生命周期中时间最长、完成的工作量最大、资源消耗最 多的阶段。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">16.</span>为了提高企业的R&amp;D绩效，许多企业采取了各种管理工具、技术和组织模式 应用于企业的R&amp;D活动中，其中不包括()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_16" value="A"> A. 质量功能部署 B.关键路径法 C.客户评价法 D.标杆超越法</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_16').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_16">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>改善企业R&amp;D绩效水平的管理工具有质量功能部署、客户评价法、关键 路径法和集成产品设计等。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">17.</span>技术在国家、地区、行业内部或之间以及技术自身系统内输出与输入的活动过 程，包括技术成果、信息、能力的转让、移植、引进、交流和推广普及。这种情况是 ()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_17" value="A"> A. 技术转移 B.技术扩散 C.技术转让 D.技术交易</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_17').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_17">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>本题考查技术转移的含义。技术转移是指技术在国家、地区、行业内部 或之间以及技术自身系统内输出与输入的活动过程，包括技术成果、信息、能力的转 让、移植、引进、交流和推广普及。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">18.</span>技术转移的主要形式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_18" value="A"> A. 无偿转移 B.有偿转移 C.有意识转移 D.无意识转移</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_18').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_18">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>技术转移的主要形式是有偿转移。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">19.</span>()是指拥有技术的一方通过某种方式将其技术出让给另一方使用的行为。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_19" value="A"> A. 技术转移 B.技术扩散 C.技术转让 D.技术引进</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_19').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_19">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查技术转让的含义。技术转让是指拥有技术的一方通过某种方式 将其技术出让给另一方使用的行为。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">20.</span>只从国外购入机器设备而不买入软件技术的行为，一般称为()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_20" value="A"> A. 技术引进 B.技术转移 C.设备进口 D.设备转移</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_20').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_20">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查设备进口的含义。只从国外购入机器设备而不买入软件技术的 行为，一般称为设备进口。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">21.</span>技术转移中效果较好和最有前景的途径之一是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_21" value="A"> A. 产学研联盟 B.创办新企业 C.技术许可证 D.信息传播</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_21').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_21">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>产学研联盟是技术转移中效果较好和最有前景的途径之一。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">22.</span>技术转移方式中，对弱小企业难以实施的方式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_22" value="A"> A. 信息传播 B.技术帮助 C.技术并购 D.创办新企业</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_22').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_22">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>技术并购方式对弱小企业难以实施。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">23.</span>技术供需双方对技术所有权、使用权和收益权进行转移的契约行为称为()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_23" value="A"> A. 技术扩散 B.技术转让 C.技术转移 D.技术交易</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_23').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_23">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>本题考查技术交易的含义。技术交易是指技术供需双方对技术所有权、 使用权和收益权进行转移的契约行为。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">24.</span>在技术交易程序中，卖者技术交易的首要程序是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_24" value="A"> A. 根据市场需求和经营机构的客观情况来确定经营目标 B.进入卖方成果库，查找本企业需要的技术 C.在选择技术之前弄清本企业资源优势、现有设备和销售渠道，明白需要什么技 术 D.寻求法律援助，找律师事务所</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_24').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_24">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>本题考查技术交易的基本程序。选项BCD都是买者技术交易的程序，其 中选项C是其首要程序。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">25.</span>在我国，专利权是以()原则授予的。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_25" value="A"> A. 申请在先 B.举证在先 C.使用在先 D.收益大小</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_25').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_25">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>在我国，专利权是以申请在先原则授予的。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">26.</span>特许专营的被特许方与特许方之间是一种()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_26" value="A"> A. 联盟关系 B.买卖关系 C.委托代理关系 D.母子公司关系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_26').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_26">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>特许专营的被特许方与特许方之间是一种买卖关系。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">27.</span>熊彼特认为，创新的目的是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_27" value="A"> A. 扩大市场 B.降低成本 C.获取潜在的利润 D.树立品牌形象</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_27').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_27">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>熊彼特认为，“创新”就是把生产要素和生产条件的新组合引入生产体 系，即“建立一种新的生产函数”，其目的是为了获取潜在的利润。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">28.</span>新产品的图纸、说明书是在()阶段产出的可度量成果。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_28" value="A"> A. 基础研究 B.发明 C.开发 D.创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_28').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_28">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查研究、发明、开发和创新的投入产出。新产品的图纸、说明书 是在开发阶段产出的可度量成果。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">29.</span>在研究、发明、开发和创新活动中，专利申请、论文、报告是在()阶段产出的 可度量成果。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_29" value="A"> A. 基础研究 B.发明 C.开发 D.创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_29').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_29">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查研究、发明、开发和创新的投入产出。专利申请、论文、报告 是在发明阶段产出的可度量成果。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">30.</span>工厂企业开发部门从事发展性开发属于短期创新，一般需要()年。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_30" value="A"> A. 2～3 B.5 C.6 D.8～10</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_30').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_30">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>工厂企业开发部门从事发展性开发属于短期创新，一般需要2～3年。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">31.</span>应用性技术开发属于中期创新，大概需要()年左右。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_31" value="A"> A. 2～3 B.5 C.8～10 D.6</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_31').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_31">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>应用性技术开发属于中期创新，大概需要5年左右。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">32.</span>由火柴盒包装箱发展起来的集装箱是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_32" value="A"> A. 产品创新 B.工艺创新 C.资本节约型技术创新 D.劳动节约型技术创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_32').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_32">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>由包装箱发展为集装箱属于产品创新中的渐进的产品创新。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">33.</span>由收音机发展到组合音响是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_33" value="A"> A. 资本节约型技术创新 B.劳动节约型技术创新 C.产品创新 D.工艺创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_33').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_33">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查产品创新。渐进(改进)的产品创新是指在技术原理没有重大变 化的情况下，基于市场需要对现有产品所做的功能上的扩展和技术上的改进。由收音 机发展到组合音响就属于这类创新。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">34.</span>企业创新的经验表明，企业创新的核心活动是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_34" value="A"> A. 管理创新 B.制度创新 C.产品创新 D.工艺创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_34').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_34">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>产品创新是企业创新的核心活动。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">35.</span>工艺创新，也称为()，是指产品的生产技术变革。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_35" value="A"> A. 原始创新 B.集成创新 C.过程创新 D.管理创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_35').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_35">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查工艺创新。工艺创新，也称为过程创新，是指产品的生产技术 变革。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">36.</span>在产品随生命周期的成长变化中，产品创新和工艺创新频率的变化规律是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_36" value="A"> A. 产品创新频率由低到高递增，工艺创新频率呈谷状延伸 B.产品创新频率由高到低递减，工艺创新频率呈峰状延伸 C.产品创新频率呈峰状延伸，工艺创新频率由高到低递减 D.产品创新频率呈谷状延伸，工艺创新频率由低到高递增</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_36').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_36">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查产品创新和工艺创新的关系。产品创新频率由高到低递减，工 艺创新频率呈峰状延伸。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">37.</span>集成创新的主体是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_37" value="A"> A. 国家 B.集体 C.企业 D.个人</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_37').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_37">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>集成创新的主体是企业。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">38.</span>最常见、最基本的创新形式是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_38" value="A"> A. 产品创新 B.引进、消化吸收再创新 C.原始创新 D.集成创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_38').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_38">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>引进、消化吸收再创新是最常见、最基本的创新形式。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">39.</span>()为科技创新提供动力源泉。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_39" value="A"> A. 产品创新 B.引进消化吸收再创新 C.原始创新 D.集成创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_39').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_39">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>原始创新为科技创新提供动力源泉。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">40.</span>需求拉动的创新过程模型指明技术创新活动的出发点是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_40" value="A"> A. 基础研究 B.应用研究 C.生产制造 D.市场需求</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_40').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_40">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>需求拉动的创新过程模型指明市场需求信息是技术创新活动的出发点。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">41.</span>研究开发是创新构思的主要来源，这是()创新过程模型的基本观点。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_41" value="A"> A. 系统集成和网络模型 B.国家创新系统 C.需求拉动 D.技术推动</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_41').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_41">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>本题考查六代具有代表性的创新过程模型。技术推动的创新过程模型的 基本观点是，研究开发是创新构思的主要来源。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">42.</span>创新过程的交互作用模型表明()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_42" value="A"> A. 技术创新是技术和市场交互作用共同引发的 B.市场需求信息是技术创新活动的出发点 C.研究开发是创新构思的主要来源 D.创新模型内各要素应该具有平行且整合发展的特性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_42').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_42">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>创新过程的交互作用模型表明，技术创新是技术和市场交互作用共同引 发的。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">43.</span>交互作用创新过程模型的研发组织一般为()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_43" value="A"> A. 企业研究实验室 B.业务单元 C.研发项目 D.企业联盟</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_43').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_43">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>交互作用创新过程模型的研发组织一般为研发项目。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">44.</span>在技术创新过程模型中，()最为显著的特征是它代表了创新的电子化和信息化 过程，更多地使用专家系统来辅助开发工作，仿真模拟技术部分替代了实物原型。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_44" value="A"> A. 一体化创新过程模式 B.系统集成和网络模型 C.需求拉动的创新过程模型 D.交互作用模式</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_44').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_44">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>本题考查系统集成和网络模型的显著特征。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">45.</span>在2006年我国颁布的《国家中长期科学和技术发展规划纲要》中，明确指出() 是科学创新体系的主体。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_45" value="A"> A. 企业 B.政府 C.科研机构和大学 D.中介机构</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_45').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_45">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>本题考查国家创新体系。我国国家创新体系的组织安排包括六个系统和 四个基础平台，其中六个系统之一是以科研机构和大学为主体的科学创新体系。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">46.</span>适宜工艺创新不利于产品创新的组织结构是()。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_46" value="A"> A. 直线制 B.职能制 C.矩阵结构 D.事业部制</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_46').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_46">
+      <span class="ans-label">答案：A</span>
+      <span class="exp-label">解析：</span>直线制组织结构适宜工艺创新不利于产品创新。
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>二、多项选择题（共 34 题）</h2>
+  <button class="btn-reveal-all" onclick="toggleAllAnswers('multi')">显示/隐藏全部答案</button>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">1.</span>知识产权的特征主要有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_1" value="A"> A. 专有性 B.永久性 C.地域性 D.知识产权的获得需要法定的程序 E.知识产权主体权利具有财产和人身双重权利</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_1').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_1">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>知识产权具有时间性，而不是永久性。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">2.</span>技术创新小组的主要特点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_2" value="A"> A. 技术创新小组组成人员少，工作效率高 B.技术创新小组是一个长期性组织 C.技术创新小组是一个开放性组织 D.技术创新小组是一种典型的简单矩阵式结构 E.技术创新小组多为扁平型</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_2').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_2">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>技术创新小组是一个短期性组织，所以选项B不选。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">3.</span>企业外部的技术创新组织模式有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_3" value="A"> A. “产”、“学”、“研”联盟 B.企业—政府模式 C.技术创新小组 D.新事业发展部 E.企业联盟</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_3').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_3">
+      <span class="ans-label">答案：ABE</span>
+      <span class="exp-label">解析：</span>本题考查企业外部的技术创新组织模式。选项CD属于企业内部的技术创 新组织模式。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">4.</span>两个或两个以上对等经济实体，为了共同的战略目标，通过各种协议而结成的 利益共享、风险共担、要素水平式双向或多向流动的松散型网络组织体。这称为()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_4" value="A"> A. 企业联盟 B.动态联盟 C.虚拟企业 D.战略伙伴 E.网络联盟</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_4').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_4">
+      <span class="ans-label">答案：ABC</span>
+      <span class="exp-label">解析：</span>本题考查企业联盟的含义。企业联盟也称为动态联盟或虚拟企业。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">5.</span>企业联盟的主要特点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_5" value="A"> A. 目标产品性 B.优势性 C.临时性 D.结构的高耸性 E.组织的柔性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_5').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_5">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>企业联盟的主要特点是：目标产品性、优势性、连续的虚拟性、组织的 柔性、结构是扁平性的。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">6.</span>一般而言，企业联盟的组织运行模式有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_6" value="A"> A. 矩形模式 B.星形模式 C.交叉模式 D.平行模式 E.联邦模式</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_6').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_6">
+      <span class="ans-label">答案：BDE</span>
+      <span class="exp-label">解析：</span>本题考查企业联盟的组织运行模式。企业联盟的组织运行模式包括星形 模式、平行模式和联邦模式三种类型。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">7.</span>要顺利完成一个R&amp;D项目，需要六种人，包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_7" value="A"> A. 项目协调者 B.创新思想家 C.市场看门人 D.项目拥护人 E.内企业家</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_7').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_7">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>要顺利完成一个 R&amp;D 项目，需要六种人，即：创新思想家、技术看门人、 市场看门人、项目拥护人、项目管理者和项目协调者。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">8.</span>企业管理者主要根据R&amp;D人员的()等几个方面进行绩效评估。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_8" value="A"> A. 技术创新项目计划完成进度 B.项目完成质量 C.出勤率 D.经验水平 E.团队协作精神</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_8').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_8">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>本题考查R&amp;D人员绩效评价方法。企业管理者主要根据R&amp;D人员的技 术创新项目计划完成进度、项目完成质量、出勤率和团队协作精神等几个方面进行绩 效评估。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">9.</span>R&amp;D项目可分为()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_9" value="A"> A. 国际级R&amp;D项目 B.国家级R&amp;D项目 C.区域级R&amp;D项目 D.省级R&amp;D项目 E.企业级R&amp;D项目</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_9').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_9">
+      <span class="ans-label">答案：BDE</span>
+      <span class="exp-label">解析：</span>本题考查R&amp;D项目的类型。R&amp;D项目可分为国家级R&amp;D项目、省级 R&amp;D项目和企业级R&amp;D项目。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">10.</span>R&amp;D项目管理实施过程包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_10" value="A"> A. 反馈阶段 B.实施阶段 C.开发阶段 D.概念阶段 E.结束阶段</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_10').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_10">
+      <span class="ans-label">答案：BCDE</span>
+      <span class="exp-label">解析：</span>项目管理实施过程分为四个阶段：概念阶段、开发阶段、实施阶段、结 束阶段。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">11.</span>在项目管理实施过程中，实施阶段管理的重点是()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_11" value="A"> A. 指导 B.监督 C.控制 D.预测 E.决策</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_11').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_11">
+      <span class="ans-label">答案：ABCD</span>
+      <span class="exp-label">解析：</span>实施阶段管理的重点是指导、监督、预测、控制。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">12.</span>R&amp;D的绩效指标应涵盖()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_12" value="A"> A. 效益 B.柔性 C.质量 D.数量 E.创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_12').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_12">
+      <span class="ans-label">答案：BCE</span>
+      <span class="exp-label">解析：</span>R&amp;D的绩效指针应涵盖效率、质量、柔性、创新。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">13.</span>技术转移的特点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_13" value="A"> A. 它是一个复杂的过程，具有综合性 B.技术转移的主要形式是有偿转移 C.兼有技术创新和制度创新的双重特点 D.具有专业性 E.具有系统性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_13').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_13">
+      <span class="ans-label">答案：ABC</span>
+      <span class="exp-label">解析：</span>技术转移的特点之一是综合性，所以不选D;且不包括系统性，所以不选 E。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">14.</span>技术转移的方式中，技术帮助的优点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_14" value="A"> A. 能在关键时刻满足企业的特殊需要 B.可减少企业获取技术的成本 C.能促进人员之间的技术交流 D.能找到合适的专家参与 E.管理较为容易</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_14').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_14">
+      <span class="ans-label">答案：ABC</span>
+      <span class="exp-label">解析：</span>本题考查技术转移方式中技术帮助的优点。技术帮助的缺点有难以找到 合适的专家参与、管理较为困难，所以选项DE不选。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">15.</span>影响技术转移成功的客观规律包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_15" value="A"> A. 技术转移的梯度最大律 B.技术转移的信息传递律 C.技术转移的适用律 D.技术转移的风险律 E.技术转移的加速律</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_15').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_15">
+      <span class="ans-label">答案：BCDE</span>
+      <span class="exp-label">解析：</span>影响技术转移成功的客观规律主要有技术转移的梯度最小律、信息传递 律、人才载体律、适用律、引力最大律、创新发展律、风险律、保密与传播矛盾律、 加速律。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">16.</span>技术交易的主要特点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_16" value="A"> A. 技术出口不是企业的直接目的 B.技术贸易比一般商品贸易复杂 C.技术贸易转让的是技术的所有权 D.技术买卖的标的可以是有形的商品，也可以是无形的技术知识 E.只有当企业认为出售技术会比利用这种技术生产产品带来的利润更大时，它才 会出口这种技术</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_16').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_16">
+      <span class="ans-label">答案：ABE</span>
+      <span class="exp-label">解析：</span>本题考查技术交易的主要特点。技术贸易转让的是技术的使用权，而不 能转让技术的所有权，所以选项C不选。技术买卖的标的不是有形的商品，而是无形 的技术知识，所以选项D错误。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">17.</span>国际技术贸易的内容包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_17" value="A"> A. 专有技术 B.人身权 C.专利技术 D.商标 E.以上选项都对</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_17').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_17">
+      <span class="ans-label">答案：ACD</span>
+      <span class="exp-label">解析：</span>国际技术贸易的内容包括专利、商标、工业产权、专有技术。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">18.</span>商标大体上可分为三类，即()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_18" value="A"> A. 制造商标 B.生产商标 C.商业商标 D.工业商标 E.服务商标</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_18').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_18">
+      <span class="ans-label">答案：ACE</span>
+      <span class="exp-label">解析：</span>商标大体上可分为三类：制造商标、商业商标和服务商标。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">19.</span>工业产权包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_19" value="A"> A. 专利权 B.商标权 C.版权 D.知识产权 E.专有权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_19').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_19">
+      <span class="ans-label">答案：AB</span>
+      <span class="exp-label">解析：</span>专利权和商标权均属工业产权。工业产权和版权合称为知识产权。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">20.</span>根据授权程度大小，许可贸易可分为()、可转让许可、互换许可五种形式。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_20" value="A"> A. 独占许可 B.排他许可 C.普通许可 D.专利许可 E.商标许可</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_20').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_20">
+      <span class="ans-label">答案：ABC</span>
+      <span class="exp-label">解析：</span>根据其授权程度大小，许可贸易可分为独占许可、排他许可、普通许可、 可转让许可、互换许可五种形式。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">21.</span>熊彼特提出的“创新”或生产要素的新组合包括五种情况，即()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_21" value="A"> A. 产品创新 B.人员创新 C.市场创新 D.开发新的资源 E.组织管理创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_21').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_21">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>创新包括五种情况：①产品创新;⑦工艺创新或生产技术创新;③市场创新; ④开发新的资源;⑤组织管理创新。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">22.</span>技术创新的特点包括()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_22" value="A"> A. 技术创新是一种经济行为 B.技术创新是一项低风险活动 C.技术创新时间的差异性 D.一体化与国际化 E.外部性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_22').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_22">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>技术创新是一项高风险活动。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">23.</span>根据技术创新的对象来划分，可以将技术创新分为()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_23" value="A"> A. 引进消化吸收再创新 B.原始创新 C.产品创新 D.集成创新 E.工艺创新</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_23').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_23">
+      <span class="ans-label">答案：CE</span>
+      <span class="exp-label">解析：</span>根据技术创新的对象来划分，可以将技术创新分为产品创新与工艺创新。 选项CDE是根据创新模式的不同划分的。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">24.</span>下列关于产品创新和工艺创新关系的表述，正确的有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_24" value="A"> A. 产品创新频率由高到低递减，工艺创新频率呈峰状延伸 B.产品创新主要是向市场提供产品，工艺创新只在少数情况下向市场提供 C.产品创新通常伴随着组织管理系统的重大变革，工艺创新一般是独立于组织系 统实施的 D.产品创新能制造产品的差异化，工艺创新可以降低企业的成本 E.工艺创新相对独立，产品创新相对系统</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_24').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_24">
+      <span class="ans-label">答案：ABD</span>
+      <span class="exp-label">解析：</span>工艺创新通常伴随着组织管理系统的重大变革，产品创新一般是独立于 组织系统实施的，所以选项C错误。产品创新相对独立，工艺创新相对系统，所以选 项E错误。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">25.</span>原始创新是为未来发展奠定坚实基础的创新，其本质属性是()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_25" value="A"> A. 基础性 B.原创性 C.第一性 D.先进性 E.集成性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_25').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_25">
+      <span class="ans-label">答案：BC</span>
+      <span class="exp-label">解析：</span>原始创新是为未来发展奠定坚实基础的创新，其本质属性是原创性和第 一性。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">26.</span>最常见的、也是企业愿意采用的技术创新模式有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_26" value="A"> A. 国家创新系统 B.技术推动 C.交互作用 D.需求拉动 E.系统集成和网络模型</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_26').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_26">
+      <span class="ans-label">答案：BCD</span>
+      <span class="exp-label">解析：</span>在六代具有代表性的创新过程模型中，技术推动、需求拉动和交互作用 是最常见的、也是企业愿意采用的技术创新模式。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">27.</span>一体化创新过程模型的特点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_27" value="A"> A. 它代表了创新的电子化和信息化过程 B.在过程中联合供货商及公司内部的横向合作，广泛进行交流与沟通 C.市场需求信息是技术创新活动的出发点 D.实行全球战略，联合供货商及用户，整合及协调不同部门在项目中的工作 E.将投资的侧重点放在核心业务和核心技术上面</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_27').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_27">
+      <span class="ans-label">答案：BDE</span>
+      <span class="exp-label">解析：</span>本题考查一体化创新过程模型的特点。选项A是系统集成和网络模型最 为显著的特征。选项C是需求拉动创新过程模型的观点。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">28.</span>企业技术创新过程的系统集成和网络模型最显著的特征有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_28" value="A"> A. 强调企业内部的创新构思、研究与开发、设计制造和市场营销等紧密配合 B.代表了创新的电子化和信息化过程 C.更多地使用专家系统来辅助开发工作 D.重视技术推动和需求推动在产品生产周期不同阶段的不同作用 E.仿真模型技术部分替代了实物原型</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_28').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_28">
+      <span class="ans-label">答案：BCE</span>
+      <span class="exp-label">解析：</span>本题考查系统集成和网络模型。系统集成和网络模型最为显著的特征是 它代表了创新的电子化和信息化过程，更多地使用专家系统来辅助开发工作，仿真模 型技术部分替代了实物原型。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">29.</span>我国国家创新体系的组织安排包括六个系统，即()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_29" value="A"> A. 以企业为主导的管理调控体系 B.以政府为主体，产学研互动的技术创新体系 C.以科研机构和大学为主体的科学创新体系 D.军民结合的科技创新体系 E.具有地域特色的区域创新体系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_29').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_29">
+      <span class="ans-label">答案：CDE</span>
+      <span class="exp-label">解析：</span>六个系统是 (1)以政府为主导的管理调控体系 (2)以企业为主体，产学研互动的技术创新体系 (3)以科研机构和大学为主体的科学创新体系 (4)以各种中介机构为纽带的科技服务体系 (5)军民结合的科技创新体系 (6)具有地域特色的区域创新体系。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">30.</span>在2006年我国颁布的《国家中长期科学和技术发展规划纲要》中，明确指出 的基础是()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_30" value="A"> A. 共享的平台基础 B.人才基础 C.政策法规基础 D.制度基础 E.文化基础</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_30').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_30">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>本题考查我国国家创新体系的组织安排中包括的四个基础平台。这四个 基础平台包括共享的平台基础、人才基础、政策法规基础、文化基础。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">31.</span>直线制组织结构的优点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_31" value="A"> A. 结构比较简单 B.责任分明 C.命令统一 D.变化反应快 E.权力分散</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_31').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_31">
+      <span class="ans-label">答案：ABC</span>
+      <span class="exp-label">解析：</span>本题考查直线制组织结构的优点。直线制具有变化反应慢、权力过分集 中的缺点，所以选项DE不选。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">32.</span>与简单技术相适应的直线制组织结构的缺点有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_32" value="A"> A. 管理人员多 B.组织不稳定 C.缺乏横向联系 D.变化反应慢 E.权力过分集中</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_32').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_32">
+      <span class="ans-label">答案：CDE</span>
+      <span class="exp-label">解析：</span>选项A是事业部制的缺点，选项B是矩阵结构的缺点。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">33.</span>事业部制组织结构适应的企业有()。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_33" value="A"> A. 小型企业 B.大中型企业 C.特大型企业 D.协作性组织 E.复杂性组织</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_33').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_33">
+      <span class="ans-label">答案：BC</span>
+      <span class="exp-label">解析：</span>选项A适合于直线制组织结构，选项DE适合于矩阵结构。
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">34.</span>矩阵结构的优点有()<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_34" value="A"> A. 密切配合 B.命令统一 C.反应灵敏 D.节约资源 E.高效工作</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_34').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_34">
+      <span class="ans-label">答案：ACDE</span>
+      <span class="exp-label">解析：</span>选项B属于直线制组织结构的优点。
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleAllAnswers(prefix) {
+  var answers = document.querySelectorAll('.quiz-q .answer');
+  answers.forEach(function(a, idx) {
+    if (a.id && a.id.startsWith('a_' + prefix + '_')) {
+      a.classList.toggle('show');
+    }
+  });
+}
+</script>
+</body>
+</html>

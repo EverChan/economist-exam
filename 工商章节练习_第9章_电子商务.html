@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第9章：电子商务 · 章节练习</title>
+<style>
+  .nav-back {
+    position: fixed; top: 14px; left: 14px; z-index: 999;
+    background: rgba(44, 95, 127, 0.92); color: #fff; padding: 7px 14px;
+    border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: all 0.2s; backdrop-filter: blur(4px);
+  }
+  .nav-back:hover { background: rgba(44, 95, 127, 1); transform: translateY(-1px); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8; color: #2c2c2a; line-height: 1.85;
+    padding: 20px 16px 60px; max-width: 780px; margin: 0 auto;
+  }
+  .header {
+    background: #fff; border-radius: 14px; padding: 28px 24px;
+    margin-bottom: 20px; border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block; font-size: 12px; color: #2c5f7f;
+    background: #e8f1f8; padding: 3px 10px; border-radius: 4px;
+    margin-bottom: 10px; font-weight: 500;
+  }
+  .header h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; color: #888780; }
+  .header .stats {
+    display: flex; gap: 20px; margin-top: 14px;
+    font-size: 13px; color: #555;
+  }
+  .header .stats span { display: inline-flex; align-items: center; gap: 4px; }
+  .header .stats .badge {
+    background: #e8f1f8; color: #2c5f7f; padding: 2px 8px;
+    border-radius: 4px; font-weight: 600;
+  }
+  .section {
+    background: #fff; border-radius: 14px; padding: 24px;
+    margin-bottom: 16px; border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px; font-weight: 600; color: #1a1a1a;
+    margin-bottom: 16px; padding-bottom: 10px;
+    border-bottom: 2px solid #e8f1f8;
+  }
+  .quiz-q { margin-bottom: 24px; }
+  .quiz-q .q-text {
+    font-size: 14px; color: #1a1a1a; margin-bottom: 10px; font-weight: 500;
+  }
+  .quiz-q .q-text .num {
+    color: #2c5f7f; margin-right: 6px; font-weight: 600;
+  }
+  .quiz-q .q-text .type-tag {
+    font-size: 11px; color: #888; background: #f5f5f3;
+    padding: 1px 6px; border-radius: 3px; margin-left: 6px; font-weight: 400;
+  }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px; color: #444441; padding: 4px 0; cursor: pointer;
+    display: block;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #ecf5ef; border-radius: 8px; padding: 12px 14px;
+    margin-top: 8px; font-size: 13px; color: #085041; display: none;
+  }
+  .answer.show { display: block; }
+  .answer .ans-label { font-weight: 600; color: #4a8a5c; }
+  .answer .exp-label { font-weight: 600; color: #4a8a5c; margin-top: 6px; display: block; }
+  .btn-reveal {
+    font-size: 12px; color: #4a8a5c; background: #ecf5ef;
+    border: 1px solid #9fd4b0; border-radius: 6px;
+    padding: 4px 12px; cursor: pointer; margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9fd4b0; }
+  .btn-reveal-all {
+    font-size: 13px; color: #2c5f7f; background: #e8f1f8;
+    border: 1px solid #b5d4f4; border-radius: 8px;
+    padding: 8px 16px; cursor: pointer; margin-bottom: 16px;
+    display: block; width: 100%; text-align: center;
+  }
+  .btn-reveal-all:hover { background: #b5d4f4; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+<div class="header">
+  <span class="label">工商管理专业知识与实务</span>
+  <h1>第9章：电子商务</h1>
+  <div class="subtitle">章节练习题 · 共 6 题</div>
+  <div class="stats">
+    <span>单选题 <span class="badge">3</span></span>
+    <span>多选题 <span class="badge">3</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>一、单项选择题（共 3 题）</h2>
+  <button class="btn-reveal-all" onclick="toggleAllAnswers('single')">显示/隐藏全部答案</button>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">1.</span>以下选项中，( )是政府的电子商务行为，不以营利为目的，主要包括政府 采购、网上报关、报税等。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_1" value="A"> A. O2O</label>
+      <label class="option"><input type="radio" name="single_1" value="B"> B. B2C</label>
+      <label class="option"><input type="radio" name="single_1" value="C"> C. C2G</label>
+      <label class="option"><input type="radio" name="single_1" value="D"> D. C2C</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_1').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_1">
+      <span class="ans-label">答案：C</span>
+      <span class="exp-label">解析：</span>C2G模式是公民与政府之间的电子商务模式，不以营利为目的，主
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">2.</span>在网络营销策略组合中的产品形态中，适合做网上销售的产品的特点不包括 ( )。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_2" value="A"> A. 产品标准化</label>
+      <label class="option"><input type="radio" name="single_2" value="B"> B. 重构性</label>
+      <label class="option"><input type="radio" name="single_2" value="C"> C. 时尚性</label>
+      <label class="option"><input type="radio" name="single_2" value="D"> D. 高端性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_2').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_2">
+      <span class="ans-label">答案：D</span>
+      <span class="exp-label">解析：</span>适合网上销售的产品有信息产品、有形产品和网上服务。由于顾
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">3.</span>以下网络市场调查方法中，不属于直接调研的方法是( )。<span class="type-tag">单选</span></div>
+    <div class="options">
+      <label class="option"><input type="radio" name="single_3" value="A"> A. 专题讨论法</label>
+      <label class="option"><input type="radio" name="single_3" value="B"> B. 访问网站</label>
+      <label class="option"><input type="radio" name="single_3" value="C"> C. 网上实验法</label>
+      <label class="option"><input type="radio" name="single_3" value="D"> D. 在线问卷法</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_single_3').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_single_3">
+      <span class="ans-label">答案：B</span>
+      <span class="exp-label">解析：</span>网络市场直接调研指的是在互联网上收集一手资料或原始信息的过
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>二、多项选择题（共 3 题）</h2>
+  <button class="btn-reveal-all" onclick="toggleAllAnswers('multi')">显示/隐藏全部答案</button>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">1.</span>网络营销的特点包括( )。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_1" value="A"> A. 个性化</label>
+      <label class="option"><input type="checkbox" name="multi_1" value="B"> B. 跨时域性</label>
+      <label class="option"><input type="checkbox" name="multi_1" value="C"> C. 交互式</label>
+      <label class="option"><input type="checkbox" name="multi_1" value="D"> D. 经济性</label>
+      <label class="option"><input type="checkbox" name="multi_1" value="E"> E. 多维性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_1').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_1">
+      <span class="ans-label">答案：ABCDE</span>
+      <span class="exp-label">解析：</span>网络营销的特点包括：(1)跨时域性、(2)交互式、(3)个性化、
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">2.</span>网络营销中，产品和服务的定价要考虑的因素有( )。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_2" value="A"> A. 国际化</label>
+      <label class="option"><input type="checkbox" name="multi_2" value="B"> B. 趋低化</label>
+      <label class="option"><input type="checkbox" name="multi_2" value="C"> C. 弹性化</label>
+      <label class="option"><input type="checkbox" name="multi_2" value="D"> D. 竞争化</label>
+      <label class="option"><input type="checkbox" name="multi_2" value="E"> E. 价格解释体系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_2').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_2">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>网络营销中产品和服务的定价要考虑以下因素：(1)国际化、(2)
+    </div>
+  </div>
+
+  <div class="quiz-q">
+    <div class="q-text"><span class="num">3.</span>外国电子商务技术标准包含了( )。<span class="type-tag">多选</span></div>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="multi_3" value="A"> A. EDI标准</label>
+      <label class="option"><input type="checkbox" name="multi_3" value="B"> B. 商品编码标准(HS)</label>
+      <label class="option"><input type="checkbox" name="multi_3" value="C"> C. 通信网络标准</label>
+      <label class="option"><input type="checkbox" name="multi_3" value="D"> D. 应用平台标准</label>
+      <label class="option"><input type="checkbox" name="multi_3" value="E"> E. 其他相关标准</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a_multi_3').classList.toggle('show')">查看答案</button>
+    <div class="answer" id="a_multi_3">
+      <span class="ans-label">答案：ABCE</span>
+      <span class="exp-label">解析：</span>我国电子商务技术标准包含了四个方面：EDI标准、商品编码
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleAllAnswers(prefix) {
+  var answers = document.querySelectorAll('.quiz-q .answer');
+  answers.forEach(function(a, idx) {
+    if (a.id && a.id.startsWith('a_' + prefix + '_')) {
+      a.classList.toggle('show');
+    }
+  });
+}
+</script>
+</body>
+</html>
