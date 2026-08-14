@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第一章：企业战略概述与战略分析</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理专业 · 企业战略与经营决策</span>
+  <h1>第一章：企业战略与经营决策</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · 企业战略概述与战略分析 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:33%"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握企业战略的五个特征与三个层次 <span class="hot">高频考点</span></li>
+    <li>熟悉宏观环境 PESTEL 与行业环境波特五力模型 <span class="hot">必考</span></li>
+    <li>理解 SWOT 分析的基本逻辑</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、企业战略概述</h2>
+  <h3>1. 企业战略的特征 <span class="hot">多选题</span></h3>
+  <p>企业战略是企业面对激烈变化的环境，为求得长期生存和发展而作出的<strong>总体性谋划</strong>。五个特征：</p>
+  <table class="compare-table">
+    <tr><th style="width:22%">特征</th><th>说明</th></tr>
+    <tr><td><strong>全局性</strong></td><td>统领企业整体，不是局部</td></tr>
+    <tr><td><strong>长远性</strong></td><td>着眼未来3-5年甚至更久</td></tr>
+    <tr><td><strong>纲领性</strong></td><td>原则性、方向性，非具体操作</td></tr>
+    <tr><td><strong>抗争性</strong></td><td>应对竞争，求得优势</td></tr>
+    <tr><td><strong>风险性</strong></td><td>环境不确定，有失败可能</td></tr>
+  </table>
+  <h3>2. 战略的三个层次 <span class="hot">必考</span></h3>
+  <table class="compare-table">
+    <tr><th style="width:22%">层次</th><th style="width:30%">主体</th><th style="width:48%">内容</th></tr>
+    <tr><td><strong>总体战略</strong></td><td>公司层（最高）</td><td>业务组合、发展/稳定/收缩方向</td></tr>
+    <tr><td><strong>业务战略</strong><br>（竞争战略）</td><td>事业部/业务单位</td><td>如何在某行业取得竞争优势</td></tr>
+    <tr><td><strong>职能战略</strong></td><td>职能部门</td><td>生产、营销、人力等职能支撑</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>公司层定"做什么业务"（总体）→ 业务层定"怎么竞争"（竞争）→ 职能层定"怎么支撑"（职能）。自上而下层层落实。</div>
+</div>
+
+<div class="section">
+  <h2>二、企业外部环境分析</h2>
+  <h3>1. 宏观环境：PESTEL <span class="hot">高频考点</span></h3>
+  <ul>
+    <li><strong>P</strong> 政治（Political）、<strong>E</strong> 经济（Economic）</li>
+    <li><strong>S</strong> 社会（Social）、<strong>T</strong> 技术（Technological）</li>
+    <li><strong>E</strong> 生态/环境（Environmental）、<strong>L</strong> 法律（Legal）</li>
+  </ul>
+  <h3>2. 行业环境：波特五力模型 <span class="hot">必考</span></h3>
+  <p>分析行业竞争激烈程度的五种力量：</p>
+  <ul>
+    <li>① <strong>潜在进入者</strong>的威胁（进入壁垒）</li>
+    <li>② <strong>替代品</strong>的威胁</li>
+    <li>③ <strong>买方</strong>的议价能力</li>
+    <li>④ <strong>供方</strong>的议价能力</li>
+    <li>⑤ <strong>现有竞争者</strong>之间的竞争</li>
+  </ul>
+  <div class="keypoint"><strong>五力越强 → 行业利润越低</strong>。买/供方议价强、进入易、替代多、竞争烈，企业赚钱越难。</div>
+  <h3>3. SWOT 分析</h3>
+  <ul>
+    <li><strong>S</strong> 优势（Strengths）、<strong>W</strong> 劣势（Weaknesses）——内部</li>
+    <li><strong>O</strong> 机会（Opportunities）、<strong>T</strong> 威胁（Threats）——外部</li>
+  </ul>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>战略五特征：全局、长远、纲领、抗争、风险</li>
+    <li>三层次：总体（公司层）→ 业务/竞争（事业部）→ 职能（部门）</li>
+    <li>PESTEL：政经社技环法 六要素</li>
+    <li>波特五力：潜在进入者、替代品、买方、供方、现有竞争</li>
+    <li>SWOT：内（优势S/劣势W）+ 外（机会O/威胁T）</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>企业战略中，"决定企业进入哪些业务领域"属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 职能战略</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 业务战略（竞争战略）</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 总体战略</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 营销战略</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：总体战略（公司层）解决"企业从事哪些业务、业务组合与发展方向"，是最高层次。业务战略解决"怎么竞争"，职能战略解决"怎么支撑"。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>波特五力模型包括的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 潜在进入者的威胁</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 购买者的议价能力</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 供应商的议价能力</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 现有竞争者之间的竞争</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABCD</span></p><p>解析：波特五力：潜在进入者、替代品、买方议价能力、供方议价能力、现有竞争者竞争。四项全选，加上替代品共五力。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>PESTEL 分析中，"T"代表：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 技术环境</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 经济环境</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 法律环境</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 社会环境</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：A</span></p><p>解析：PESTEL 中 T=Technological（技术）。E=经济，L=法律，S=社会。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>SWOT 分析中，属于企业内部因素的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 机会（O）和威胁（T）</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 优势（S）和劣势（W）</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 机会（O）和优势（S）</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 威胁（T）和劣势（W）</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：SWOT中 S优势、W劣势是内部因素；O机会、T威胁是外部因素。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>企业战略的特征包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 全局性</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 长远性</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 纲领性</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 短期性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABC</span></p><p>解析：战略五特征：全局性、长远性、纲领性、抗争性、风险性。战略着眼长远，D短期性错误。</p></div>
+  </div>
+</div>
+<a href="工商学习_第一章_第2节_企业战略类型与选择.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：企业战略类型与选择</h3>
+  <p>发展战略有哪几种？竞争战略三件套是什么？波士顿矩阵怎么分？</p>
+</a>
+</body>
+</html>

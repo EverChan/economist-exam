@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第四章：不完全竞争市场</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第一部分 经济学基础</span>
+  <h1>第四章：市场结构理论</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 不完全竞争市场 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第四章_第2节_完全竞争市场.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：完全竞争市场</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握完全垄断市场的特征、需求曲线与 MR<P <span class="hot">高频考点</span></li>
+    <li>理解价格歧视的三个条件与三级价格歧视 <span class="hot">必考</span></li>
+    <li>了解垄断竞争与寡头垄断的主要特点</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、完全垄断市场</h2>
+  <h3>1. 特征</h3>
+  <ul>
+    <li>只有一个卖者，产品<strong>无相近替代品</strong></li>
+    <li>进入壁垒极高（专利、资源独占、自然垄断、政府特许）</li>
+    <li>企业是<strong>价格制定者</strong>（price maker）</li>
+  </ul>
+  <h3>2. 需求曲线与收益 <span class="hot">高频考点</span></h3>
+  <table class="compare-table">
+    <tr><th style="width:30%">对比</th><th>完全垄断</th><th>完全竞争</th></tr>
+    <tr><td>需求曲线</td><td>向右下方倾斜</td><td>水平线</td></tr>
+    <tr><td>边际收益 MR</td><td><strong>MR < P（AR）</strong></td><td>MR = P</td></tr>
+    <tr><td>定价</td><td>价格制定者</td><td>价格接受者</td></tr>
+  </table>
+  <div class="keypoint"><strong>关键：</strong>垄断者要卖更多必须降价，新增一单位的边际收益低于价格，故 MR 曲线在需求曲线下方，且 <strong>MR < AR = P</strong>。</div>
+
+  <h3>3. 价格歧视 <span class="hot">必考</span></h3>
+  <p>价格歧视是指对同一产品向不同消费者收不同价格。实施三条件：</p>
+  <ul>
+    <li>① 市场能<strong>有效分割</strong>（消费者不能转卖）</li>
+    <li>② 不同群体<strong>需求价格弹性不同</strong></li>
+    <li>③ 企业有<strong>定价能力</strong></li>
+  </ul>
+  <table class="compare-table">
+    <tr><th style="width:20%">级别</th><th style="width:40%">含义</th><th style="width:40%">例子</th></tr>
+    <tr><td><strong>一级</strong></td><td>对每个单位按愿付最高价收费（完全价格歧视）</td><td>理想状态</td></tr>
+    <tr><td><strong>二级</strong></td><td>按购买量差别定价</td><td>批量折扣</td></tr>
+    <tr><td><strong>三级</strong></td><td>按市场群体差别定价</td><td>学生票/成人票</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>二、垄断竞争市场</h2>
+  <ul>
+    <li>特征：企业很多、产品<strong>有差别</strong>（品牌）、进退较易</li>
+    <li>需求曲线较平坦（仍有替代），企业对价格有一定控制但较弱</li>
+    <li>典型：日用品、餐饮、服装</li>
+  </ul>
+  <h2>三、寡头垄断市场</h2>
+  <ul>
+    <li>特征：少数几家企业控制市场，产品可有/无差别</li>
+    <li>进退壁垒较高，企业间<strong>相互依存</strong>（一家决策影响他人）</li>
+    <li>典型：汽车、钢铁、石油；定价方式：<strong>协议价格</strong>、<strong>价格领袖制</strong></li>
+  </ul>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>完全垄断：唯一卖者、无替代品、极高壁垒、价格制定者</li>
+    <li>垄断需求曲线右下倾，<strong>MR < P（AR）</strong></li>
+    <li>价格歧视三条件：可分割、弹性不同、有定价权</li>
+    <li>三级价格歧视：按群体定价（学生票）；二级：按量（批量折扣）</li>
+    <li>垄断竞争：很多+有差别（日用品）；寡头：少数几家+相互依存（汽车）</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>完全垄断企业的边际收益 MR 与价格 P 的关系是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. MR = P</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. MR > P</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. MR < P</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 两者无确定关系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：垄断者需求曲线右下倾，为多卖需降价，新增一单位边际收益低于价格，故 MR<P（MR<AR=P）。完全竞争才是MR=P。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>实施价格歧视不需要的条件是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 市场能有效分割</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 不同群体需求弹性不同</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 企业有定价能力</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 所有消费者收入水平相同</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：D</span></p><p>解析：价格歧视三条件：市场可分割、需求弹性不同、有定价能力。消费者收入相同反而不利于差别定价（弹性趋同），不是必要条件。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>下列属于三级价格歧视的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 买得多享受批发折扣</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 学生票比成人票便宜</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 每件商品按顾客最高愿付价收费</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 统一标价</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：三级价格歧视是按不同市场群体（如学生/成人）差别定价。A是二级（按量），C是一级（完全），D无歧视。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>关于寡头垄断市场，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 市场上只有少数几家企业</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 企业间存在明显的相互依存关系</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 进入壁垒较低</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 常见定价方式包括协议价格和价格领袖制</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABD</span></p><p>解析：寡头：少数企业、相互依存、进退壁垒较高（C错）、定价靠协议或价格领袖。汽车、钢铁是典型。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>垄断竞争市场与完全竞争市场的主要区别是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 企业数量多少</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 产品是否有差别</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 是否能自由进退</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 买卖双方信息是否完全</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：垄断竞争与完全竞争都"企业多、进退易"，主要区别在<strong>产品有差别</strong>（垄断竞争有品牌差异，完全竞争同质）。</p></div>
+  </div>
+</div>
+<div class="next-preview">
+  <p class="label">下节预告</p>
+  <h3>工商管理 第1章：企业战略与经营决策</h3>
+  <p>经济学基础前四章学完，下一模块进入工商管理：企业战略怎么定？</p>
+</div>
+</body>
+</html>

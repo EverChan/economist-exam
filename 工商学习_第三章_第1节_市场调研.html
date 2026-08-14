@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第三章：市场调研</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理专业 · 市场营销与品牌管理</span>
+  <h1>第三章：市场营销与品牌管理</h1>
+  <p class="subtitle">第 1 节 / 共 2 节 · 市场调研 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 1/2</p>
+</div>
+<a href="工商学习_第二章_第2节_股东机构与治理机构.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第二章 第2节：股东机构与治理机构</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>了解市场调研的内容、类型与方法 <span class="hot">高频考点</span></li>
+    <li>掌握抽样调查的概率与非概率抽样方式 <span class="hot">必考</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、市场调研概述</h2>
+  <h3>1. 市场调研内容</h3>
+  <ul>
+    <li>产品调研、顾客调研、销售调研、促销调研</li>
+  </ul>
+  <h3>2. 市场调研类型</h3>
+  <table class="compare-table">
+    <tr><th style="width:24%">类型</th><th>目的</th></tr>
+    <tr><td><strong>探测性</strong></td><td>初步了解情况、发现问题（"是什么"）</td></tr>
+    <tr><td><strong>描述性</strong></td><td>描述现状特征（"怎么样"）</td></tr>
+    <tr><td><strong>因果性</strong></td><td>探明因果关系（"为什么"）</td></tr>
+  </table>
+  <h3>3. 市场调研方法 <span class="hot">多选题</span></h3>
+  <ul>
+    <li><strong>文案调研法</strong>：收集二手资料</li>
+    <li><strong>观察法</strong>：直接观察行为</li>
+    <li><strong>实验法</strong>：控制变量测效果（如试销）</li>
+    <li><strong>访问法</strong>：面谈、电话、邮寄、网上问卷</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、抽样调查 <span class="hot">必考</span></h2>
+  <p>从总体中抽取部分样本推断总体。分两类：</p>
+  <table class="compare-table">
+    <tr><th style="width:22%">类别</th><th style="width:40%">具体方式</th><th style="width:38%">特点</th></tr>
+    <tr><td><strong>概率抽样</strong><br>（随机抽样）</td><td>简单随机抽样、分层抽样、整群抽样、等距抽样（系统抽样）</td><td>每个单位被抽中概率已知，可推断总体</td></tr>
+    <tr><td><strong>非概率抽样</strong></td><td>方便抽样、判断抽样、配额抽样、滚雪球抽样</td><td>凭主观或方便抽取，不能推断总体</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>概率抽样四种（简单/分层/整群/等距）都能统计推断；非概率四种（方便/判断/配额/滚雪球）常用于探索，不能推断总体。</div>
+  <div class="example"><strong>分层抽样：</strong>先按城市规模分层，再每层随机抽，样本更具代表性。滚雪球：找一个人介绍下一个人，适合隐蔽群体（如特定病患者）。</div>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>调研三类型：探测（是什么）、描述（怎么样）、因果（为什么）</li>
+    <li>调研四方法：文案、观察、实验、访问</li>
+    <li>概率抽样：简单随机、分层、整群、等距（可推断总体）</li>
+    <li>非概率抽样：方便、判断、配额、滚雪球（不可推断）</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>下列抽样方法中，属于概率抽样的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 方便抽样</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 判断抽样</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 简单随机抽样</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 滚雪球抽样</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：概率抽样包括简单随机、分层、整群、等距。方便、判断、滚雪球属非概率抽样。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>市场调研的方法包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 文案调研法</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 观察法</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 实验法</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 访问法</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABCD</span></p><p>解析：市场调研四方法：文案、观察、实验、访问（面谈/电话/邮寄/网络）。全选。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>为弄清"为什么销量下降"而进行的调研，属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 探测性调研</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 描述性调研</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 因果性调研</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 预测性调研</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：C</span></p><p>解析：探因果关系的"为什么"是因果性调研。探测性找问题，描述性讲现状。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>关于非概率抽样，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 包括方便抽样、判断抽样、配额抽样、滚雪球抽样</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 每个单位被抽中概率已知</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 不能据以推断总体</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 常用于探索性研究</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ACD</span></p><p>解析：非概率抽样（方便/判断/配额/滚雪球）凭主观或方便抽取，不能推断总体，多用于探索。B是概率抽样特点。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>先按地区分层，再在每层内随机抽取样本，这种抽样是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 整群抽样</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 分层抽样</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 等距抽样</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 方便抽样</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：先分层再层内随机抽样是分层抽样，代表性好。整群是抽"群"整体，等距是按固定间隔抽。</p></div>
+  </div>
+</div>
+<a href="工商学习_第三章_第2节_目标市场战略与品牌管理.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：目标市场战略与品牌管理</h3>
+  <p>市场怎么细分？无差异、差异性、集中性策略怎么选？</p>
+</a>
+</body>
+</html>

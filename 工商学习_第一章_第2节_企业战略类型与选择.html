@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第一章：企业战略类型与选择</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理专业 · 企业战略与经营决策</span>
+  <h1>第一章：企业战略与经营决策</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 企业战略类型与选择 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:66%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="工商学习_第一章_第1节_企业战略概述与战略分析.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：企业战略概述与战略分析</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握总体战略的三大类型（发展/稳定/收缩）及具体形式 <span class="hot">高频考点</span></li>
+    <li>熟记竞争战略三种（成本领先/差异化/集中） <span class="hot">必考</span></li>
+    <li>理解波士顿矩阵（BCG）四象限</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、企业总体战略</h2>
+  <h3>1. 三大类型</h3>
+  <ul>
+    <li><strong>发展战略</strong>：扩张规模、增加业务（成长型）</li>
+    <li><strong>稳定战略</strong>：维持现状，不冒进</li>
+    <li><strong>紧缩战略</strong>：收缩、退出、瘦身</li>
+  </ul>
+  <h3>2. 发展战略的具体形式 <span class="hot">高频考点</span></h3>
+  <table class="compare-table">
+    <tr><th style="width:20%">形式</th><th style="width:40%">含义</th><th style="width:40%">例子</th></tr>
+    <tr><td><strong>一体化</strong></td><td>沿产业链扩张</td><td>前向（收购渠道）、后向（收购原料）、横向（并购同行）</td></tr>
+    <tr><td><strong>密集型</strong></td><td>现有业务深耕（安索夫矩阵）</td><td>市场渗透、市场开发、新产品开发</td></tr>
+    <tr><td><strong>多元化</strong></td><td>进入新业务领域</td><td>相关多元化、非相关多元化</td></tr>
+  </table>
+  <div class="keypoint"><strong>安索夫矩阵：</strong>横轴"老/新市场"，纵轴"老/新产品" → 市场渗透（老老）、市场开发（新老）、新产品开发（老新）、多元化（新新）。</div>
+</div>
+
+<div class="section">
+  <h2>二、企业竞争战略（波特） <span class="hot">必考</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:22%">战略</th><th style="width:40%">核心</th><th style="width:38%">适用</th></tr>
+    <tr><td><strong>成本领先</strong></td><td>全行业最低成本</td><td>价格敏感、规模大</td></tr>
+    <tr><td><strong>差异化</strong></td><td>产品/服务独树一帜</td><td>重视品牌、愿意溢价</td></tr>
+    <tr><td><strong>集中战略</strong></td><td>聚焦某细分市场（可成本或差异）</td><td> niche 市场</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>三、波士顿矩阵（BCG） <span class="hot">高频考点</span></h2>
+  <p>按"市场增长率"（纵）和"相对市场份额"（横）把业务分为四类：</p>
+  <table class="compare-table">
+    <tr><th style="width:22%">类型</th><th style="width:40%">特征</th><th style="width:38%">策略</th></tr>
+    <tr><td><strong>明星</strong></td><td>高增长+高份额</td><td>重点投入（未来现金牛）</td></tr>
+    <tr><td><strong>现金牛</strong></td><td>低增长+高份额</td><td>收获，提供现金流</td></tr>
+    <tr><td><strong>问题（问号）</strong></td><td>高增长+低份额</td><td>选择性投资或放弃</td></tr>
+    <tr><td><strong>瘦狗</strong></td><td>低增长+低份额</td><td>清算、退出</td></tr>
+  </table>
+  <div class="example"><strong>记忆：</strong>明星→养大变现金牛；现金牛→挤奶供血液；问题→赌一把或扔；瘦狗→清仓。</div>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>总体战略：发展（一体化/密集型/多元化）、稳定、紧缩</li>
+    <li>一体化：前向（渠道）、后向（原料）、横向（同行）</li>
+    <li>安索夫：市场渗透/开发、新产品开发、多元化</li>
+    <li>竞争战略：成本领先、差异化、集中</li>
+    <li>BCG四象限：明星、现金牛、问题、瘦狗（按增长率×份额）</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>某汽车厂收购了一家轮胎厂，属于总体战略中的：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 前向一体化</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 后向一体化</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 横向一体化</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 多元化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：收购上游供应商（轮胎是零部件，属上游）是后向一体化。前向是收购下游渠道（如4S店），横向是并购同行。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>波特提出的三种基本竞争战略不包括：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 成本领先战略</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 差异化战略</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 集中战略</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 多元化战略</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：D</span></p><p>解析：波特三基本竞争战略：成本领先、差异化、集中。多元化是总体战略的发展形式，不是竞争战略。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>波士顿矩阵中，市场增长率高但相对市场份额低的业务是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 明星</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 现金牛</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 问题（问号）</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 瘦狗</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：C</span></p><p>解析：问题业务=高增长+低份额，需大量投入且前景不确定。明星=高增+高份，现金牛=低增+高份，瘦狗=低增+低份。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>企业发展战略中的"密集型成长战略"包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 市场渗透战略</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 市场开发战略</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 新产品开发战略</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 多元化战略</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABC</span></p><p>解析：密集型（安索夫矩阵）：市场渗透、市场开发、新产品开发。D多元化与密集型并列，属发展战略另一形式。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>某企业通过降低成本使产品价格低于竞争对手，赢得价格敏感客户，采取的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 差异化战略</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 成本领先战略</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 集中战略</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 稳定战略</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：以全行业最低成本、低价取胜是成本领先战略。差异化靠独特性，集中靠聚焦细分市场。</p></div>
+  </div>
+</div>
+<a href="工商学习_第一章_第3节_企业经营决策.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：企业经营决策</h3>
+  <p>确定型、风险型、不确定型决策怎么区分？保本产量公式怎么算？</p>
+</a>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第四章：完全竞争市场</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第一部分 经济学基础</span>
+  <h1>第四章：市场结构理论</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 完全竞争市场 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:66%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第四章_第1节_市场结构类型.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：市场结构类型</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握完全竞争市场的四个特征 <span class="hot">高频考点</span></li>
+    <li>理解完全竞争企业的需求曲线（水平）及收益关系 AR=MR=P <span class="hot">必考</span></li>
+    <li>掌握短期均衡（停止营业点）与长期均衡条件</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、完全竞争市场的特征</h2>
+  <ul>
+    <li>① 市场上有<strong>无数</strong>买者和卖者（单个企业无法影响价格）</li>
+    <li>② 产品<strong>同质无差别</strong></li>
+    <li>③ 资源<strong>自由流动</strong>，企业自由进退</li>
+    <li>④ 买卖双方<strong>信息完全</strong></li>
+  </ul>
+  <div class="keypoint"><strong>核心结论：</strong>完全竞争企业是<strong>价格接受者</strong>（price taker），只能接受市场决定的价格，不能自己定价。</div>
+</div>
+
+<div class="section">
+  <h2>二、需求曲线与收益 <span class="hot">必考</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:30%">曲线/关系</th><th>说明</th></tr>
+    <tr><td><strong>企业需求曲线</strong></td><td>是一条<strong>水平线</strong>（价格固定为P，想卖多少卖多少）</td></tr>
+    <tr><td><strong>行业需求曲线</strong></td><td>向右下方倾斜（整个市场需求）</td></tr>
+    <tr><td><strong>收益关系</strong></td><td><strong>AR = MR = P</strong>（平均收益=边际收益=价格）</td></tr>
+  </table>
+  <div class="example"><strong>为什么 MR=P？</strong>水平需求线下，多卖一单位仍按市价P卖出，边际收益就是P，所以MR=P=AR。</div>
+</div>
+
+<div class="section">
+  <h2>三、均衡条件</h2>
+  <h3>1. 短期均衡 <span class="hot">高频考点</span></h3>
+  <ul>
+    <li>均衡原则：<strong>MR = SMC</strong>（边际收益=短期边际成本）</li>
+    <li><strong>停止营业点</strong>：当价格 P = AVC（平均可变成本）最低点时，企业刚好不亏不赚可变成本，再低就停产</li>
+    <li>短期可能盈利、盈亏平衡或亏损（只要P≥AVC就继续生产）</li>
+  </ul>
+  <h3>2. 长期均衡 <span class="hot">必考</span></h3>
+  <p>长期中企业自由进退，经济利润趋于0，达到：</p>
+  <div class="keypoint"><strong>长期均衡条件：P = MR = SMC = SAC = LMC = LAC（最低点）</strong><br>即价格等于长期平均成本的最低点，企业只获正常利润。</div>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>完全竞争四特征：无数买卖者、产品同质、自由进退、信息完全</li>
+    <li>企业是价格接受者；企业需求曲线=水平线</li>
+    <li>收益：AR = MR = P</li>
+    <li>短期均衡：MR = SMC；停止营业点 P = AVC</li>
+    <li>长期均衡：P=MR=SMC=SAC=LMC=LAC（最低点），经济利润=0</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>完全竞争企业的需求曲线是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 向右下方倾斜</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 向右上方倾斜</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 一条水平线</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 一条垂直线</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：完全竞争企业是价格接受者，面对固定市场价格，需求曲线为水平线（价格既定，销量任意）。行业需求曲线才是右下倾。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>完全竞争企业短期停止营业的条件是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 价格低于平均总成本 ATC</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 价格等于平均可变成本 AVC 的最低点</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 价格低于边际成本 MC</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 价格高于平均可变成本</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：停止营业点是 P=AVC最低点。当 P<AVC，生产连可变成本都收不回，不如停产。P<ATC但>P≥AVC时仍应生产（可覆盖部分固定成本）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>完全竞争市场上，企业的平均收益 AR、边际收益 MR 与价格 P 的关系是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. AR > MR > P</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. AR = MR = P</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. AR < MR < P</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. MR > P > AR</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：完全竞争企业需求曲线水平，多卖一单位按市价P，故 MR=P；平均收益AR=TR/Q=P，所以 AR=MR=P。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>完全竞争市场的特征包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 市场上有无数买者和卖者</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 产品同质无差别</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 企业能自由进入退出</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 单个企业能决定市场价格</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABC</span></p><p>解析：完全竞争四特征：无数买卖者、产品同质、自由进退、信息完全。D错，单个企业是价格接受者，不能定价。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>完全竞争市场长期均衡时，企业：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 获得超额经济利润</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 经济利润为零，只获正常利润</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 一定亏损</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 价格高于长期平均成本最低点</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：长期自由进退使经济利润趋零，均衡时 P=LAC最低点，企业只获正常利润（经济利润=0）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第四章_第3节_不完全竞争市场.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：不完全竞争市场</h3>
+  <p>垄断企业的 MR 为何小于价格？价格歧视怎么玩？寡头和垄断竞争有何不同？</p>
+</a>
+</body>
+</html>

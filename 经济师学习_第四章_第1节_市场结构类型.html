@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第四章：市场结构类型</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第一部分 经济学基础</span>
+  <h1>第四章：市场结构理论</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · 市场结构类型 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:33%"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+<a href="经济师学习_第三章_第2节_成本函数与成本曲线.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第三章 第2节：成本函数与成本曲线</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握划分市场结构类型的四个依据 <span class="hot">高频考点</span></li>
+    <li>熟记四种市场结构（完全竞争→垄断）的特征对比表 <span class="hot">必考</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、市场结构及其划分</h2>
+  <p>市场结构是指一个行业内部买方和卖方的数量、规模、产品差别程度等形成的竞争形态。</p>
+  <h3>划分依据（四个） <span class="hot">多选题</span></h3>
+  <ul>
+    <li>① 本行业<strong>企业数目</strong>多少</li>
+    <li>② 各企业<strong>产品差别程度</strong></li>
+    <li>③ 进入<strong>障碍大小</strong>（进退难易）</li>
+    <li>④ 企业对<strong>价格的控制程度</strong></li>
+  </ul>
+  <div class="keypoint"><strong>竞争程度由高到低：</strong>完全竞争 → 垄断竞争 → 寡头垄断 → 完全垄断。企业越少、产品越无差别、进退越难、价格控制越强，垄断性越强。</div>
+</div>
+
+<div class="section">
+  <h2>二、四种市场结构特征对比 <span class="hot">必考 · 核心表</span></h2>
+  <table class="compare-table">
+    <tr><th>类型</th><th>企业数</th><th>产品差别</th><th>进退壁垒</th><th>价格控制</th><th>典型</th></tr>
+    <tr><td><strong>完全竞争</strong></td><td>很多</td><td>同质无差别</td><td>自由</td><td>无（价格接受者）</td><td>农产品</td></tr>
+    <tr><td><strong>垄断竞争</strong></td><td>很多</td><td>有差别</td><td>较易</td><td>较弱</td><td>日用品</td></tr>
+    <tr><td><strong>寡头垄断</strong></td><td>少数</td><td>有/无差别</td><td>较难</td><td>较强</td><td>汽车、钢铁</td></tr>
+    <tr><td><strong>完全垄断</strong></td><td>一个</td><td>唯一无替代品</td><td>极难</td><td>很强（价格制定者）</td><td>公用事业</td></tr>
+  </table>
+  <div class="example"><strong>例子：</strong>小麦市场≈完全竞争（大家都种一样的小麦）；可乐市场≈寡头（可口、百事几家）；自来水公司≈完全垄断。</div>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>划分四依据：企业数、产品差别、进退壁垒、价格控制</li>
+    <li>竞争度：完全竞争 > 垄断竞争 > 寡头 > 完全垄断</li>
+    <li>完全竞争：很多+同质+自由进退+无价格控制（农产品）</li>
+    <li>完全垄断：唯一+无替代品+极难进入+强价格控制（公用事业）</li>
+    <li>垄断竞争：很多+有差别（日用品）；寡头：少数几家（汽车）</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>划分市场结构类型的依据不包括：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 本行业企业数目</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 产品差别程度</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 企业所处地理位置</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 进入障碍大小</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：划分依据是：企业数目、产品差别、进入障碍（进退难易）、价格控制程度。地理位置不是划分依据。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>下列行业中，最接近完全竞争市场的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 自来水供应</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 汽车制造</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 小麦种植</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 洗发水</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：农产品（如小麦）生产者众多、产品同质、自由进退、无价格控制，最接近完全竞争。自来水是垄断，汽车是寡头，洗发水是垄断竞争。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>完全垄断市场形成的关键原因是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 企业数量很多</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 产品有差别</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 存在极高进入壁垒，唯一卖者</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 进退自由</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：C</span></p><p>解析：完全垄断是只有一家企业、产品无相近替代品、进入壁垒极高，企业是价格制定者。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>关于垄断竞争市场，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 企业数目很多</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 产品有差别</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 企业对价格有很强控制力</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 进入壁垒较低</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABD</span></p><p>解析：垄断竞争：企业多、产品有差别、进退较易、价格控制较弱。C错，垄断竞争价格控制弱，完全垄断才是强控制。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>按照竞争程度由强到弱排列，正确的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 完全垄断 > 寡头 > 垄断竞争 > 完全竞争</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 完全竞争 > 垄断竞争 > 寡头 > 完全垄断</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 寡头 > 完全竞争 > 垄断竞争 > 完全垄断</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 垄断竞争 > 完全竞争 > 寡头 > 完全垄断</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：竞争程度由强到弱：完全竞争（最强）→垄断竞争→寡头垄断→完全垄断（最弱）。垄断程度则相反。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第四章_第2节_完全竞争市场.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：完全竞争市场</h3>
+  <p>完全竞争企业的需求曲线为什么是水平线？短期均衡和停止营业点怎么定？</p>
+</a>
+</body>
+</html>

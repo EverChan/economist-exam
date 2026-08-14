@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第二章：公司所有者与经营者</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理专业 · 公司法人治理结构</span>
+  <h1>第二章：公司法人治理结构</h1>
+  <p class="subtitle">第 1 节 / 共 2 节 · 公司所有者与经营者 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 1/2</p>
+</div>
+<a href="工商学习_第一章_第3节_企业经营决策.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第一章 第3节：企业经营决策</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>理解公司的特征与股东权利 <span class="hot">高频考点</span></li>
+    <li>掌握经营者激励约束机制与委托代理问题 <span class="hot">必考</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、公司与公司的特征</h2>
+  <ul>
+    <li>公司是企业法人，<strong>独立承担民事责任</strong></li>
+    <li>特征：① 独立的法人财产；② 出资者有限责任；③ 所有权与经营权分离；④ 依法设立</li>
+  </ul>
+  <div class="keypoint"><strong>核心：</strong>股东以出资额为限承担<strong>有限责任</strong>；公司以其全部财产对债务负责。所有权（股东）与经营权（经营者）分离是现代公司的根本特征。</div>
+</div>
+
+<div class="section">
+  <h2>二、公司所有者：股东</h2>
+  <h3>1. 股东的权利 <span class="hot">多选题</span></h3>
+  <ul>
+    <li>① <strong>表决权</strong>（出席股东大会、投票）</li>
+    <li>② <strong>选举权</strong>（选举董事、监事）</li>
+    <li>③ <strong>收益权</strong>（分红、剩余财产分配）</li>
+    <li>④ <strong>知情权</strong>（查阅章程、财报）</li>
+    <li>⑤ <strong>股份转让权</strong></li>
+  </ul>
+  <h3>2. 股东（大）会</h3>
+  <p>股东（大）会是公司的<strong>权力机构</strong>，由全体股东组成，决定公司重大事项。</p>
+</div>
+
+<div class="section">
+  <h2>三、经营者与委托代理</h2>
+  <h3>1. 经营者</h3>
+  <p>经营者是由董事会聘任的<strong>经理层</strong>，实际掌握公司经营控制权。经营者与所有者目标可能不一致（股东要利润，经理要薪资/闲暇/规模）。</p>
+  <h3>2. 经营者激励约束机制 <span class="hot">高频考点</span></h3>
+  <table class="compare-table">
+    <tr><th style="width:24%">机制</th><th>内容</th></tr>
+    <tr><td><strong>报酬激励</strong></td><td>年薪、奖金、股票期权、福利</td></tr>
+    <tr><td><strong>控制权激励</strong></td><td>赋予经营决策权带来的成就感与地位</td></tr>
+    <tr><td><strong>声誉激励</strong></td><td>职业声誉、市场评价</td></tr>
+    <tr><td><strong>市场竞争</strong></td><td>经理人市场、资本市场（接管威胁）的约束</td></tr>
+  </table>
+  <h3>3. 委托代理问题</h3>
+  <p>所有者（委托人）与经营者（代理人）目标冲突 + 信息不对称 → <strong>道德风险、逆向选择</strong>。解决靠激励+监督+市场约束。</p>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>公司特征：独立法人财产、股东有限责任、两权分离</li>
+    <li>股东权利：表决、选举、收益、知情、转让</li>
+    <li>股东（大）会 = 公司权力机构</li>
+    <li>经营者激励四机制：报酬、控制权、声誉、市场竞争</li>
+    <li>委托代理问题根源：目标冲突 + 信息不对称</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>现代公司最根本的特征是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 注册资本雄厚</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 所有权与经营权分离</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 员工人数多</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 产品多样</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：现代公司最根本特征是所有权（股东）与经营权（经营者）分离，由此产生委托代理关系。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>股东依法享有的权利包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 表决权和选举权</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 资产收益权</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 知情权</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 直接经营决策权（日常）</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABC</span></p><p>解析：股东权利：表决、选举、收益、知情、转让。日常经营决策权属于经营者（经理层），股东不直接经营，D错。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>公司中作为权力机构的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 董事会</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 监事会</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 股东（大）会</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 经理层</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：C</span></p><p>解析：股东（大）会是公司权力机构（最高权力机关），董事会是执行机构，监事会是监督机构，经理是执行层。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>经营者激励约束机制包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 报酬激励</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 控制权激励</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 声誉激励</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 产品激励</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABC</span></p><p>解析：经营者激励四机制：报酬、控制权、声誉、市场竞争约束。无"产品激励"这一说法。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>委托代理问题产生的主要原因是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 股东人数太少</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 所有者与经营者目标冲突且信息不对称</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 公司注册资本不足</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 产品缺乏竞争力</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：委托代理问题源于所有者与经营者目标不一致（股东要利润最大化，经理要自身利益）加上信息不对称，导致道德风险等。</p></div>
+  </div>
+</div>
+<a href="工商学习_第二章_第2节_股东机构与治理机构.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：股东机构与治理机构</h3>
+  <p>股东会、董事会、经理、监事会各自的职权怎么划分？</p>
+</a>
+</body>
+</html>

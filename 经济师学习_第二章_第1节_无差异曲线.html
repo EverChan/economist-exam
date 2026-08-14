@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第二章：无差异曲线</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第一部分 经济学基础</span>
+  <h1>第二章：消费者行为理论</h1>
+  <p class="subtitle">第 1 节 / 共 2 节 · 无差异曲线 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 1/2</p>
+</div>
+<a href="经济师学习_第一章_第3节_弹性理论.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第一章 第3节：弹性理论</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>理解效用的含义，区分基数效用论与序数效用论 <span class="hot">高频考点</span></li>
+    <li>掌握无差异曲线的三条特征及商品边际替代率递减规律 <span class="hot">必考</span></li>
+    <li>理解预算约束线及收入、价格变动对其的影响</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、效用理论</h2>
+  <h3>1. 效用的含义</h3>
+  <p>效用是指商品或服务<strong>满足人们某种欲望的能力</strong>，是消费者在消费商品时所感受到的<strong>满足程度</strong>。它是一种主观心理评价，没有客观标准。</p>
+  <div class="example"><strong>例子：</strong>同一杯奶茶，渴的人觉得效用高，刚喝完水的人觉得效用低。效用因人、因时、因地而异。</div>
+
+  <h3>2. 两种效用理论</h3>
+  <table class="compare-table">
+    <tr><th style="width:22%">理论</th><th style="width:39%">核心观点</th><th style="width:39%">衡量方式</th></tr>
+    <tr><td><strong>基数效用论</strong></td><td>效用可计量，可加总求和</td><td>用"效用单位"衡量，如1、2、3</td></tr>
+    <tr><td><strong>序数效用论</strong></td><td>效用不可计量，只能排序</td><td>用偏好顺序衡量：第一、第二、第三</td></tr>
+  </table>
+  <p>考试默认采用<strong>序数效用论</strong>来分析消费者行为（无差异曲线法）。</p>
+
+  <h3>3. 基数效用论：边际效用递减规律 <span class="hot">高频考点</span></h3>
+  <ul>
+    <li><strong>总效用（TU）</strong>：消费一定量商品获得的总满足程度</li>
+    <li><strong>边际效用（MU）</strong>：每增加一单位消费带来的效用增量，MU = ΔTU / ΔQ</li>
+    <li><strong>边际效用递减规律</strong>：随消费量增加，MU 逐步递减（吃的越多越不爽）</li>
+    <li><strong>消费者均衡条件</strong>：MU₁/P₁ = MU₂/P₂ = … = λ（每元边际效用相等）</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、无差异曲线</h2>
+  <h3>1. 含义</h3>
+  <p>无差异曲线是给消费者带来<strong>相同满足程度</strong>的两种商品的所有组合的曲线。线上任意一点，消费者的效用都一样。</p>
+  <div class="example"><strong>例子：</strong>2个苹果+3根香蕉，和3个苹果+2根香蕉，给你一样爽——这两点就在同一条无差异曲线上。</div>
+
+  <h3>2. 无差异曲线的特征 <span class="hot">必考 · 多选题</span></h3>
+  <table class="compare-table">
+    <tr><th style="width:30%">特征</th><th>说明</th></tr>
+    <tr><td><strong>① 离原点越远效用越大</strong></td><td>右上方的曲线代表更高的满足程度</td></tr>
+    <tr><td><strong>② 任意两条不相交</strong></td><td>若相交则同一点有两种效用，矛盾</td></tr>
+    <tr><td><strong>③ 凸向原点</strong></td><td>从左上向右下倾斜，且向右下方凸起（斜率绝对值递减）</td></tr>
+  </table>
+
+  <h3>3. 商品边际替代率（MRS） <span class="hot">高频考点</span></h3>
+  <p>MRS 是指消费者为多得一单位商品 X，愿意放弃的商品 Y 的数量：<strong>MRS = -ΔY / ΔX</strong>。</p>
+  <ul>
+    <li>MRS 的几何意义 = 无差异曲线在该点的<strong>斜率绝对值</strong></li>
+    <li><strong>边际替代率递减规律</strong>：沿曲线右下移，X越多吃够了，愿意放弃的Y越少 → MRS 递减</li>
+    <li>这正是无差异曲线"凸向原点"的原因</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>无差异曲线——"越远越爽、互不相交、凸向原点"。MRS = 斜率绝对值，沿着曲线走越来越小。</div>
+</div>
+
+<div class="section">
+  <h2>三、预算约束</h2>
+  <h3>1. 预算约束线</h3>
+  <p>在收入 I 和价格 P₁、P₂ 既定下，消费者能买得起的两种商品最大组合的轨迹：<strong>P₁X₁ + P₂X₂ = I</strong>。线内买得起花不完，线外买不起，线上刚好花光。</p>
+  <h3>2. 预算线的变动 <span class="hot">高频考点</span></h3>
+  <table class="compare-table">
+    <tr><th style="width:30%">变动因素</th><th>预算线变化</th></tr>
+    <tr><td><strong>收入 I 增加</strong></td><td>线向右<strong>平行移动</strong>（购买力整体增强）</td></tr>
+    <tr><td><strong>收入 I 减少</strong></td><td>线向左<strong>平行移动</strong></td></tr>
+    <tr><td><strong> X₁ 价格下降</strong></td><td>线绕与X₂轴交点<strong>向右旋转</strong>（X₁买得更多）</td></tr>
+    <tr><td><strong>两种商品价格同比例降</strong></td><td>等同于收入增加，线<strong>平行右移</strong></td></tr>
+  </table>
+</div>
+
+<div class="summary">
+  <h2>高频考点速记卡</h2>
+  <ul>
+    <li>效用 = 满足程度，主观评价；基数论可计量、序数论只排序</li>
+    <li>边际效用递减规律：吃得越多，新增满足越少</li>
+    <li>消费者均衡：MU₁/P₁ = MU₂/P₂ = λ（每元效用相等）</li>
+    <li>无差异曲线三特征：越远越爽、不相交、凸向原点</li>
+    <li>MRS = -ΔY/ΔX = 曲线斜率绝对值，沿曲线递减</li>
+    <li>预算线：P₁X₁+P₂X₂=I；收入变→平移，单价格变→旋转</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>关于无差异曲线的特征，下列说法正确的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 离原点越近，效用水平越高</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 任意两条无差异曲线可能相交</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 无差异曲线向右下方倾斜且凸向原点</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 商品边际替代率沿曲线递增</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：无差异曲线特征为：离原点越远效用越大、任意两条不相交、凸向原点。凸向原点意味着商品边际替代率 MRS 沿曲线递减，D错。A、B均与特征相反。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>消费者收入增加，其他条件不变，预算约束线将：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 向左旋转</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 向右平行移动</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 围绕原点转动</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 形状改变为曲线</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：收入 I 增加，价格不变，预算线 P₁X₁+P₂X₂=I 整体向外（向右）平行移动，消费者能购买的商品组合整体上移。价格变动才是旋转。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>商品边际替代率 MRS 的几何意义是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 预算线的斜率</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 无差异曲线在该点的斜率绝对值</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 总效用与边际效用之比</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 两种商品价格之比</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：MRS = -ΔY/ΔX，表示无差异曲线上某一点切线斜率的绝对值，反映为多得1单位X愿放弃的Y的数量。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>下列关于边际效用递减规律的表述，正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 随商品消费量增多，总效用一直递增</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 边际效用随着消费量增加而逐步递减</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 消费者均衡时每元边际效用相等</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 边际效用可能为负（消费过量时）</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：BCD</span></p><p>解析：B对，边际效用递减；C对，均衡条件 MU₁/P₁=…=λ；D对，吃撑了再吃效用为负，TU开始下降。A错，总效用在MU>0时递增、MU<0时递减，并非一直递增。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>若商品 X 的价格下降，而收入和其他商品价格不变，预算约束线将：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 平行向右移动</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 绕与Y轴交点向右旋转</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 绕与X轴交点向左旋转</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 平行向左移动</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：X降价，用同样收入能买更多X，预算线与X轴交点外移，与Y轴交点不变（Y价格没变），故绕Y轴交点向右旋转。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第二章_第2节_预算约束与消费者均衡.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：预算约束与消费者均衡</h3>
+  <p>预算线怎么画？收入、价格变动如何让预算线平移或旋转？消费者均衡点在哪里？</p>
+</a>
+</body>
+</html>
