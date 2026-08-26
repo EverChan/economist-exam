@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第34章：用益物权与担保物权</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第34章</span>
+  <h1>第三十四章 物权法律概述</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 用益物权与担保物权 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第三十四章_第2节_所有权.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：所有权</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握用益物权的种类 <span class="hot">必考</span></li>
+    <li>区分抵押权、质权、留置权三大担保物权 <span class="hot">高频考点 · 多选题</span></li>
+    <li>理解担保物权的优先顺位</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、用益物权</h2>
+  <p><strong>用益物权</strong>是对他人所有的物依法享有占有、使用、收益的权利（利用物的使用价值）。主要种类：</p>
+  <ul>
+    <li><strong>土地承包经营权</strong>：对农村土地占有、使用、收益，从事农业生产</li>
+    <li><strong>建设用地使用权</strong>：在国有土地上建造建筑物、构筑物及附属设施（多通过出让/划拨设立）</li>
+    <li><strong>宅基地使用权</strong>：农村村民依法使用集体土地建造住宅</li>
+    <li><strong>地役权</strong>：为自身不动产便利而利用他人不动产（如通行权）</li>
+    <li>（民法典另设<strong>居住权</strong>，亦属用益物权）</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>用益物权口诀——“<strong>土、建、宅、役</strong>”（土地承包、建设用地、宅基地、地役权），均利用物的使用价值。</div>
+</div>
+
+<div class="section">
+  <h2>二、担保物权：抵押权、质权、留置权 <span class="hot">高频考点 · 多选题</span></h2>
+  <p>担保物权是为担保债权实现，就债务人或第三人特定物/权利享有的优先受偿权（利用交换价值）。三者区别如下：</p>
+  <table class="compare-table">
+    <tr><th style="width:16%">对比项</th><th>抵押权</th><th>质权</th><th>留置权</th></tr>
+    <tr><td><strong>性质</strong></td><td>意定（约定）</td><td>意定（约定）</td><td>法定</td></tr>
+    <tr><td><strong>是否转移占有</strong></td><td>不转移占有</td><td>转移占有</td><td>债权人已合法占有</td></tr>
+    <tr><td><strong>客体</strong></td><td>动产、不动产</td><td>动产、财产权利</td><td>仅限动产</td></tr>
+  </table>
+  <ul>
+    <li><strong>抵押权</strong>：不转移占有；不动产抵押<strong>登记生效</strong>，动产抵押<strong>登记对抗</strong>（未经登记不得对抗善意第三人）。</li>
+    <li><strong>质权</strong>：转移占有，分动产质权与权利质权（如汇票、股权、知识产权出质）。</li>
+    <li><strong>留置权</strong>：法定担保物权，债权人合法占有债务人动产，债权未受清偿时可留置（通常须基于<strong>同一法律关系</strong>，企业之间除外）。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>抵押<strong>不占</strong>、质权<strong>要占</strong>、留置<strong>法定占</strong>；留置权客体仅动产。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>下列属于用益物权的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 土地承包经营权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 建设用地使用权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 抵押权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 地役权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 宅基地使用权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABDE</span></p><p>解析：用益物权包括土地承包经营权、建设用地使用权、宅基地使用权、地役权（及居住权）。抵押权是担保物权，不属于用益物权。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>关于抵押权，下列说法正确的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 抵押权以转移占有为要件</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 不动产抵押自抵押合同生效时设立</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 不动产抵押以登记为生效要件</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 抵押权是法定担保物权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：抵押权<strong>不转移占有</strong>，是意定担保物权；不动产抵押采<strong>登记生效主义</strong>（登记才设立），动产抵押采登记对抗。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>下列关于质权的说法，正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 质权须转移占有</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 质权客体包括动产和财产权利</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 质权是法定担保物权</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 股权可以出质设立权利质权</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 质权不转移占有</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABD</span></p><p>解析：质权是<strong>意定</strong>担保物权，须<strong>转移占有</strong>，客体为动产或财产权利（股权可出质）。C、E 把质权说成法定/不转移占有，混淆了留置权/抵押权。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>债权人按照合同约定合法占有债务人动产，债务人不履行到期债务时可留置该动产，这属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 抵押权</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 质权</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 留置权</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 用益物权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：留置权是<strong>法定担保物权</strong>，债权人已合法占有债务人动产，债务人不履行到期债务时可留置（通常须同一法律关系）。抵押权不转移占有，质权是约定的。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（单选）</span>甲向乙借款，将其汽车质押给乙并交付。该担保物权的设立要件是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 签订质押合同并登记</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 签订质押合同并交付汽车</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 仅签订质押合同</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 仅交付汽车</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：动产质权自<strong>出质人交付质押财产时</strong>设立，需质押合同+交付。质权以转移占有为要件，登记并非动产质权设立要件。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十五章_第1节_合同的订立（要约与承诺）.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：合同的订立（要约与承诺）</h3>
+  <p>下一节：合同法律制度 · 合同的订立（要约与承诺）</p>
+</a>
+</body>
+</html>

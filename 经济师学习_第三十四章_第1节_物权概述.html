@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第34章：物权概述</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第34章</span>
+  <h1>第三十四章 物权法律概述</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · 物权概述 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:33%"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+<a href="经济师学习_第三十三章_第3节_优化营商环境的制度与实践.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 3 节：优化营商环境的制度与实践</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握物权的特征与分类 <span class="hot">必考</span></li>
+    <li>理解物权的设立、变更、转让和消灭（物权变动）</li>
+    <li>掌握善意取得制度的构成要件 <span class="hot">高频考点 · 多选题</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、物权的特征与分类 <span class="hot">高频考点 · 多选题</span></h2>
+  <p><strong>物权</strong>是权利人依法对特定的物享有直接支配和排他的权利。其特征包括：绝对权（对世权）、支配权、排他性、优先性（物权优先于债权）、客体为特定有体物。</p>
+  <table class="compare-table">
+    <tr><th style="width:30%">分类标准</th><th>物权类型</th><th>说明</th></tr>
+    <tr><td><strong>权利主体是否为所有人</strong></td><td>自物权 / 他物权</td><td>所有权（自物权）；用益物权、担保物权（他物权）</td></tr>
+    <tr><td><strong>客体是否为动产</strong></td><td>动产物权 / 不动产物权</td><td>动产所有权、动产质权；房屋所有权、建设用地使用权</td></tr>
+    <tr><td><strong>设立目的</strong></td><td>用益物权 / 担保物权</td><td>利用使用价值 / 担保债权实现</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>所有权是<strong>自物权、完全物权</strong>；用益物权与担保物权是<strong>他物权</strong>，从所有权派生。</div>
+</div>
+
+<div class="section">
+  <h2>二、物权的设立、变更、转让和消灭（物权变动）</h2>
+  <ul>
+    <li><strong>不动产物权</strong>：依法律规定应当登记的，自<strong>记载于不动产登记簿</strong>时发生效力（登记生效主义）。</li>
+    <li><strong>动产物权</strong>：自<strong>交付</strong>时发生效力（交付生效主义），法律另有规定的除外。</li>
+    <li>船舶、航空器和机动车等物权的设立、变更、转让、消灭，<strong>未经登记，不得对抗善意第三人</strong>。</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>甲卖房给乙，未办过户登记，则房屋所有权未转移；甲卖车给乙并已交付但未登记，乙取得所有权但不得对抗善意第三人。</div>
+</div>
+
+<div class="section">
+  <h2>三、善意取得制度 <span class="hot">高频考点 · 多选题</span></h2>
+  <p>无处分权人将不动产或动产转让给受让人，符合法定条件的，受让人<strong>善意取得</strong>该物权，原所有权人只能向无处分权人请求赔偿损失。</p>
+  <p><strong>构成要件（四要件）：</strong></p>
+  <ul>
+    <li>① 转让人<strong>无处分权</strong>；</li>
+    <li>② 受让人受让时<strong>善意</strong>（不知道且不应当知道无处分权）；</li>
+    <li>③ 以<strong>合理价格</strong>有偿转让；</li>
+    <li>④ 完成<strong>法定公示</strong>：动产已交付、不动产已登记。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>无权处分 + 受让人善意 + 合理价格 + 交付/登记 = 善意取得。注意：<strong>赠与</strong>（无偿）不能善意取得。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>下列属于物权特征的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 绝对权（对世权）</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 支配权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 具有排他性</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 物权优先于债权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 客体只能是行为</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCD</span></p><p>解析：物权是绝对权、支配权、具有排他性、具优先性（优先于债权），客体为特定有体物而非行为。E 错误。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>不动产物权的设立、变更、转让和消灭，依照法律规定应当登记的，自何时发生效力：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 合同签订时</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 交付时</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 记载于不动产登记簿时</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 付款时</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：不动产物权变动以<strong>登记生效</strong>为原则，自记载于不动产登记簿时发生效力。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>善意取得制度的构成要件包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 转让人无处分权</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 受让人受让时为善意</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 以合理价格有偿转让</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 已完成法定公示（交付或登记）</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 转让人须为所有权人</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCD</span></p><p>解析：善意取得四要件：转让人无处分权、受让人善意、合理有偿价格、完成法定公示。E 与“无处分权”矛盾，故不选。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>甲将借用的乙的笔记本电脑以明显低于市场价赠送给不知情的丙，丙能否善意取得该电脑所有权：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 能，因为丙不知情</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 能，因为已交付</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 不能，因属无偿赠与</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 不能，因丙不善意</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：善意取得要求<strong>以合理价格有偿转让</strong>，赠与为无偿，不满足“合理价格”要件，故丙不能善意取得。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（单选）</span>下列属于自物权的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 建设用地使用权</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 抵押权</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 所有权</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 质权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：C</span></p><p>解析：自物权即<strong>所有权</strong>（权利人对自己的物享有完全的占有、使用、收益、处分权）。建设用地使用权、抵押权、质权均是他物权。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十四章_第2节_所有权.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：所有权</h3>
+  <p>下一节：物权法律概述 · 所有权</p>
+</a>
+</body>
+</html>

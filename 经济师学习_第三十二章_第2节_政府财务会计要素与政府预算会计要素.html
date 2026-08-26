@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第32章：政府财务会计要素与政府预算会计要素</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第32章</span>
+  <h1>第三十二章 政府会计</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 政府财务会计要素与政府预算会计要素 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第三十二章_第1节_政府会计的概念与特点.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：政府会计的概念与特点</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握政府财务会计五要素 <span class="hot">必考</span></li>
+    <li>掌握政府预算会计三要素 <span class="hot">高频考点</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、政府财务会计要素（5个）</h2>
+  <table class="compare-table">
+    <tr><th style="width:20%">要素</th><th style="width:48%">含义要点</th></tr>
+    <tr><td><strong>资产</strong></td><td>预计能够产生服务潜力或者带来经济利益流入的经济资源</td></tr>
+    <tr><td><strong>负债</strong></td><td>过去事项形成的、预期导致经济资源流出政府的现时义务</td></tr>
+    <tr><td><strong>净资产</strong></td><td>资产扣除负债后的余额</td></tr>
+    <tr><td><strong>收入</strong></td><td>导致净资产增加、含服务潜力或经济利益流入的经济资源</td></tr>
+    <tr><td><strong>费用</strong></td><td>导致净资产减少、含服务潜力或经济利益流出的经济资源</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>政府财务会计要素 = 企业会计六要素去掉"利润"、加"净资产"（资产、负债、净资产、收入、费用），共 5 个。</div>
+</div>
+
+<div class="section">
+  <h2>二、政府预算会计要素（3个）</h2>
+  <table class="compare-table">
+    <tr><th style="width:22%">要素</th><th style="width:46%">含义要点</th></tr>
+    <tr><td><strong>预算收入</strong></td><td>政府会计主体在预算年度内依法取得的并纳入预算管理的现金流入</td></tr>
+    <tr><td><strong>预算支出</strong></td><td>政府会计主体在预算年度内依法发生并纳入预算管理的现金流出</td></tr>
+    <tr><td><strong>预算结余</strong></td><td>预算收入减去预算支出后的资金余额，以及结转结余资金（含结余资金、结转资金）</td></tr>
+  </table>
+  <div class="example"><strong>例子：</strong>财政部门向某单位拨付一笔经费，单位收到时确认<strong>预算收入</strong>；实际列支时确认<strong>预算支出</strong>；年度末未用完且可结转下年的部分形成<strong>预算结余</strong>。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>政府财务会计要素包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 资产</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 负债</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 净资产</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 收入</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 费用</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCDE</span></p><p>解析：政府<strong>财务会计要素</strong>共 5 个：<strong>资产、负债、净资产、收入、费用</strong>。全部当选。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>下列各项中，属于政府预算会计要素的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 资产</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 净资产</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 预算结余</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 费用</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：政府<strong>预算会计要素</strong>为<strong>预算收入、预算支出、预算结余</strong>。资产、净资产、费用属于财务会计要素（A、B、D 不选）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>下列关于政府资产的说法，正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 资产是预计能够产生服务潜力的经济资源</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 资产是预计能够带来经济利益流入的经济资源</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 净资产 = 资产 − 负债</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 政府财务会计要素包含利润</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 负债是预期导致经济资源流出政府的现时义务</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCE</span></p><p>解析：政府资产强调"服务潜力或经济利益流入"（A、B）；净资产=资产−负债（C）；负债是预期资源流出的现时义务（E）。政府财务会计要素<strong>不含"利润"</strong>（以净资产变动体现，D 错）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>政府预算会计要素中，"预算收入减去预算支出后的资金余额"指的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 预算收入</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 预算支出</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 预算结余</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 净资产</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：<strong>预算结余</strong>=预算收入−预算支出后的资金余额，以及结转结余资金。净资产是财务会计要素（D 错）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>政府财务会计要素与企业会计要素相比，政府财务会计没有：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 资产</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 负债</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 利润</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 收入</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：C</span></p><p>解析：企业会计六要素含<strong>利润</strong>；政府财务会计要素为资产、负债、净资产、收入、费用，<strong>无"利润"</strong>要素（经营成果通过净资产变动体现）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十二章_第3节_政府会计报告（决算报告与财务报告）.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：政府会计报告（决算报告与财务报告）</h3>
+  <p>下一节：政府会计 · 政府会计报告（决算报告与财务报告）</p>
+</a>
+</body>
+</html>

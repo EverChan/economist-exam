@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第18章：货币供给</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第18章</span>
+  <h1>第十八章 货币供求与货币均衡</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 货币供给 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第十八章_第1节_货币需求.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：货币需求</h3>
+</a>
+<div class="section"><h2>本节学习目标</h2><ul>
+<li>掌握货币层次的划分（M0、M1、M2）</li>
+<li>理解社会融资规模的含义</li>
+<li>掌握货币供给机制（基础货币与货币乘数）</li>
+<li>了解商业银行扩张信用的限制因素与数字货币</li>
+</ul></div>
+
+<div class="section"><h2>一、货币供给与货币层次 <span class="hot">必考</span></h2>
+<table class="compare-table">
+<tr><th>层次</th><th>构成</th><th>含义</th></tr>
+<tr><td>M0</td><td>流通中货币（现金）</td><td>—</td></tr>
+<tr><td>M1（狭义货币）</td><td>M0 + 单位活期存款</td><td>现实购买力</td></tr>
+<tr><td>M2（广义货币）</td><td>M1 + 单位定期存款 + 个人存款 + 其他存款</td><td>现实 + 潜在购买力</td></tr>
+</table>
+<p><strong>准货币</strong> = M2 − M1（潜在购买力）。</p>
+<div class="keypoint"><strong>记忆：</strong>M1 看"活钱"流动性最强；M2 含定存和居民储蓄，口径更宽。</div></div>
+
+<div class="section"><h2>二、社会融资规模</h2>
+<p>指一定时期内实体经济从金融体系获得的资金总额，是<strong>增量</strong>概念。包括人民币贷款、外币贷款、委托贷款、信托贷款、未贴现银行承兑汇票、企业债券、非金融企业境内股票融资、保险公司赔偿、投资性房地产、小额贷款公司贷款等。</p></div>
+
+<div class="section"><h2>三、货币供给机制 <span class="hot">高频考点</span></h2>
+<p><strong>基础货币（B）</strong> = 存款准备金（R）+ 流通中现金（C），又称高能货币。</p>
+<p><strong>货币供应量（M）</strong> = 基础货币 × 货币乘数，即 M = B × m。</p>
+<p><strong>货币乘数</strong> m = (1 + c) / (r_d + e + c)，其中：</p>
+<ul>
+<li>c：现金漏损率（现金 / 存款）</li>
+<li>r_d：法定存款准备金率</li>
+<li>e：超额准备金率</li>
+</ul>
+<div class="keypoint"><strong>记忆：</strong>货币乘数 = (1 + c) ÷ (法定准备金率 + 超额准备金率 + 现金漏损率)。</div></div>
+
+<div class="section"><h2>四、商业银行扩张信用的限制因素</h2>
+<ul>
+<li>缴存中央银行的法定存款准备金</li>
+<li>提取现金数量（现金漏损）</li>
+<li>企事业单位及社会公众持有现金（而非存入银行派生）</li>
+</ul>
+<div class="example"><strong>举例：</strong>企业拿到贷款后若全部提现，则无法形成存款派生，信用扩张受限。</div></div>
+
+<div class="section"><h2>五、数字货币 <span class="hot">高频考点</span></h2>
+<p>包括法定数字货币（央行数字货币 CBDC）与私人数字货币。我国数字人民币（e-CNY）由中国人民银行发行，定位 M0，具有价值特征与法偿性。</p></div><div class="quiz"><h2>练习题（5题）</h2>
+<div class="quiz-q"><p class="q-text"><span class="num">1.（单选）</span>根据我国货币层次划分，M1（狭义货币）的构成是？</p>
+<div class="options"><label class="option"><input type="radio" name="q1" value="a"> A. 流通中现金 M0</label><br>
+<label class="option"><input type="radio" name="q1" value="b"> B. M0 + 单位活期存款</label><br>
+<label class="option"><input type="radio" name="q1" value="c"> C. M0 + 单位定期存款</label><br>
+<label class="option"><input type="radio" name="q1" value="d"> D. M0 + 个人存款</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+<div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：M1 = M0（流通中现金）+ 单位活期存款，代表现实购买力。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">2.（单选）</span>准货币是指？</p>
+<div class="options"><label class="option"><input type="radio" name="q2" value="a"> A. M0</label><br>
+<label class="option"><input type="radio" name="q2" value="b"> B. M1</label><br>
+<label class="option"><input type="radio" name="q2" value="c"> C. M2 − M1</label><br>
+<label class="option"><input type="radio" name="q2" value="d"> D. M2 + M1</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+<div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：准货币 = M2 − M1，是潜在购买力，如单位定期存款、个人存款等。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">3.（单选）</span>基础货币（高能货币）的构成是？</p>
+<div class="options"><label class="option"><input type="radio" name="q3" value="a"> A. 法定准备金 + 超额准备金</label><br>
+<label class="option"><input type="radio" name="q3" value="b"> B. 存款准备金 + 流通中现金</label><br>
+<label class="option"><input type="radio" name="q3" value="c"> C. M1 + M2</label><br>
+<label class="option"><input type="radio" name="q3" value="d"> D. 流通中现金 + 单位活期存款</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+<div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：基础货币 B = 存款准备金 R + 流通中现金 C，是央行直接控制的货币。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">4.（多选）</span>关于我国货币层次划分，下列说法正确的有？</p>
+<div class="options"><label class="option"><input type="checkbox" name="q4" value="a"> A. M0 指流通中货币（现金）</label><br>
+<label class="option"><input type="checkbox" name="q4" value="b"> B. M1 = M0 + 单位活期存款</label><br>
+<label class="option"><input type="checkbox" name="q4" value="c"> C. M2 包含个人存款</label><br>
+<label class="option"><input type="checkbox" name="q4" value="d"> D. 准货币 = M2 − M1</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+<div class="answer" id="a4"><p><span class="label">答案：ABCD</span></p><p>解析：四个表述均正确，我国货币层次 M0、M1、M2 及准货币定义如述。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">5.（单选）</span>若现金漏损率为 c、法定存款准备金率为 r_d、超额准备金率为 e，则货币乘数 m 等于？</p>
+<div class="options"><label class="option"><input type="radio" name="q5" value="a"> A. (1 + c) / (r_d + e + c)</label><br>
+<label class="option"><input type="radio" name="q5" value="b"> B. (1 − c) / (r_d + e)</label><br>
+<label class="option"><input type="radio" name="q5" value="c"> C. 1 / (r_d + e + c)</label><br>
+<label class="option"><input type="radio" name="q5" value="d"> D. (1 + c) / (r_d × e × c)</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+<div class="answer" id="a5"><p><span class="label">答案：A</span></p><p>解析：货币乘数 m = (1 + c) / (r_d + e + c)，分子体现现金与存款的放大，分母体现各类准备金漏出。</p></div></div>
+</div><a href="经济师学习_第十八章_第3节_货币均衡与通货膨胀.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：货币均衡与通货膨胀</h3>
+  <p>下一节：货币供求与货币均衡 · 货币均衡与通货膨胀</p>
+</a>
+</body>
+</html>

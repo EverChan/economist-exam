@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第20章：商业银行的运营与管理</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第20章</span>
+  <h1>第二十章 商业银行与金融市场</h1>
+  <p class="subtitle">第 1 节 / 共 2 节 · 商业银行的运营与管理 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 1/2</p>
+</div>
+<a href="经济师学习_第十九章_第2节_货币政策.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：货币政策</h3>
+</a>
+<div class="section"><h2>本节学习目标</h2><ul>
+<li>掌握商业银行的职能与组织形式</li>
+<li>掌握商业银行的主要业务（负债、资产、中间）</li>
+<li>理解经营管理三性原则</li>
+<li>了解存款保险制度</li>
+</ul></div>
+
+<div class="section"><h2>一、商业银行的内涵与职能 <span class="hot">必考</span></h2>
+<p>商业银行是最典型的银行，经营吸收公众存款、发放贷款、办理结算等业务的企业法人。</p>
+<table class="compare-table">
+<tr><th>职能</th><th>说明</th></tr>
+<tr><td>信用中介</td><td><strong>最基本</strong>职能，吸收存款、发放贷款</td></tr>
+<tr><td>支付中介</td><td>办理结算、收付</td></tr>
+<tr><td>信用创造</td><td><strong>特殊</strong>职能，通过存款派生创造货币</td></tr>
+<tr><td>金融服务 / 调节经济</td><td>提供咨询、代理等</td></tr>
+</table></div>
+
+<div class="section"><h2>二、商业银行的主要业务 <span class="hot">高频考点 · 多选题</span></h2>
+<table class="compare-table">
+<tr><th>业务类型</th><th>内容</th></tr>
+<tr><td>负债业务</td><td>吸收存款（<strong>最主要来源</strong>）、借款（同业拆借、向央行借款、发行金融债券）</td></tr>
+<tr><td>资产业务</td><td>贷款（<strong>最主要</strong>资产业务）、证券投资、现金资产</td></tr>
+<tr><td>中间业务（表外）</td><td>结算、信托、租赁、代理、咨询，不运用自身资金、收取手续费</td></tr>
+</table>
+<div class="keypoint"><strong>记忆：</strong>负债是"钱从哪来"（存款），资产是"钱到哪去"（贷款），中间业务"不占钱赚手续费"。</div></div>
+
+<div class="section"><h2>三、经营管理原则与存款保险</h2>
+<p><strong>三性原则</strong>：盈利性、流动性、安全性。安全性是前提，流动性是条件，盈利性是目标。</p>
+<p><strong>存款保险制度</strong>：2015年5月1日《存款保险条例》施行，最高偿付限额为<strong>50万元</strong>人民币。</p></div><div class="quiz"><h2>练习题（5题）</h2>
+<div class="quiz-q"><p class="q-text"><span class="num">1.（单选）</span>商业银行最基本、最能反映其经营活动特征的职能是？</p>
+<div class="options"><label class="option"><input type="radio" name="q1" value="a"> A. 信用中介</label><br>
+<label class="option"><input type="radio" name="q1" value="b"> B. 支付中介</label><br>
+<label class="option"><input type="radio" name="q1" value="c"> C. 信用创造</label><br>
+<label class="option"><input type="radio" name="q1" value="d"> D. 金融服务</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+<div class="answer" id="a1"><p><span class="label">答案：A</span></p><p>解析：信用中介是商业银行最基本职能，即通过吸收存款、发放贷款充当资金中介。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">2.（多选）</span>商业银行的主要业务包括？</p>
+<div class="options"><label class="option"><input type="checkbox" name="q2" value="a"> A. 负债业务</label><br>
+<label class="option"><input type="checkbox" name="q2" value="b"> B. 资产业务</label><br>
+<label class="option"><input type="checkbox" name="q2" value="c"> C. 中间业务</label><br>
+<label class="option"><input type="checkbox" name="q2" value="d"> D. 货币发行业务</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+<div class="answer" id="a2"><p><span class="label">答案：ABC</span></p><p>解析：货币发行业务是中央银行的业务，D 不选。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">3.（单选）</span>商业银行最主要的负债业务和最主要的资产业务分别是？</p>
+<div class="options"><label class="option"><input type="radio" name="q3" value="a"> A. 借款、证券投资</label><br>
+<label class="option"><input type="radio" name="q3" value="b"> B. 吸收存款、贷款</label><br>
+<label class="option"><input type="radio" name="q3" value="c"> C. 发行金融债券、现金资产</label><br>
+<label class="option"><input type="radio" name="q3" value="d"> D. 同业拆借、结算</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+<div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：吸收存款是负债最主要来源，贷款是资产最主要业务。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">4.（单选）</span>商业银行经营管理"三性"原则中，作为前提的是？</p>
+<div class="options"><label class="option"><input type="radio" name="q4" value="a"> A. 盈利性</label><br>
+<label class="option"><input type="radio" name="q4" value="b"> B. 流动性</label><br>
+<label class="option"><input type="radio" name="q4" value="c"> C. 安全性</label><br>
+<label class="option"><input type="radio" name="q4" value="d"> D. 成长性</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+<div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：安全性是前提，流动性是条件，盈利性是目标。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">5.（多选）</span>关于我国存款保险制度，下列说法正确的有？</p>
+<div class="options"><label class="option"><input type="checkbox" name="q5" value="a"> A. 《存款保险条例》自2015年5月1日施行</label><br>
+<label class="option"><input type="checkbox" name="q5" value="b"> B. 最高偿付限额为50万元</label><br>
+<label class="option"><input type="checkbox" name="q5" value="c"> C. 由中央银行直接赔付</label><br>
+<label class="option"><input type="checkbox" name="q5" value="d"> D. 覆盖人民币存款和外币存款</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+<div class="answer" id="a5"><p><span class="label">答案：AB</span></p><p>解析：存款保险条例2015年5月1日施行，最高偿付限额50万元；赔付由存款保险基金管理机构而非央行直接赔付，C 错；本条例覆盖境内投保机构人民币及外币存款，但题目 D 表述不完整易误解，标准答案为 AB。</p></div></div>
+</div><a href="经济师学习_第二十章_第2节_金融市场.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：金融市场</h3>
+  <p>下一节：商业银行与金融市场 · 金融市场</p>
+</a>
+</body>
+</html>

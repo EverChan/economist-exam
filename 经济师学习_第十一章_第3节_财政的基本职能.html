@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第11章：财政的基本职能</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第11章</span>
+  <h1>第十一章 公共物品与财政职能</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 财政的基本职能 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第十一章_第2节_市场与政府的经济活动范围.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：市场与政府的经济活动范围</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握财政三大基本职能及其实现手段 <span class="hot">必考</span></li>
+    <li>区分资源配置、收入分配、经济稳定与发展三大职能</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、财政的三大基本职能 <span class="hot">高频考点 · 多选题</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:20%">职能</th><th style="width:32%">目标</th><th>主要手段</th></tr>
+    <tr><td><strong>资源配置</strong></td><td>优化资源在地区、产业、政府间配置，提高效率</td><td>调节支出结构、确定公共物品供给范围、提高财政配置效率</td></tr>
+    <tr><td><strong>收入分配</strong></td><td>缩小收入差距，实现公平</td><td>税收（累进所得税）、转移支付、公共支出</td></tr>
+    <tr><td><strong>经济稳定与发展</strong></td><td>充分就业、物价稳定、经济增长、国际收支平衡</td><td>相机抉择财政政策、自动稳定器</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>资源配置管"效率"，收入分配管"公平"，经济稳定管"总量平稳"。三大职能中<strong>资源配置职能</strong>是财政履行其他职能的基础。</div>
+</div>
+
+<div class="section">
+  <h2>二、各职能的具体体现</h2>
+  <ul>
+    <li><strong>资源配置</strong>：将资源引导到市场不愿供给的公共领域；通过投资补贴引导产业结构。</li>
+    <li><strong>收入分配</strong>：规范工资、调节过高收入、保障低收入、转移支付。</li>
+    <li><strong>经济稳定与发展</strong>：通过"相机抉择"调控总需求，运用累进税与转移支付的"自动稳定"作用。</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>经济萧条时政府增加支出、减税（扩张性财政政策）→ 履行经济稳定职能；对高收入者征累进个税、给低收入者低保 → 履行收入分配职能。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>财政的基本职能包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 资源配置职能</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 收入分配职能</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 经济稳定与发展职能</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 货币发行职能</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 国际收支调节职能</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABC</span></p><p>解析：财政三大基本职能是资源配置、收入分配、经济稳定与发展；货币发行属央行（货币职能），国际收支调节是宏观目标之一但非独立职能。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>政府通过累进所得税和最低生活保障制度缩小收入差距，体现的是财政的：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 资源配置职能</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 收入分配职能</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 经济稳定职能</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 监督管理职能</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：税收与转移支付调节收入差距，属<strong>收入分配职能</strong>。资源配置管效率，经济稳定管总量。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>在三大财政职能中，履行其他职能的基础是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 收入分配职能</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 资源配置职能</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 经济稳定职能</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 均衡发展职能</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：教材指出<strong>资源配置职能</strong>是财政提供公共物品、满足社会公共需要的基础，是履行其他职能的前提。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>下列财政政策手段中，主要用于实现"经济稳定与发展"职能的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 确定公共物品供给范围</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 累进所得税的自动稳定作用</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 调节财政支出结构</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 公共定价</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：累进所得税随经济波动自动增减，发挥"自动稳定器"作用，服务于经济稳定与发展职能；A、C 属资源配置，D 属资源配置中的定价手段。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（多选）</span>关于财政"资源配置职能"的实现，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 调节资源在地区间的配置</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 调节资源在产业间的配置</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 提高财政资源配置效率</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 通过累进税缩小收入差距</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 确定公共物品供给范围</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCE</span></p><p>解析：资源配置职能实现手段包括调节地区/产业/政府间配置、确定公共物品供给范围、提高效率；D 累进税缩小差距属收入分配职能。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第十二章_第1节_财政支出及其分类.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：财政支出及其分类</h3>
+  <p>下一节：财政支出 · 财政支出及其分类</p>
+</a>
+</body>
+</html>

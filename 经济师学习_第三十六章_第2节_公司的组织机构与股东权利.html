@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第36章：公司的组织机构与股东权利</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第36章</span>
+  <h1>第三十六章 公司法律制度</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 公司的组织机构与股东权利 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第三十六章_第1节_公司与公司法概述、公司登记与设立.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：公司与公司法概述、公司登记与设立</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握公司三会（股东会、董事会、监事会）的职权划分 <span class="hot">必考</span></li>
+    <li>理解股东的主要权利 <span class="hot">高频考点 · 多选题</span></li>
+    <li>了解审计委员会可替代监事会的新规定</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、公司的组织机构 <span class="hot">高频考点 · 多选题</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:18%">机构</th><th>性质</th><th>主要职权</th></tr>
+    <tr><td><strong>股东会</strong></td><td>权力机构</td><td>决定经营方针、选举董事监事、审议利润分配、增减资、合并分立解散等</td></tr>
+    <tr><td><strong>董事会</strong></td><td>执行机构</td><td>执行股东会决议、决定经营计划、聘任经理等</td></tr>
+    <tr><td><strong>监事会</strong></td><td>监督机构</td><td>检查财务、监督董事高管履职</td></tr>
+  </table>
+  <ul>
+    <li>有限责任公司董事会成员为<strong>三人以上</strong>；规模较小或股东较少的可设一名董事，不设董事会。</li>
+    <li>新法允许公司在董事会中设<strong>审计委员会</strong>行使监事会职权，从而<strong>不设监事会或监事</strong>；规模较小或股东较少的，也可设一名监事，或经全体股东一致同意不设监事。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>股东会（权力）—董事会（执行）—监事会（监督）三权分立；新法允许<strong>审计委员会替代监事会</strong>。</div>
+</div>
+
+<div class="section">
+  <h2>二、股东权利 <span class="hot">高频考点 · 多选题</span></h2>
+  <p>股东基于出资享有的一系列权利，主要包括：</p>
+  <ul>
+    <li><strong>表决权</strong>：参与重大决策（按出资/股份比例，章程另有规定除外）</li>
+    <li><strong>知情权</strong>：查阅公司章程、股东名册、股东会会议记录、财务会计报告等</li>
+    <li><strong>分红权</strong>：按实缴出资比例分取红利（章程另有约定除外）</li>
+    <li><strong>剩余财产分配权</strong>：公司解散清算后分配剩余财产</li>
+    <li><strong>新股优先认购权</strong>（有限公司）、<strong>股权转让权</strong></li>
+    <li><strong>股东代表诉讼权</strong>：董事、高管损害公司利益，股东可书面请求监事会/董事会起诉；拒绝或怠于起诉时，股东可<strong>自己名义</strong>直接起诉</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>董事挪用公司资金，监事会有权起诉；若监事会拒绝，符合条件的股东（有限公司连续 180 日以上持股 1% 以上）可提起代表诉讼。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>下列属于公司股东权利的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 表决权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 知情权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 分红权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 剩余财产分配权</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 股东代表诉讼权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCDE</span></p><p>解析：股东权利包括表决权、知情权、分红权、剩余财产分配权、新股优先认购权、股权转让权、股东代表诉讼权等，全部正确。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>在公司组织机构中，属于公司权力机构的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 股东会</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 董事会</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 监事会</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 经理层</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：A</span></p><p>解析：<strong>股东会</strong>是公司的权力机构，决定经营方针、选举董监、审议利润分配等重大事项。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>关于新《公司法》监事会的规定，正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 公司可在董事会中设审计委员会行使监事会职权</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 设审计委员会的，可不设监事会或监事</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 规模较小公司可设一名监事</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 有限公司经全体股东一致同意可不设监事</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 所有公司必须设监事会</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCD</span></p><p>解析：新法允许以审计委员会替代监事会、小规模公司设一名监事或经全体股东一致同意不设监事，并非所有公司都必须设监事会，E 错误。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>董事、高管损害公司利益，监事会拒绝起诉时，符合条件的股东可以：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 直接向法院起诉该董事个人（股东代表诉讼）</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 只能忍让</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 请求公安机关拘留</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 自行免除该董事职务</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：A</span></p><p>解析：监事（会）拒绝或怠于起诉时，符合条件的股东可<strong>以自己名义</strong>直接向法院提起<strong>股东代表诉讼</strong>，保护公司利益。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（单选）</span>有限责任公司股东查阅下列哪项文件，一般不属于知情权范围：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 公司章程</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 股东会会议记录</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 公司会计账簿（可请求查阅）</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 董事个人银行流水</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：D</span></p><p>解析：股东知情权包括查阅章程、股东名册、股东会记录、财务会计报告，并可请求查阅会计账簿；董事个人银行流水与公司治理无关，不属知情权范围。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十六章_第3节_董监高义务、股份发行转让与合并分立清算.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：董监高义务、股份发行转让与合并分立清算</h3>
+  <p>下一节：公司法律制度 · 董监高义务、股份发行转让与合并分立清算</p>
+</a>
+</body>
+</html>

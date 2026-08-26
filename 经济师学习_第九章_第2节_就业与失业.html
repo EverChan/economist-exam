@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第9章：就业与失业</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第9章</span>
+  <h1>第九章 价格总水平和就业、失业</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 就业与失业 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第九章_第1节_价格总水平.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：价格总水平</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握失业率公式与自然失业率的含义</li>
+    <li>区分失业类型：自愿失业（摩擦性、结构性）与需求不足型失业 <span class="hot">必考</span></li>
+    <li>掌握奥肯定律公式与就业弹性 <span class="hot">高频考点 · 多选题</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、就业与失业的统计</h2>
+  <p>失业率 = 失业人数 / 劳动力人数 × 100%。<strong>自然失业率</strong>（弗里德曼）：经济处于充分就业时的失业率；斯蒂格利茨定义为通货膨胀率为零时的失业率。</p>
+</div>
+
+<div class="section">
+  <h2>二、失业的类型 <span class="hot">必考</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:26%">类型</th><th style="width:37%">含义</th><th>联系</th></tr>
+    <tr><td><strong>自愿失业</strong></td><td>不愿接受现行工资而宁愿不工作</td><td>含摩擦性失业、结构性失业</td></tr>
+    <tr><td><strong>需求不足型失业</strong><br>（非自愿/周期性）</td><td>总需求不足减少劳动力派生需求导致</td><td>与经济周期相联系，宏观调控重点</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>三、奥肯定律与就业弹性</h2>
+  <p>奥肯定律（阿瑟·奥肯）：相对于潜在 GDP，<strong>实际 GDP 每下降 2 个百分点，失业率上升 1 个百分点</strong>。公式：</p>
+  <p class="keypoint"><strong>(y - y*) / y* = -2 (u - u*)</strong></p>
+  <p><strong>就业弹性系数</strong> = 就业增长率 / 经济增长率；第三产业占比大则就业弹性较高。</p>
+  <div class="keypoint"><strong>记忆：</strong>奥肯定律体现增长与就业正相关——促增长是降失业的主要途径；2% 与 1% 的对应关系常考。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>失业率的计算公式为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 失业人数 / 总人口</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 失业人数 / 劳动力人数</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 就业人数 / 劳动力人数</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 失业人数 / 就业人数</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：失业率 = <strong>失业人数 / 劳动力人数</strong>（劳动力 = 就业 + 失业）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>与劳动者现行工资水平下找不到工作、与总需求不足相联系的失业，称为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 摩擦性失业</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 结构性失业</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 需求不足型失业（周期性失业）</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 自愿失业</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：<strong>需求不足型失业（非自愿/周期性失业）</strong>由总需求不足减少劳动力派生需求引起，与经济周期相联系，是宏观调控关注重点。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>关于失业类型，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 自愿失业包括摩擦性失业和结构性失业</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 摩擦性失业属于自愿失业</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 需求不足型失业与总需求不足相联系</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 结构性失业源于劳动力供需结构不匹配</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 周期性失业即需求不足型失业</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCDE</span></p><p>解析：自愿失业含摩擦性+结构性（A、B、D）；需求不足型失业=非自愿=周期性失业，与总需求不足联系（C、E）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>根据奥肯定律，相对于潜在 GDP，实际 GDP 每下降 2 个百分点，失业率将：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 上升 1 个百分点</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 下降 1 个百分点</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 上升 2 个百分点</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 不变</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：A</span></p><p>解析：奥肯定律：实际 GDP 相对潜在 GDP 每<strong>下降 2 个百分点</strong>，失业率<strong>上升 1 个百分点</strong>；或失业率每高 1 个百分点，实际 GDP 相对降 2 个百分点。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>关于自然失业率与就业弹性，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 自然失业率指经济处于充分就业时的失业率</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 斯蒂格利茨将自然失业率定义为通胀率为零时的失业率</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 就业弹性 = 就业增长率 / 经济增长率</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 第三产业占比大则就业弹性较高</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 奥肯定律表明增长与就业正相关</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCDE</span></p><p>解析：自然失业率（弗里德曼：充分就业时；斯蒂格利茨：通胀为零时）（A、B）；就业弹性=就业增长率/经济增长率，服务业占比大则较高（C、D）；奥肯定律表明增长与就业正相关（E）。全选。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第九章_第3节_菲利普斯曲线.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：菲利普斯曲线</h3>
+  <p>下一节：价格总水平和就业、失业 · 菲利普斯曲线</p>
+</a>
+</body>
+</html>

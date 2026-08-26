@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第13章：税负转嫁</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第13章</span>
+  <h1>第十三章 财政收入</h1>
+  <p class="subtitle">第 3 节 / 共 4 节 · 税负转嫁 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:75%"></div></div>
+  <p class="progress-text">本章进度 3/4</p>
+</div>
+<a href="经济师学习_第十三章_第2节_税收.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：税收</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握税负转嫁的五种形式 <span class="hot">必考</span></li>
+    <li>理解影响税负转嫁的因素</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、税负转嫁的形式 <span class="hot">高频考点 · 多选题</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:20%">形式</th><th style="width:32%">方向</th><th>说明</th></tr>
+    <tr><td><strong>前转（顺转）</strong></td><td>卖方→买方</td><td>抬高售价转给消费者，最典型</td></tr>
+    <tr><td><strong>后转（逆转）</strong></td><td>买方→卖方</td><td>压低进价转给供货商</td></tr>
+    <tr><td><strong>混转（散转）</strong></td><td>双向</td><td>前转+后转并行</td></tr>
+    <tr><td><strong>消转</strong></td><td>自我消化</td><td>改进技术、提高效益内部消化</td></tr>
+    <tr><td><strong>税收资本化</strong></td><td>后转特殊形式</td><td>资本品未来收益中扣除，买价压低</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>二、影响税负转嫁的因素</h2>
+  <ul>
+    <li><strong>商品需求弹性</strong>：需求弹性越小，越易<strong>前转</strong>（买方缺乏替代，只能接受涨价）。</li>
+    <li><strong>商品供给弹性</strong>：供给弹性小则难后转。</li>
+    <li><strong>课税范围</strong>：范围越广越易转嫁。</li>
+    <li><strong>经济交易性质</strong>：经济交易中存在自由定价空间才易转嫁。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>"需求弹性小→易前转"是关键结论。前转=加价给买方，后转=压价给供货商，税收资本化=买房时扣未来税。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>纳税人通过提高商品售价将税款转嫁给消费者，这种形式是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 后转</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 前转</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 消转</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 税收资本化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：抬高售价转给买方为<strong>前转（顺转）</strong>，是最典型、普遍的转嫁形式。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>税负转嫁的形式包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 前转</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 后转</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 混转</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 消转</label><br>
+      <label class="option"><input type="checkbox" name="q2"> E. 税收资本化</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABCDE</span></p><p>解析：五种形式全部正确：前转、后转、混转、消转、税收资本化（后转的特殊形式）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>一般来说，商品需求弹性越小，税负越容易：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 前转</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 后转</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 消转</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 无法转嫁</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：A</span></p><p>解析：需求弹性小→消费者难以替代、只能接受涨价→税负易<strong>前转</strong>给买方；弹性大则难前转。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>纳税人通过改进技术、提高效益自行消化税款而不转嫁，属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 前转</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 后转</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 消转</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 混转</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：<strong>消转</strong>是纳税人通过提高生产效率在内部消化税负，不发生名义转嫁。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（多选）</span>关于税收资本化，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 它是后转的一种特殊形式</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 表现为资本品买价中扣除未来应纳税额</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 发生在土地、债券等资本品交易</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 属于前转</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 税负由买方承担</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABC</span></p><p>解析：税收资本化是<strong>后转的特殊形式</strong>，在资本品（土地、债券等）交易中买方压低买价以扣除未来税负，税负实际由卖方（原持有者）承担（E错，由卖方承担）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第十三章_第4节_国债.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 4 节：国债</h3>
+  <p>下一节：财政收入 · 国债</p>
+</a>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第25章：估计量与抽样误差</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第25章</span>
+  <h1>第二十五章 抽样调查</h1>
+  <p class="subtitle">第 2 节 / 共 2 节 · 估计量与抽样误差 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 2/2</p>
+</div>
+<a href="经济师学习_第二十五章_第1节_抽样调查基本概念与概率抽样.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：抽样调查基本概念与概率抽样</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握估计量的优良性质 <span class="hot">高频考点</span></li>
+    <li>区分抽样误差与非抽样误差</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、估计量的性质</h2>
+  <ul>
+    <li><strong>一致性</strong>：样本量越大，估计越接近真值</li>
+    <li><strong>无偏性</strong>：估计量期望 = 被估总体参数（平均不偏不倚）</li>
+    <li><strong>有效性</strong>：方差小者更有效</li>
+    <li><strong>充分性</strong>：估计量包含了样本中关于参数的全部信息</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、抽样误差 <span class="hot">必考</span></h2>
+  <ul>
+    <li><strong>抽样误差</strong>：由抽样的<strong>随机性</strong>引起，用样本估计总体时必然产生的误差</li>
+    <li>特点：<strong>不可避免、但可计算、可控制</strong>（增大样本量可减小）</li>
+    <li><strong>非抽样误差</strong>：抽样框误差、无回答误差、计量误差——与随机性无关，<strong>可避免或减少</strong></li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>抽样误差=随机性→不可避免但可控；非抽样误差=人为/设计→可以避免。考题常问"抽样误差产生的根本原因"→抽样的随机性。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>抽样误差产生的根本原因是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 受抽样框限制</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 调查员诱导受访者</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 问卷设计缺陷</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 抽样的随机性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：D</span></p><p>解析：抽样误差是由于<strong>抽样的随机性</strong>造成的——任一样本只是众多可能样本之一，用样本估计总体必有偏差。A/B/C 属非抽样误差。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>估计量的优良性质包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 一致性</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 无偏性</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 有效性</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 充分性</label><br>
+      <label class="option"><input type="checkbox" name="q2"> E. 对称性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABCD</span></p><p>解析：估计量四大优良性质：一致性、无偏性、有效性、充分性。"对称性"不是评价标准。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>关于抽样误差，下列说法正确的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 可以完全避免</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 由随机性引起，不可避免但可控制</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 属于非抽样误差</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 增大样本量会增大抽样误差</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：抽样误差源于随机性，<strong>不可避免但可计算、可通过增大样本量减小</strong>。它与非抽样误差并列，不是包含关系。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>下列属于非抽样误差的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 抽样框误差</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 无回答误差</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 计量误差</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 抽样随机性误差</label><br>
+      <label class="option"><input type="checkbox" name="q4"> E. 样本量与总体差异</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABC</span></p><p>解析：非抽样误差含抽样框误差、无回答误差、计量误差，与随机性无关、可避免；D 是抽样误差本身。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>估计量期望等于被估总体参数，这一性质称为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 一致性</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 无偏性</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 有效性</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 充分性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：<strong>无偏性</strong>=估计量期望等于总体真参数（长期平均不偏不倚）；一致性是样本量增大趋近真值。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第二十六章_第1节_回归模型与最小二乘估计.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：回归模型与最小二乘估计</h3>
+  <p>下一节：回归分析 · 回归模型与最小二乘估计</p>
+</a>
+</body>
+</html>

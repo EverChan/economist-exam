@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第10章：净出口函数与贸易乘数</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第10章</span>
+  <h1>第十章 国际贸易理论和政策</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 净出口函数与贸易乘数 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第十章_第2节_国际贸易政策.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：国际贸易政策</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握净出口函数 X - M = q - γy + n(EPf / P) <span class="hot">高频考点</span></li>
+    <li>理解影响进出口的因素（收入、汇率、价格、国外收入）</li>
+    <li>掌握对外贸易（贸易）乘数 = 1 / (1 - β + γ) <span class="hot">必考</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、净出口函数</h2>
+  <p>净出口函数：<strong>X - M = q - γy + n(EPf / P)</strong>。其中 y 为国民收入，γ 为边际进口倾向，E 为本币汇率（直接标价法下 E 上升表示本币贬值），Pf、P 为国外、国内价格水平。</p>
+  <ul>
+    <li><strong>影响出口</strong>：国外收入（正相关）、本币贬值 E 上升（正相关）、国外价格相对上升。</li>
+    <li><strong>影响进口</strong>：本国收入 y（正相关，γ 为边际进口倾向）、本币升值（进口增加）、本国价格相对上升。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、对外贸易乘数 <span class="hot">必考</span></h2>
+  <p>开放经济中，出口增加通过连锁消费反应放大国民收入，对外贸易乘数：</p>
+  <table class="compare-table">
+    <tr><th style="width:34%">乘数</th><th>公式</th></tr>
+    <tr><td><strong>对外贸易乘数</strong><br>（贸易乘数）</td><td>k = 1 / (1 - β + γ)，β 为边际消费倾向，γ 为边际进口倾向</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>本币贬值（E↑）→ 净出口↑；收入↑→进口↑（γ 为边际进口倾向）。贸易乘数分母比封闭经济多一个 γ，故小于投资乘数。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>净出口函数 X - M = q - γy + n(EPf / P) 中，γ 表示：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 边际消费倾向</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 边际进口倾向</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 边际储蓄倾向</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 汇率弹性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：净出口函数中 γ 为<strong>边际进口倾向</strong>，表示收入增加引起的进口增加比例；-γy 体现收入越高进口越多、净出口越少。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>对外贸易乘数（贸易乘数）的公式为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 1 / (1 - β)</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 1 / (1 - β + γ)</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. β / (1 - β)</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 1 / (β + γ)</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：对外贸易乘数 = <strong>1 / (1 - β + γ)</strong>，β 边际消费倾向，γ 边际进口倾向；分母比封闭经济多 γ，故小于投资乘数。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>影响一国出口的因素主要包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 国外国民收入（正相关）</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 本币贬值（E 上升，促进出口）</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 国外价格水平相对上升</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 本国国民收入（正相关）</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 本国利率水平</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABC</span></p><p>解析：出口受国外收入（A）、本币贬值 E↑（B）、国外价格相对上升（C）正向影响。D 本国收入影响的是<strong>进口</strong>（正相关），非出口；E 非直接因素。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>在直接标价法下，本币贬值（汇率 E 上升）会使净出口：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 增加</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 减少</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 不变</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 先增后减</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：A</span></p><p>解析：函数含 n(EPf/P)，本币贬值 E↑ → 该项正确增大 → <strong>净出口增加</strong>（出口相对便宜、进口相对贵）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>关于对外贸易乘数，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 公式为 1 / (1 - β + γ)</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 边际进口倾向 γ 越大，乘数越小</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 对外贸易乘数小于封闭经济下的投资乘数</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 出口增加会通过连锁消费放大国民收入</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 边际消费倾向 β 越大，乘数越小</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCD</span></p><p>解析：贸易乘数=1/(1-β+γ)（A）；γ 越大分母越大、乘数越小（B）；因多 γ 项而小于投资乘数（C）；出口引致连锁消费放大收入（D）。E 错：β 越大乘数越大。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第十一章_第1节_公共物品的定义及其融资与生产.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：公共物品的定义及其融资与生产</h3>
+  <p>下一节：公共物品与财政职能 · 公共物品的定义及其融资与生产</p>
+</a>
+</body>
+</html>

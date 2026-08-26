@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第33章：“调整经济的法”与“经济法”</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第33章</span>
+  <h1>第三十三章 法律对经济关系的调整</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · “调整经济的法”与“经济法” | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:33%"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+<a href="经济师学习_第三十二章_第3节_政府会计报告（决算报告与财务报告）.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 3 节：政府会计报告（决算报告与财务报告）</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>区分“调整经济的法”与“经济法”两个概念 <span class="hot">必考</span></li>
+    <li>理解经济法作为独立法律部门的调整对象</li>
+    <li>辨析“经济法”与“民商法”“行政法”的关系</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、“调整经济的法”与“经济法”的区别 <span class="hot">高频考点 · 多选题</span></h2>
+  <p><strong>“调整经济的法”</strong>是一个<strong>概念体系</strong>，所指的范围包括宪法、刑法、经济法、民商法、行政法、社会法等所有调整经济关系的法律规范，是一个整体的集合概念。</p>
+  <p><strong>“经济法”</strong>则是<strong>一个独立的法律部门</strong>，是现代法律体系的一个组成部分，与民法、商法、行政法、刑法等部门并列。</p>
+  <table class="compare-table">
+    <tr><th style="width:22%">对比项</th><th style="width:38%">“调整经济的法”</th><th>“经济法”</th></tr>
+    <tr><td><strong>性质</strong></td><td>概念体系（所有调整经济关系的法律规范总和）</td><td>独立的法律部门</td></tr>
+    <tr><td><strong>范围</strong></td><td>最广，含宪法、刑法、民商法、行政法、经济法等</td><td>仅指经济法这一个部门</td></tr>
+    <tr><td><strong>关系</strong></td><td>包含经济法</td><td>被包含于“调整经济的法”之中</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>“调整经济的法”是<strong>大集合</strong>，“经济法”是其中<strong>一个部门</strong>。考题常设陷阱把二者等同——记住：经济法 ≠ 调整经济的法。</div>
+</div>
+
+<div class="section">
+  <h2>二、经济法的调整对象</h2>
+  <p>经济法作为独立法律部门，其调整对象是国家在管理与协调经济运行过程中发生的经济关系，主要包括三类：</p>
+  <ul>
+    <li><strong>经济管理关系</strong>：国家宏观经济管理过程中发生的社会关系（如计划、财政、金融等调控关系）</li>
+    <li><strong>市场管理关系</strong>：国家规范市场主体竞争与交易秩序过程中发生的社会关系（如反垄断、反不正当竞争）</li>
+    <li><strong>组织管理性的流转和协作关系</strong>：既有管理因素又含平等协商的横向协作关系（如国家通过国企进行的投资、采购）</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>央行调整存款准备金率属于<strong>经济管理关系</strong>；市场监管部门处罚垄断协议属于<strong>市场管理关系</strong>。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>关于“调整经济的法”与“经济法”的关系，下列说法正确的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 二者是同一概念</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. “经济法”包含“调整经济的法”</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. “调整经济的法”包含“经济法”</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 二者无任何联系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：“调整经济的法”是一个概念体系，涵盖所有调整经济关系的法律规范（含宪法、刑法、民商法、行政法、经济法等）；“经济法”只是其中一个独立法律部门。因此是“调整经济的法”包含“经济法”。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>经济法作为独立法律部门，其调整对象包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 经济管理关系</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 市场管理关系</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 平等主体之间的婚姻关系</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 组织管理性的流转和协作关系</label><br>
+      <label class="option"><input type="checkbox" name="q2"> E. 刑事犯罪关系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABD</span></p><p>解析：经济法调整国家管理与协调经济运行中的关系，包括经济管理关系、市场管理关系、组织管理性的流转和协作关系。婚姻关系由民法（亲属法）调整，刑事犯罪由刑法调整，均不属经济法调整对象。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>下列属于“经济法”这一独立法律部门调整的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 甲乙二人签订买卖合同</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 市场监管部门查处经营者达成垄断协议</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 夫妻离婚财产分割</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 自然人立遗嘱</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：查处垄断协议属于<strong>市场管理关系</strong>，由经济法调整。买卖合同属民商法调整；离婚、遗嘱属民法（亲属、继承）调整，均不属经济法。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>“调整经济的法”所指范围不包括下列哪一选项：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 宪法中有关经济的规范</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 民商法</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 行政法</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 以上均属于其范围</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：D</span></p><p>解析：“调整经济的法”是概念体系，包括宪法、刑法、经济法、民商法、行政法、社会法等所有调整经济关系的规范，故 A、B、C 均包含在内。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（多选）</span>下列关于经济法调整对象的表述中，正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 经济法调整经济管理关系</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 经济法调整市场管理关系</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 经济法调整平等主体间的财产关系</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 经济法调整组织管理性的流转和协作关系</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 经济法调整经济犯罪关系</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABD</span></p><p>解析：经济法调整对象为经济管理关系、市场管理关系、组织管理性的流转和协作关系。平等主体间的财产关系由民商法调整，经济犯罪由刑法调整，均不属经济法。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十三章_第2节_调整社会主义市场经济的法律体系.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：调整社会主义市场经济的法律体系</h3>
+  <p>下一节：法律对经济关系的调整 · 调整社会主义市场经济的法律体系</p>
+</a>
+</body>
+</html>

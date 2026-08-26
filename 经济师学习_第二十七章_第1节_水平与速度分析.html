@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第27章：水平与速度分析</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第27章</span>
+  <h1>第二十七章 时间序列分析</h1>
+  <p class="subtitle">第 1 节 / 共 2 节 · 水平与速度分析 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 1/2</p>
+</div>
+<a href="经济师学习_第二十六章_第1节_回归模型与最小二乘估计.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：回归模型与最小二乘估计</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>区分时期序列与时点序列 <span class="hot">必考</span></li>
+    <li>掌握发展速度、增长速度（环比/定基）</li>
+    <li>理解平均发展速度用几何平均</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、时间序列的类型</h2>
+  <table class="compare-table">
+    <tr><th style="width:24%">类型</th><th>含义</th><th>举例</th></tr>
+    <tr><td><strong>时期序列</strong></td><td>反映一段时期累计量，可相加</td><td>GDP、销售额</td></tr>
+    <tr><td><strong>时点序列</strong></td><td>反映某一瞬间水平，不可相加</td><td>人口数、库存</td></tr>
+    <tr><td>相对数/平均数序列</td><td>由相对数/平均数构成</td><td>城镇化率、平均工资</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>"能不能相加"是判别关键——人口数相加没意义（时点），GDP相加有意义（时期）。城镇化率属相对数序列。</div>
+</div>
+
+<div class="section">
+  <h2>二、水平与速度分析</h2>
+  <ul>
+    <li><strong>发展速度</strong> = 报告期水平 ÷ 基期水平
+      <ul>
+        <li><strong>环比发展速度</strong> = 报告期 ÷ 前一期</li>
+        <li><strong>定基发展速度</strong> = 报告期 ÷ 固定基期</li>
+      </ul>
+    </li>
+    <li><strong>增长速度</strong> = 发展速度 − 1（环比增长、定基增长同理）</li>
+    <li><strong>平均发展速度</strong>：用<strong>几何平均</strong>法（各环比发展速度连乘开 n 次方）</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>"常住人口城镇化率"是相对数时间序列；"就业人口数"是时点序列；"报告期水平与前一期水平之比"是环比发展速度。</div>
+</div>
+
+<div class="section">
+  <h2>三、速度分析的形态</h2>
+  <ul>
+    <li><strong>长期趋势（T）</strong>：持续上升/下降</li>
+    <li><strong>季节变动（S）</strong>：一年内重复的周期波动</li>
+    <li><strong>循环波动（C）</strong>：一年以上的涨落循环</li>
+    <li><strong>不规则波动（I）</strong>：随机、突发</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>"常住人口城镇化率"指标的时间序列属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 相对数时间序列</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 时点序列</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 平均数时间序列</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 时期序列</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：A</span></p><p>解析：城镇化率是比率（相对数），由同类相对数按时间排列形成<strong>相对数时间序列</strong>。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>"就业人口数"属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 时期序列</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 时点序列</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 相对数时间序列</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 平均数时间序列</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：就业人口数反映某一时点的水平，相加无意义，属<strong>时点序列</strong>。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>在时间序列速度分析中，报告期水平与其前一期水平之比是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 环比增长速度</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 环比发展速度</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 定基发展速度</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 定基增长速度</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：<strong>环比发展速度</strong>=报告期水平÷前一期水平；定基发展速度÷固定基期；增长速度=发展速度−1。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>一年内重复出现的周期性波动称为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 季节变动</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 长期趋势</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 循环波动</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 不规则波动</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：A</span></p><p>解析：<strong>季节变动</strong>是一年内重复出现的周期波动（如节假日消费）；循环波动是一年以上的涨落。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>计算平均发展速度通常采用：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 算术平均</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 几何平均</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 调和平均</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 中位数</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：平均发展速度用<strong>几何平均法</strong>——各环比发展速度连乘后开 n 次方（因发展速度是相乘关系，不能简单算术平均）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第二十七章_第2节_时间序列的分解.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：时间序列的分解</h3>
+  <p>下一节：时间序列分析 · 时间序列的分解</p>
+</a>
+</body>
+</html>

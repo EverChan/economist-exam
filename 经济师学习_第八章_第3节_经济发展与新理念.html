@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第8章：经济发展与新理念</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第8章</span>
+  <h1>第八章 经济增长和经济发展理论</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 经济发展与新理念 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第八章_第2节_经济周期与波动.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：经济周期与波动</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>理解经济发展的含义（含经济增长 + 结构变化）</li>
+    <li>掌握新发展理念（创新、协调、绿色、开放、共享）及各自定位 <span class="hot">必考</span></li>
+    <li>理解新发展格局（双循环）与高质量发展、新质生产力</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、经济发展的含义</h2>
+  <p>经济发展不仅包含<strong>经济增长</strong>，还包括<strong>经济结构和社会结构</strong>的变化。核心是<strong>人民生活水平持续提高</strong>，<strong>以人为本</strong>是经济发展的基本内核。</p>
+</div>
+
+<div class="section">
+  <h2>二、新发展理念 <span class="hot">必考</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:22%">理念</th><th>定位</th></tr>
+    <tr><td><strong>创新</strong></td><td>引领发展的第一动力</td></tr>
+    <tr><td><strong>协调</strong></td><td>持续健康发展的内在要求</td></tr>
+    <tr><td><strong>绿色</strong></td><td>永续发展的必要条件、人民对美好生活追求的重要体现</td></tr>
+    <tr><td><strong>开放</strong></td><td>国家繁荣发展的必由之路</td></tr>
+    <tr><td><strong>共享</strong></td><td>中国特色社会主义的本质要求（全民、全面、共建、渐进共享）</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>三、新发展格局与高质量发展</h2>
+  <ul>
+    <li><strong>新发展格局</strong>：以国内大循环为主体、国内国际双循环相互促进。</li>
+    <li><strong>高质量发展</strong>：全面建设社会主义现代化国家的首要任务；是坚持以人民为中心、创新引领、可持续绿色、区域协调、更加开放的发展。</li>
+    <li><strong>新质生产力</strong>：推动高质量发展的内在要求和重要着力点，创新起主导作用，具有高科技、高效能、高质量特征（绿色发展是其底色）。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>共享是"全民、全面、共建、渐进"共享（非"同步"共享）。高质量发展首要任务是全面建设社会主义现代化国家的首要任务。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>新发展理念的内容是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 创新、协调、绿色、开放、共享</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 创新、统筹、生态、改革、共享</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 效率、公平、绿色、开放、共治</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 改革、发展、稳定、绿色、共享</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：A</span></p><p>解析：新发展理念 = <strong>创新、协调、绿色、开放、共享</strong>（"十三五"规划明确提出）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>在新发展理念中，"引领发展的第一动力"是指：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 协调</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 绿色</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 创新</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 开放</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：<strong>创新</strong>是引领发展的第一动力；协调是内在要求；绿色是必要条件；开放是必由之路；共享是本质要求。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>关于新发展理念，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 创新是引领发展的第一动力</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 协调是持续健康发展的内在要求</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 绿色是永续发展的必要条件</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 开放是国家繁荣发展的必由之路</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 共享是中国特色社会主义的本质要求</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCDE</span></p><p>解析：五个理念定位均正确：创新（第一动力）、协调（内在要求）、绿色（必要条件）、开放（必由之路）、共享（本质要求）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>《"十四五"规划纲要》提出的新发展格局是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 以国际大循环为主体、国内国际相互促进</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 以国内大循环为主体、国内国际双循环相互促进</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 以出口为导向的单循环</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 以进口替代为主体的格局</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：新发展格局 = <strong>以国内大循环为主体、国内国际双循环相互促进</strong>。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>关于高质量发展与新质生产力，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 高质量发展是全面建设社会主义现代化国家的首要任务</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 发展新质生产力是推动高质量发展的内在要求和重要着力点</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 新质生产力具有高科技、高效能、高质量特征</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 绿色发展是新质生产力的底色</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 共享是同步共享</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCD</span></p><p>解析：高质量发展是首要任务（A）；新质生产力是重要着力点（B），具高科技高效能高质量特征（C），绿色是其底色（D）。E 错：共享是<strong>渐进共享</strong>，并非"同步"共享。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第九章_第1节_价格总水平.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：价格总水平</h3>
+  <p>下一节：价格总水平和就业、失业 · 价格总水平</p>
+</a>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第29章：会计确认与会计计量</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第29章</span>
+  <h1>第二十九章 会计循环</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · 会计确认与会计计量 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:33%"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+<a href="经济师学习_第二十八章_第4节_会计基本前提、信息质量要求与会计法规.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 4 节：会计基本前提、信息质量要求与会计法规</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>理解会计确认的标准与主要内容</li>
+    <li>掌握五项会计计量属性及其含义 <span class="hot">必考 · 多选题</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、会计确认</h2>
+  <p><strong>会计确认</strong>是指按照一定的标准和方法，辨认和确定经济信息是否作为会计要素正式记入账簿并列入报表的过程。主要解决：<strong>该不该记（定性）、何时记、如何记</strong>。</p>
+  <p>确认标准：①符合会计要素的定义；②与该资源/义务有关的经济利益<strong>很可能</strong>流入/流出企业；③金额能够<strong>可靠计量</strong>。</p>
+</div>
+
+<div class="section">
+  <h2>二、会计计量属性 <span class="hot">高频考点</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:18%">计量属性</th><th style="width:42%">含义</th><th>典型应用</th></tr>
+    <tr><td><strong>历史成本</strong><br>（实际成本）</td><td>购置时实际支付的现金或等价物金额</td><td>绝大多数资产初始计量</td></tr>
+    <tr><td><strong>重置成本</strong><br>（现行成本）</td><td>现在购买相同或相似资产所需现金或等价物</td><td>盘盈固定资产入账</td></tr>
+    <tr><td><strong>可变现净值</strong></td><td>正常销售所能收到的净现金流入（售价-相关税费-加工成本）</td><td>存货期末计量</td></tr>
+    <tr><td><strong>现值</strong></td><td>未来现金流量按适当折现率折算的当前价值</td><td> long-term 应收、弃置义务</td></tr>
+    <tr><td><strong>公允价值</strong></td><td>市场参与者在有序交易中出售资产/转移负债的价格</td><td>交易性金融资产、投资性房地产</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>历史成本"买时价"、重置成本"现在买价"、可变现净值"卖了能拿多少"、现值"未来折回来"、公允价值"市场价"。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>根据我国企业会计准则，会计计量属性包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 历史成本</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 重置成本</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 可变现净值</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 现值</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 公允价值</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCDE</span></p><p>解析：会计计量属性共五项：<strong>历史成本、重置成本、可变现净值、现值、公允价值</strong>。全部当选。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>企业盘盈一台未入账的设备，应采用的计量属性是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 历史成本</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 重置成本</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 可变现净值</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 公允价值</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：盘盈固定资产因无原始凭证，按<strong>重置成本</strong>（现在购买相同或相似资产所需金额）入账。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>企业持有的交易性金融资产期末按公允价值计量，体现的计量属性是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 历史成本</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 现值</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 公允价值</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 可变现净值</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：C</span></p><p>解析：交易性金融资产等以<strong>公允价值</strong>计量且其变动计入当期损益，体现公允价值计量属性。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>会计确认主要解决的问题是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 经济业务应记录的金额</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 经济信息是否记入账簿、何时记、如何记</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 会计主体的法律形式</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 报表对外报送的时间</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：会计确认解决的是经济信息<strong>该不该记（定性）、何时记、如何记</strong>，即是否作为会计要素正式入账并列报。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>存货期末按成本与可变现净值孰低计量，其中"可变现净值"是指：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 现在购买该存货所需金额</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 未来现金流量折现价值</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 正常销售预计收到的净现金流入</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 市场有序交易价格</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：C</span></p><p>解析：<strong>可变现净值</strong>=存货的估计售价减去至完工估计将发生的成本、估计销售费用及相关税费后的净现金流入。A 重置成本、B 现值、D 公允价值。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第二十九章_第2节_会计记录与复式记账（借贷记账法）.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：会计记录与复式记账（借贷记账法）</h3>
+  <p>下一节：会计循环 · 会计记录与复式记账（借贷记账法）</p>
+</a>
+</body>
+</html>

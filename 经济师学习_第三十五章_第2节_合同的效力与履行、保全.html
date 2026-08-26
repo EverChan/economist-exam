@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第35章：合同的效力与履行、保全</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第35章</span>
+  <h1>第三十五章 合同法律制度</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 合同的效力与履行、保全 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第三十五章_第1节_合同的订立（要约与承诺）.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：合同的订立（要约与承诺）</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握合同效力的四种形态（有效、无效、可撤销、效力待定） <span class="hot">必考</span></li>
+    <li>理解合同履行中的抗辩权 <span class="hot">高频考点 · 多选题</span></li>
+    <li>掌握合同保全（代位权、撤销权）</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、合同的效力形态 <span class="hot">高频考点 · 多选题</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:16%">形态</th><th>适用情形</th><th>法律后果</th></tr>
+    <tr><td><strong>有效</strong></td><td>行为人有相应能力、意思真实、不违法</td><td>受法律保护和约束</td></tr>
+    <tr><td><strong>无效</strong></td><td>虚假意思表示、违背强制性规定、违背公序良俗、恶意串通</td><td>自始无效</td></tr>
+    <tr><td><strong>可撤销</strong></td><td>重大误解、欺诈、胁迫、显失公平</td><td>撤销后自始无效</td></tr>
+    <tr><td><strong>效力待定</strong></td><td>限制民事行为能力人超能力订立、无权代理</td><td>经追认有效，否则无效</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>无效=根本违法；可撤销=意思不自由（误解/欺诈/胁迫/显失公平）；效力待定=等待追认。</div>
+</div>
+
+<div class="section">
+  <h2>二、合同履行中的抗辩权 <span class="hot">高频考点 · 多选题</span></h2>
+  <ul>
+    <li><strong>同时履行抗辩权</strong>：当事人互负债务、无先后履行顺序，一方未履行前可拒绝其履行要求。</li>
+    <li><strong>先履行抗辩权（后履行方）</strong>：有先后履行顺序，先履行方未履行/不符合约定，后履行方有权拒绝相应履行。</li>
+    <li><strong>不安抗辩权（先履行方）</strong>：先履行方有确切证据证明对方经营恶化、转移财产逃债等，可<strong>中止</strong>履行并要求提供担保。</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>甲应先交货、乙后付款；甲发现乙濒临破产，可行使<strong>不安抗辩权</strong>中止交货，要求乙提供担保。</div>
+</div>
+
+<div class="section">
+  <h2>三、合同的保全（代位权与撤销权）</h2>
+  <ul>
+    <li><strong>代位权</strong>：债务人怠于行使其债权影响债权人到期债权实现的，债权人可<strong>向法院请求</strong>以自己名义代位行使债务人对相对人的权利。</li>
+    <li><strong>撤销权</strong>：债务人以明显不合理低价转让财产、无偿处分财产等影响债权实现，债权人可<strong>请求法院撤销</strong>债务人的行为。撤销权自知道或应知撤销事由起<strong>一年</strong>内行使；自行为发生起<strong>五年</strong>内未行使消灭。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>代位权管“债务人<strong>不积极要债</strong>”；撤销权管“债务人<strong>主动损害债权</strong>”（如低价转让）。两者均须通过法院行使。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>下列情形中，合同可撤销的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 重大误解</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 欺诈</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 胁迫</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 显失公平</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 恶意串通损害他人利益</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCD</span></p><p>解析：可撤销事由为重大误解、欺诈、胁迫、显失公平。E 项恶意串通属<strong>无效</strong>情形，非可撤销。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>甲乙互负债务且无先后履行顺序，甲未履行义务时乙拒绝履行，乙行使的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 同时履行抗辩权</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 先履行抗辩权</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 不安抗辩权</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 代位权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：A</span></p><p>解析：无先后履行顺序、互负债务，一方未履行前对方可拒绝履行，属<strong>同时履行抗辩权</strong>。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>关于不安抗辩权，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 由先履行一方行使</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 须有确切证据证明对方经营状况严重恶化</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 可径直解除合同</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 可中止履行并要求对方提供担保</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 只能由后履行方行使</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABD</span></p><p>解析：不安抗辩权由<strong>先履行一方</strong>在有确切证据证明对方丧失履约能力时行使，可<strong>中止履行</strong>并要求提供担保，不能直接解除合同。E 错误（是后履行方的先履行抗辩权）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>债务人怠于行使其到期债权，影响债权人债权实现的，债权人可行使：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 撤销权</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 代位权</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 抵销权</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 解除权</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：债务人<strong>怠于行使</strong>到期债权影响债权实现的，债权人可行使<strong>代位权</strong>（向法院请求以自己名义代位行使）。债务人<strong>主动</strong>低价转让财产才涉及撤销权。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（单选）</span>债权人撤销权的除斥期间，自债务人行为发生之日起超过多少年不行使则消灭：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 1 年</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 2 年</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 3 年</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 5 年</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：D</span></p><p>解析：撤销权自债权人知道或应知撤销事由起 <strong>1 年</strong>内行使；自债务人行为发生之日起 <strong>5 年</strong>内未行使的，撤销权消灭。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十五章_第3节_合同的担保、转让、变更解除与违约责任.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：合同的担保、转让、变更解除与违约责任</h3>
+  <p>下一节：合同法律制度 · 合同的担保、转让、变更解除与违约责任</p>
+</a>
+</body>
+</html>

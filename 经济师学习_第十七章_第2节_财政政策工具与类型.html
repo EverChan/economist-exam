@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第17章：财政政策工具与类型</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第17章</span>
+  <h1>第十七章 财政政策</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 财政政策工具与类型 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第十七章_第1节_财政政策功能与目标.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：财政政策功能与目标</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握财政政策工具 <span class="hot">高频考点 · 多选题</span></li>
+    <li>掌握财政政策按调节总量分为扩张/紧缩/中性 <span class="hot">必考</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、财政政策工具</h2>
+  <ul>
+    <li><strong>预算</strong>：赤字/结余调节总需求。</li>
+    <li><strong>税收</strong>：增减税影响企业居民行为。</li>
+    <li><strong>公债</strong>：筹集与调节。</li>
+    <li><strong>公共支出</strong>：购买性/转移性支出。</li>
+    <li><strong>政府投资</strong>：基建等资本性支出。</li>
+    <li><strong>财政补贴</strong>：定向调节。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、财政政策类型 <span class="hot">必考 · 多选题</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:26%">分类标准</th><th>类型</th></tr>
+    <tr><td>按调节经济周期</td><td><strong>自动稳定</strong>（内在稳定器：累进税+转移支付）、<strong>相机抉择</strong></td></tr>
+    <tr><td>按调节总量</td><td><strong>扩张性（积极）</strong>、<strong>紧缩性</strong>、<strong>中性</strong></td></tr>
+  </table>
+  <ul>
+    <li><strong>扩张性</strong>：减税、增支、赤字→刺激需求（经济萧条）。</li>
+    <li><strong>紧缩性</strong>：增税、减支→抑制需求（通胀）。</li>
+    <li><strong>中性</strong>：财政收支保持基本平衡。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>自动稳定器=累进所得税+转移性支出，经济过热自动多收少付、过冷自动少收多付。扩张=松（减税增支），紧缩=紧（增税减支）。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>下列可作为财政政策工具的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 预算</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 税收</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 公债</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 政府投资</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 财政补贴</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCDE</span></p><p>解析：财政政策工具含预算、税收、公债、公共支出、政府投资、财政补贴，全选。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>经济萧条时期，政府实行减税并增加支出，这属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 紧缩性财政政策</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 扩张性（积极）财政政策</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 中性财政政策</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 自动稳定政策</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：减税+增支=刺激总需求，属<strong>扩张性（积极）财政政策</strong>，用于经济萧条。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>财政政策的"自动稳定器"主要包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 累进所得税</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 转移性支出</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 政府投资</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 公债</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 财政补贴</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：AB</span></p><p>解析：自动稳定器=累进所得税+转移性支出；政府投资、公债、补贴属相机抉择工具。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>经济过热、通胀压力上升时，政府宜采取：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 扩张性财政政策</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 紧缩性财政政策</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 中性财政政策</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 积极财政政策</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：通胀时宜<strong>紧缩性财政政策</strong>（增税减支）抑制总需求；扩张/积极用于萧条。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（多选）</span>关于相机抉择财政政策，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 由政府主动根据经济形势调整</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 包括扩张性与紧缩性政策</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 与自动稳定器相对</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 不需要人大审批</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 可运用税收、支出等工具</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCE</span></p><p>解析：相机抉择是政府主动逆周期调控，含扩张/紧缩，运用税收支出等工具，与自动稳定器相对；预算调整仍需人大审批（D错）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第十七章_第3节_财政政策乘数与时滞.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：财政政策乘数与时滞</h3>
+  <p>下一节：财政政策 · 财政政策乘数与时滞</p>
+</a>
+</body>
+</html>

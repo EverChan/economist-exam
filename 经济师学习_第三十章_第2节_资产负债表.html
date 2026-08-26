@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第30章：资产负债表</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第30章</span>
+  <h1>第三十章 会计报表</h1>
+  <p class="subtitle">第 2 节 / 共 4 节 · 资产负债表 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 2/4</p>
+</div>
+<a href="经济师学习_第三十章_第1节_会计报表概述与编制要求.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：会计报表概述与编制要求</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握资产负债表的结构与编制依据 <span class="hot">必考</span></li>
+    <li>理解资产、负债项目的排列与填列方法 <span class="hot">高频考点</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、资产负债表的结构</h2>
+  <p><strong>资产负债表</strong>是反映企业在<strong>某一特定日期</strong>财务状况的<strong>静态报表</strong>，依据<strong>"资产=负债+所有者权益"</strong>编制。格式主要有：</p>
+  <ul>
+    <li><strong>账户式（我国采用）</strong>：左方列示资产，右方列示负债和所有者权益，左右两方总额相等。</li>
+    <li>报告式：上下垂直排列。</li>
+  </ul>
+  <p>排列规律：资产按<strong>流动性</strong>由强到弱（流动资产在前，非流动资产在后）；负债按<strong>到期日由近到远</strong>（流动负债在前，非流动负债在后）。</p>
+</div>
+
+<div class="section">
+  <h2>二、重要项目的填列方法 <span class="hot">高频考点</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:30%">项目</th><th style="width:40%">填列方法</th></tr>
+    <tr><td><strong>货币资金</strong></td><td>根据"库存现金+银行存款+其他货币资金"总账余额合计填列</td></tr>
+    <tr><td><strong>应收账款</strong></td><td>"应收账款"与"预收账款"明细借余合计，<strong>减</strong>坏账准备后填列</td></tr>
+    <tr><td><strong>存货</strong></td><td>原材料、在途物资、库存商品等总账借余合计，<strong>减</strong>存货跌价准备</td></tr>
+    <tr><td><strong>未分配利润</strong></td><td>根据"本年利润"和"利润分配"明细计算填列（年末轧差）</td></tr>
+    <tr><td><strong>长期借款</strong></td><td>总账余额<strong>扣除</strong>一年内到期部分后填列</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>资产类项目多"合计后减备抵（坏账/跌价准备）"；长期负债需"扣除一年内到期部分"转入流动负债。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>我国企业资产负债表采用的格式是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 报告式</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 账户式</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 多步式</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 单步式</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：我国资产负债表采用<strong>账户式</strong>（左资产、右负债与所有者权益，总额相等）。多步式/单步式是利润表的格式。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>资产负债表"应收账款"项目应根据（ ）填列：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. "应收账款"总账余额</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. "应收账款"与"预收账款"明细账借方余额合计减坏账准备</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. "应收账款"与"应付账款"明细借余合计</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. "预收账款"总账余额</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析："应收账款"项目按<strong>"应收账款"与"预收账款"所属明细科目借方余额合计，减去坏账准备</strong>后的净额填列，因为预收账款借方余额实质是应收。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>下列资产负债表项目中，需要根据若干总账科目余额合计填列的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 货币资金</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 存货</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 短期借款</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 未分配利润</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 实收资本</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABD</span></p><p>解析：<strong>货币资金</strong>（现金+存款+其他货币资金）、<strong>存货</strong>（多个存货类科目借余合计减跌价准备）、<strong>未分配利润</strong>（本年利润与利润分配轧差）均需分析计算填列。短期借款、实收资本一般直接按总账余额填列（C、E 不选）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>资产负债表中，资产项目排列顺序的依据是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 金额大小</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 流动性强弱</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 重要性程度</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 取得时间先后</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：资产按<strong>流动性由强到弱</strong>排列（流动资产在前、非流动资产在后）；负债按到期日由近到远排列。并非按金额或时间。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>"长期借款"项目在资产负债表上应填列的金额为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. "长期借款"总账科目余额</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. "长期借款"总账余额扣除一年内到期部分后的净额</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. "长期借款"明细科目借方余额</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. "长期借款"与"应付债券"合计</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：长期借款项目应填列<strong>总账余额扣除一年内到期部分</strong>后的金额，一年内到期部分已转入"一年内到期的非流动负债"（流动负债）列示。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十章_第3节_利润表.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：利润表</h3>
+  <p>下一节：会计报表 · 利润表</p>
+</a>
+</body>
+</html>

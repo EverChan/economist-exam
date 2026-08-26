@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第36章：董监高义务、股份发行转让与合并分立清算</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第36章</span>
+  <h1>第三十六章 公司法律制度</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 董监高义务、股份发行转让与合并分立清算 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第三十六章_第2节_公司的组织机构与股东权利.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：公司的组织机构与股东权利</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握董监高的任职资格负面清单与忠实勤勉义务 <span class="hot">必考</span></li>
+    <li>理解股份发行与转让的限制</li>
+    <li>掌握公司合并、分立、减资、解散与清算规则 <span class="hot">高频考点</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、董监高的任职资格与义务 <span class="hot">高频考点</span></h2>
+  <p><strong>任职资格（不得担任的情形，负面清单）：</strong></p>
+  <ul>
+    <li>无民事行为能力或限制民事行为能力；</li>
+    <li>因贪污、贿赂、侵占财产、挪用财产或破坏社会主义市场经济秩序，被判刑执行期满未逾 <strong>5 年</strong>；</li>
+    <li>对破产负有个人责任的企业破产清算完结未逾 <strong>3 年</strong>；</li>
+    <li>担任因违法被吊销营业执照企业法定代表人并负有个人责任，未逾 <strong>3 年</strong>；</li>
+    <li>个人所负数额较大债务<strong>到期未清偿</strong>。</li>
+  </ul>
+  <p><strong>法定义务：</strong>董监高对公司负有<strong>忠实义务</strong>（不得利用职权收受贿赂、侵占公司财产、篡夺商业机会等）和<strong>勤勉义务</strong>（尽责管理）。</p>
+  <div class="keypoint"><strong>记忆：</strong>任职限制年限——经济犯罪 <strong>5 年</strong>、破产/吊照 <strong>3 年</strong>、大额到期债务未清。</div>
+</div>
+
+<div class="section">
+  <h2>二、股份的发行与转让</h2>
+  <ul>
+    <li><strong>股份有限公司</strong>：资本划分为等额股份，发行可平价、溢价，但<strong>不得折价</strong>发行。</li>
+    <li><strong>股份转让限制</strong>：发起人持有的本公司股份，自公司成立之日起 <strong>1 年内</strong>不得转让；公开发行前已发行股份，自上市交易起 <strong>1 年内</strong>不得转让。</li>
+    <li>董监高任职期间每年转让股份不得超过其所持股份总数的 <strong>25%</strong>；离职后 <strong>半年内</strong>不得转让。</li>
+  </ul>
+  <div class="example"><strong>例子：</strong>公司上市后，原始股东（公开发行前持股）须锁定 1 年方可转让，防止短期套利。</div>
+</div>
+
+<div class="section">
+  <h2>三、公司合并、分立、减资、解散与清算</h2>
+  <ul>
+    <li><strong>合并/分立</strong>：须经股东会决议；合并时各方债权债务由存续或新设公司概括承受。</li>
+    <li><strong>减资</strong>：须编制资产负债表及财产清单，自决议起 <strong>10 日内</strong>通知债权人，<strong>30 日内</strong>在报纸或公示系统公告；债权人可要求清偿或担保。</li>
+    <li><strong>解散与清算</strong>：解散后应成立清算组（有限公司由股东组成，股份公司为董事或股东指定人员），清算完毕办理注销登记，法人资格终止。</li>
+  </ul>
+  <div class="keypoint"><strong>记忆：</strong>减资通知债权人 <strong>10 日</strong>内通知、<strong>30 日</strong>内公告；合并分立债权债务<strong>概括承受</strong>。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>因贪污罪被判刑的张某，执行期满多少年后方可担任公司董事：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 2 年</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 3 年</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 5 年</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 10 年</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：因贪污、贿赂等经济犯罪被判刑，执行期满未逾 <strong>5 年</strong>的，不得担任董监高。本题须满 5 年。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>公司董事、监事、高级管理人员的法定义务包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 忠实义务</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 勤勉义务</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 保密义务（对竞争对手）</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 不得篡夺公司商业机会</label><br>
+      <label class="option"><input type="checkbox" name="q2"> E. 不得收受贿赂</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABDE</span></p><p>解析：董监高负忠实义务与勤勉义务；忠实义务含不得收受贿赂、不得篡夺公司商业机会等。C“对竞争对手保密义务”非法定表述，忠实义务针对公司而非泛泛对竞争对手。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>股份有限公司公开发行前已发行的股份，自上市交易之日起多长时间内不得转让：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 半年</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 1 年</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 2 年</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 3 年</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：公开发行前已发行股份，自上市交易之日起 <strong>1 年内</strong>不得转让；发起人持股亦自公司成立起 1 年内不得转让。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>关于公司减资程序，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 须编制资产负债表及财产清单</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 自决议起 10 日内通知债权人</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 自决议起 30 日内公告</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 债权人可要求清偿债务或提供担保</label><br>
+      <label class="option"><input type="checkbox" name="q4"> E. 减资无需通知债权人</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABCD</span></p><p>解析：减资须编制报表清单、10 日内通知债权人、30 日内公告，债权人有权要求清偿或担保。E 与法定程序相悖。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（多选）</span>公司解散后，关于清算下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 有限公司清算组由股东组成</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 股份公司清算组由董事或股东指定人员组成</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 清算结束办理注销登记后法人资格终止</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 清算期间公司仍存续但不得开展与清算无关的经营活动</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 解散后无需清算即可注销</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCD</span></p><p>解析：解散后应依法清算：有限公司清算组由股东组成，股份公司由董事或股东指定人员组成；清算期间法人仍存续但限于清算事务，清算完结注销后终止。E 错误，注销须先清算。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第三十七章_第1节_工业产权法律制度（专利与商标）.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：工业产权法律制度（专利与商标）</h3>
+  <p>下一节：其他法律制度 · 工业产权法律制度（专利与商标）</p>
+</a>
+</body>
+</html>

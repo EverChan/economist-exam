@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第21章：巴塞尔协议与国际金融监管协调</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第21章</span>
+  <h1>第二十一章 金融风险与金融监管</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 巴塞尔协议与国际金融监管协调 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第二十一章_第2节_金融监管理论与监管体制.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：金融监管理论与监管体制</h3>
+</a>
+<div class="section"><h2>本节学习目标</h2><ul>
+<li>掌握巴塞尔协议Ⅲ的资本监管要求</li>
+<li>了解老巴塞尔报告与新巴塞尔协议三大支柱</li>
+<li>熟悉国际金融监管协调机构</li>
+</ul></div>
+
+<div class="section"><h2>一、巴塞尔协议演进 <span class="hot">必考</span></h2>
+<table class="compare-table">
+<tr><th>版本</th><th>核心内容</th></tr>
+<tr><td>1988年巴塞尔报告</td><td>资本充足率≥8%（核心资本≥4%），风险权重0/10/20/50/100%</td></tr>
+<tr><td>2003新巴塞尔资本协议</td><td>三大支柱：最低资本要求、监管当局监督检查、市场约束</td></tr>
+<tr><td>2010巴塞尔协议Ⅲ</td><td>核心一级资本≥4.5%，一级≥6%，总资本≥8%；引入杠杆率、流动性覆盖率（LCR）、净稳定融资比率（NSFR）；留存超额资本2.5%</td></tr>
+</table></div>
+
+<div class="section"><h2>二、国际金融监管协调</h2>
+<ul>
+<li><strong>巴塞尔委员会</strong>：制定银行监管标准（《有效银行监管核心原则》）。</li>
+<li><strong>证监会国际组织（IOSCO）</strong>、<strong>国际保险监督官协会（IAIS）</strong>。</li>
+<li><strong>金融稳定理事会（FSB）</strong>：协调全球金融监管。</li>
+</ul>
+<div class="keypoint"><strong>记忆：</strong>资本充足率"8%"是永恒底线；协议Ⅲ新增流动性监管（LCR、NSFR）。</div></div><div class="quiz"><h2>练习题（5题）</h2>
+<div class="quiz-q"><p class="q-text"><span class="num">1.（单选）</span>1988年《巴塞尔报告》规定商业银行资本充足率不得低于？</p>
+<div class="options"><label class="option"><input type="radio" name="q1" value="a"> A. 4%</label><br>
+<label class="option"><input type="radio" name="q1" value="b"> B. 6%</label><br>
+<label class="option"><input type="radio" name="q1" value="c"> C. 8%</label><br>
+<label class="option"><input type="radio" name="q1" value="d"> D. 10%</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+<div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：1988年巴塞尔报告要求总资本充足率不低于8%，其中核心资本不低于4%。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">2.（多选）</span>2003年《新巴塞尔资本协议》的三大支柱包括？</p>
+<div class="options"><label class="option"><input type="checkbox" name="q2" value="a"> A. 最低资本要求</label><br>
+<label class="option"><input type="checkbox" name="q2" value="b"> B. 监管当局的监督检查</label><br>
+<label class="option"><input type="checkbox" name="q2" value="c"> C. 市场约束</label><br>
+<label class="option"><input type="checkbox" name="q2" value="d"> D. 流动性覆盖率</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+<div class="answer" id="a2"><p><span class="label">答案：ABC</span></p><p>解析：新巴塞尔协议三大支柱为最低资本要求、监管检查、市场约束；流动性覆盖率是巴塞尔Ⅲ内容。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">3.（单选）</span>巴塞尔协议Ⅲ规定核心一级资本充足率最低为？</p>
+<div class="options"><label class="option"><input type="radio" name="q3" value="a"> A. 4%</label><br>
+<label class="option"><input type="radio" name="q3" value="b"> B. 4.5%</label><br>
+<label class="option"><input type="radio" name="q3" value="c"> C. 6%</label><br>
+<label class="option"><input type="radio" name="q3" value="d"> D. 8%</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+<div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：巴塞尔协议Ⅲ将核心一级资本充足率提高到4.5%，一级6%，总资本8%。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">4.（多选）</span>巴塞尔协议Ⅲ新增或强化的重要举措包括？</p>
+<div class="options"><label class="option"><input type="checkbox" name="q4" value="a"> A. 引入杠杆率</label><br>
+<label class="option"><input type="checkbox" name="q4" value="b"> B. 建立流动性覆盖率（LCR）</label><br>
+<label class="option"><input type="checkbox" name="q4" value="c"> C. 建立净稳定融资比率（NSFR）</label><br>
+<label class="option"><input type="checkbox" name="q4" value="d"> D. 设置留存超额资本2.5%</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+<div class="answer" id="a4"><p><span class="label">答案：ABCD</span></p><p>解析：巴塞尔协议Ⅲ在资本、杠杆率、流动性（LCR、NSFR）及留存超额资本（2.5%）方面均作出强化规定。</p></div></div>
+
+<div class="quiz-q"><p class="q-text"><span class="num">5.（单选）</span>负责制定《有效银行监管核心原则》的国际组织是？</p>
+<div class="options"><label class="option"><input type="radio" name="q5" value="a"> A. 国际货币基金组织（IMF）</label><br>
+<label class="option"><input type="radio" name="q5" value="b"> B. 巴塞尔委员会</label><br>
+<label class="option"><input type="radio" name="q5" value="c"> C. 世界银行</label><br>
+<label class="option"><input type="radio" name="q5" value="d"> D. 世界贸易组织（WTO）</label></div>
+<button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+<div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：巴塞尔委员会发布《有效银行监管核心原则》等银行监管国际标准。</p></div></div>
+</div><a href="经济师学习_第二十二章_第1节_汇率制度.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：汇率制度</h3>
+  <p>下一节：对外金融关系与政策 · 汇率制度</p>
+</a>
+</body>
+</html>

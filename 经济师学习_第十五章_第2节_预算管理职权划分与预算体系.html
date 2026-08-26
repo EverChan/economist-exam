@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第15章：预算管理职权划分与预算体系</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第15章</span>
+  <h1>第十五章 政府预算</h1>
+  <p class="subtitle">第 2 节 / 共 4 节 · 预算管理职权划分与预算体系 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 2/4</p>
+</div>
+<a href="经济师学习_第十五章_第1节_政府预算的职能与原则.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：政府预算的职能与原则</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握各级权力机关与政府的预算管理职权 <span class="hot">高频考点 · 多选题</span></li>
+    <li>掌握我国政府预算体系的"四本预算" <span class="hot">必考</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、预算管理职权划分</h2>
+  <table class="compare-table">
+    <tr><th style="width:28%">主体</th><th>主要职权</th></tr>
+    <tr><td><strong>各级人大</strong></td><td>审查、批准本级总预算草案及执行报告</td></tr>
+    <tr><td><strong>各级人大常委会</strong></td><td>监督预算执行、审批调整方案、审批决算</td></tr>
+    <tr><td><strong>各级政府</strong></td><td>编制本级预算草案、组织执行</td></tr>
+    <tr><td><strong>各级财政部门</strong></td><td>具体编制、执行预算，定期报告</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>二、政府预算体系（四本预算） <span class="hot">必考 · 多选题</span></h2>
+  <ul>
+    <li><strong>一般公共预算</strong>：以税收为主体的收支预算（主体）。</li>
+    <li><strong>政府性基金预算</strong>：专项用于特定公共事业。</li>
+    <li><strong>国有资本经营预算</strong>：国资收益收支。</li>
+    <li><strong>社会保险基金预算</strong>：社保收支，专款专用。</li>
+  </ul>
+  <p>我国实行<strong>复式预算</strong>，以上四本预算共同构成全口径预算体系。</p>
+  <div class="keypoint"><strong>记忆：</strong>四本预算=一般公共+政府性基金+国有资本经营+社会保险基金。复式预算对应"经常性/资本"分类，我国即四本预算。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（多选）</span>我国政府预算体系由以下哪些预算组成：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q1"> A. 一般公共预算</label><br>
+      <label class="option"><input type="checkbox" name="q1"> B. 政府性基金预算</label><br>
+      <label class="option"><input type="checkbox" name="q1"> C. 国有资本经营预算</label><br>
+      <label class="option"><input type="checkbox" name="q1"> D. 社会保险基金预算</label><br>
+      <label class="option"><input type="checkbox" name="q1"> E. 债务预算</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：ABCD</span></p><p>解析：我国政府预算体系为四本预算：一般公共、政府性基金、国有资本经营、社会保险基金；债务预算非独立一本。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>以税收为主体收入、我国政府预算体系主体的预算是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 政府性基金预算</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 国有资本经营预算</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 一般公共预算</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 社会保险基金预算</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：<strong>一般公共预算</strong>以税收为主体，是预算体系的主体。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>关于预算管理职权，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 各级人大审查批准本级总预算</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 各级人大常委会审批决算</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 各级政府编制本级预算草案</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 财政部门具体编制和执行预算</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 审计机关批准预算</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCD</span></p><p>解析：人大审批预算、常委会审决算、政府编草案、财政具体执行均正确；审计机关监督而非批准预算（E错）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>我国实行的预算编制方式是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 单式预算</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 复式预算</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 零基预算</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 绩效预算</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：我国实行<strong>复式预算</strong>（对应四本预算分类）；零基/绩效是编制方法而非预算形式分类。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（单选）</span>专款专用、主要反映各项社会保险基金收支的预算是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 一般公共预算</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 政府性基金预算</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 社会保险基金预算</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 国有资本经营预算</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：C</span></p><p>解析：<strong>社会保险基金预算</strong>专款专用，反映社保收支；政府性基金用于特定公共事业，国有资本经营反映国资收益。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第十五章_第3节_政府预算编制和执行制度.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：政府预算编制和执行制度</h3>
+  <p>下一节：政府预算 · 政府预算编制和执行制度</p>
+</a>
+</body>
+</html>

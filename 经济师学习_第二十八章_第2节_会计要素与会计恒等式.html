@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第28章：会计要素与会计恒等式</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第28章</span>
+  <h1>第二十八章 会计概论</h1>
+  <p class="subtitle">第 2 节 / 共 4 节 · 会计要素与会计恒等式 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:50%"></div></div>
+  <p class="progress-text">本章进度 2/4</p>
+</div>
+<a href="经济师学习_第二十八章_第1节_会计基本概念与会计目标.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：会计基本概念与会计目标</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握六大会计要素及其特征 <span class="hot">必考</span></li>
+    <li>熟练运用会计恒等式并判断经济业务对要素的影响 <span class="hot">高频考点</span></li>
+    <li>区分反映财务状况（静态）与经营成果（动态）的要素</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、六大会计要素</h2>
+  <p>会计要素是对会计对象按经济特征所作的基本分类，是会计核算对象的<strong>具体化</strong>。我国《企业会计准则》将要素分为六类：</p>
+  <table class="compare-table">
+    <tr><th style="width:16%">类别</th><th style="width:22%">要素</th><th style="width:30%">含义要点</th><th>报表归属</th></tr>
+    <tr><td rowspan="3"><strong>反映财务状况</strong><br>（静态）</td><td><strong>资产</strong></td><td>过去形成、拥有或控制、预期带来经济利益</td><td rowspan="3">资产负债表</td></tr>
+    <tr><td><strong>负债</strong></td><td>过去形成、现时义务、预期导致经济利益流出</td></tr>
+    <tr><td><strong>所有者权益</strong></td><td>资产扣除负债后由所有者享有的剩余权益</td></tr>
+    <tr><td rowspan="3"><strong>反映经营成果</strong><br>（动态）</td><td><strong>收入</strong></td><td>日常活动形成、导致所有者权益增加、与投入资本无关</td><td rowspan="3">利润表</td></tr>
+    <tr><td><strong>费用</strong></td><td>日常活动发生、导致所有者权益减少、与利润分配无关</td></tr>
+    <tr><td><strong>利润</strong></td><td>一定会计期间的经营成果（收入-费用+利得-损失）</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>资产/负债/所有者权益——"静态三要素"看<strong>某一时点</strong>；收入/费用/利润——"动态三要素"看<strong>一段时期</strong>。</div>
+</div>
+
+<div class="section">
+  <h2>二、资产与负债的分类</h2>
+  <ul>
+    <li><strong>资产</strong>按流动性：<strong>流动资产</strong>（货币资金、交易性金融资产、应收及预付款项、存货等）与<strong>非流动资产</strong>（固定资产、在建工程、无形资产、长期股权投资、长期应收款等）。</li>
+    <li><strong>负债</strong>按流动性：<strong>流动负债</strong>（短期借款、应付及预收款项、应付职工薪酬、应交税费等）与<strong>非流动负债</strong>（长期借款、应付债券、长期应付款等）。</li>
+    <li><strong>所有者权益</strong>来源：所有者投入资本、直接计入所有者权益的利得和损失、留存收益（盈余公积、未分配利润）。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>三、会计恒等式 <span class="hot">高频考点</span></h2>
+  <p>静态等式（编制资产负债表依据）：</p>
+  <p><strong>资产 = 负债 + 所有者权益</strong></p>
+  <p>动态等式（编制利润表依据）：</p>
+  <p><strong>利润 = 收入 - 费用</strong></p>
+  <p>综合等式：</p>
+  <p><strong>资产 = 负债 + 所有者权益 +（收入 - 费用）</strong></p>
+  <p>无论发生何种经济业务，恒等式<strong>恒等关系不变</strong>：只涉及等式一边内部增减，或等式两边同增同减，总额始终平衡。</p>
+  <div class="example"><strong>例子：</strong>用银行存款购入设备 10 万元——资产内部"固定资产"增、"银行存款"减，资产总额不变，等式仍平衡。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>下列会计要素中，反映企业一定会计期间经营成果的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 资产、负债、所有者权益</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 收入、费用、利润</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 资产、收入、利润</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 负债、费用、所有者权益</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：<strong>收入、费用、利润</strong>是反映<strong>一定会计期间经营成果</strong>的"动态三要素"，列入利润表；资产、负债、所有者权益是反映<strong>某一特定日期财务状况</strong>的"静态三要素"，列入资产负债表。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>反映企业某一特定日期财务状况的会计等式是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 资产 = 负债 + 所有者权益</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 利润 = 收入 - 费用</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 收入 = 费用 + 利润</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 资产 = 收入 - 费用</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：A</span></p><p>解析：<strong>资产 = 负债 + 所有者权益</strong>是静态等式，反映<strong>某一特定日期</strong>的财务状况，是编制资产负债表的依据；利润=收入-费用为动态等式。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>下列各项中，属于企业流动资产的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 货币资金</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 存货</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 固定资产</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 应收账款</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 无形资产</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABD</span></p><p>解析：流动资产指可在一年或超过一年的一个营业周期内变现或耗用的资产，包括货币资金、交易性金融资产、应收及预付款项、存货等。固定资产、无形资产属于<strong>非流动资产</strong>（C、E 不选）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>企业用银行存款偿还前欠货款，这一经济业务对会计恒等式的影响是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 资产与负债同增</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 资产与负债同减</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 资产内部一增一减</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 负债内部一增一减</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：银行存款（资产）减少，应付账款（负债）减少——属于<strong>等式两边同减</strong>，等式总额仍保持平衡。这是典型"资产、负债同减"的业务。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>下列关于所有者权益的表述，正确的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 所有者权益等于企业全部资产</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 所有者权益是债权人对企业资产的剩余索取权</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 所有者权益来源于投入资本、直接计入权益的利得损失和留存收益</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 留存收益不包括未分配利润</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：C</span></p><p>解析：所有者权益=资产-负债，是<strong>所有者</strong>（而非债权人）的剩余权益（A、B 错）；其来源包括投入资本、直接计入权益的利得损失、留存收益（盈余公积+未分配利润）（C 正确，D 错）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第二十八章_第3节_会计要素确认和计量基本原则.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：会计要素确认和计量基本原则</h3>
+  <p>下一节：会计概论 · 会计要素确认和计量基本原则</p>
+</a>
+</body>
+</html>

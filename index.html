@@ -58,7 +58,7 @@
     height: 100%;
     background: var(--accent);
     border-radius: 4px;
-    width: 4%;
+    width: 100%;
     transition: width 0.4s;
   }
   .progress-text-total {
@@ -242,7 +242,7 @@
     <div class="progress-bar-total">
       <div class="fill" id="totalFill" style="width:31%"></div>
     </div>
-    <span class="progress-text-total" id="totalText">已完成 15 章 / 共 48 章</span>
+    <span class="progress-text-total" id="totalText">已完成 48 章 / 共 48 章</span>
   </div>
 </div>
 
@@ -260,172 +260,247 @@
     工商管理专业
     <div class="tab-sub">11章</div>
   </div>
+  <div class="subject-tab" onclick="switchSubject('past')">
+    真题题库
+    <div class="tab-sub">近5年真题</div>
+  </div>
 </div>
 
 <!-- ========== 经济基础知识 ========== -->
 <div class="subject-panel active" id="panel-economics">
-
-  <!-- 模块一：经济学基础 -->
   <div class="module">
     <div class="module-header">
       <span class="module-title">一、经济学基础（第1-10章）</span>
-      <span class="module-progress"><span class="done-count">4</span>/10 章进行中</span>
+      <span class="module-progress"><span class="done-count">10</span>/10 章</span>
     </div>
     <div class="chapter-list">
-      <!-- 第一章 -->
-      <a href="经济师学习_第一章_第1节_需求与供给.html" class="chapter-item done">
-        <span class="chapter-num">第1章</span>
-        <span class="chapter-name">市场需求、供给与均衡价格</span>
-        <div class="section-links">
-          <span class="section-link">第1节</span>
-          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第一章_第2节_均衡价格与价格管制.html'" style="background:var(--accent);">第2节</span>
-          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第一章_第3节_弹性理论.html'" style="background:var(--green);">第3节</span>
-        </div>
-      </a>
-      <!-- 第二章 -->
-      <a href="经济师学习_第二章_第1节_无差异曲线.html" class="chapter-item done">
-        <span class="chapter-num">第2章</span>
-        <span class="chapter-name">消费者行为理论</span>
-        <div class="section-links">
-          <span class="section-link">第1节</span>
-          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二章_第2节_预算约束与消费者均衡.html'" style="background:var(--green);">第2节</span>
-        </div>
-      </a>
-      <!-- 第三章 -->
-      <a href="经济师学习_第三章_第1节_生产函数与生产曲线.html" class="chapter-item done">
-        <span class="chapter-num">第3章</span>
-        <span class="chapter-name">生产和成本理论</span>
-        <div class="section-links">
-          <span class="section-link">第1节</span>
-          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三章_第2节_成本函数与成本曲线.html'" style="background:var(--green);">第2节</span>
-        </div>
-      </a>
-      <!-- 第四章 -->
-      <a href="经济师学习_第四章_第1节_市场结构类型.html" class="chapter-item done">
-        <span class="chapter-num">第4章</span>
-        <span class="chapter-name">市场结构理论</span>
-        <div class="section-links">
-          <span class="section-link">第1节</span>
-          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第四章_第2节_完全竞争市场.html'" style="background:var(--accent);">第2节</span>
-          <span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第四章_第3节_不完全竞争市场.html'" style="background:var(--green);">第3节</span>
-        </div>
-      </a>
-      <!-- 第五章 -->
-      <div class="chapter-item pending">
-        <span class="chapter-num">第5章</span>
-        <span class="chapter-name">生产要素市场理论</span>
-        <span class="chapter-status status-pending">未开始</span>
-      </div>
-      <!-- 第六章 -->
-      <div class="chapter-item pending">
-        <span class="chapter-num">第6章</span>
-        <span class="chapter-name">市场失灵和政府的干预</span>
-        <span class="chapter-status status-pending">未开始</span>
-      </div>
-      <!-- 第七章 -->
-      <div class="chapter-item pending">
-        <span class="chapter-num">第7章</span>
-        <span class="chapter-name">国民收入核算和简单的宏观经济模型</span>
-        <span class="chapter-status status-pending">未开始</span>
-      </div>
-      <!-- 第八章 -->
-      <div class="chapter-item pending">
-        <span class="chapter-num">第8章</span>
-        <span class="chapter-name">经济增长和经济发展理论</span>
-        <span class="chapter-status status-pending">未开始</span>
-      </div>
-      <!-- 第九章 -->
-      <div class="chapter-item pending">
-        <span class="chapter-num">第9章</span>
-        <span class="chapter-name">价格总水平和就业、失业</span>
-        <span class="chapter-status status-pending">未开始</span>
-      </div>
-      <!-- 第十章 -->
-      <div class="chapter-item pending">
-        <span class="chapter-num">第10章</span>
-        <span class="chapter-name">国际贸易理论和政策</span>
-        <span class="chapter-status status-pending">未开始</span>
-      </div>
+  <a href="经济师学习_第一章_第1节_需求与供给.html" class="chapter-item done">
+    <span class="chapter-num">第1章</span>
+    <span class="chapter-name">市场需求、供给与均衡价格</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第一章_第2节_均衡价格与价格管制.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第一章_第3节_弹性理论.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第二章_第1节_无差异曲线.html" class="chapter-item done">
+    <span class="chapter-num">第2章</span>
+    <span class="chapter-name">消费者行为理论</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二章_第2节_预算约束与消费者均衡.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第三章_第1节_生产函数与生产曲线.html" class="chapter-item done">
+    <span class="chapter-num">第3章</span>
+    <span class="chapter-name">生产和成本理论</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三章_第2节_成本函数与成本曲线.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第四章_第1节_市场结构类型.html" class="chapter-item done">
+    <span class="chapter-num">第4章</span>
+    <span class="chapter-name">市场结构理论</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第四章_第2节_完全竞争市场.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第四章_第3节_不完全竞争市场.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第五章_第1节_生产者使用生产要素的原则.html" class="chapter-item done">
+    <span class="chapter-num">第5章</span>
+    <span class="chapter-name">生产要素市场理论</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第五章_第2节_完全竞争生产者对生产要素的需求.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第五章_第3节_生产要素的供给曲线与均衡工资的决定.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第六章_第1节_资源最优配置标准与帕累托最优状态.html" class="chapter-item done">
+    <span class="chapter-num">第6章</span>
+    <span class="chapter-name">市场失灵和政府的干预</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第六章_第2节_市场失灵的原因.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第六章_第3节_政府对市场的干预.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第七章_第1节_国民收入核算.html" class="chapter-item done">
+    <span class="chapter-num">第7章</span>
+    <span class="chapter-name">国民收入核算和简单的宏观经济模型</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第七章_第2节_消费、储蓄与投资理论.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第七章_第3节_乘数.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第八章_第1节_经济增长与因素分解.html" class="chapter-item done">
+    <span class="chapter-num">第8章</span>
+    <span class="chapter-name">经济增长和经济发展理论</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第八章_第2节_经济周期与波动.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第八章_第3节_经济发展与新理念.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第九章_第1节_价格总水平.html" class="chapter-item done">
+    <span class="chapter-num">第9章</span>
+    <span class="chapter-name">价格总水平和就业、失业</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第九章_第2节_就业与失业.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第九章_第3节_菲利普斯曲线.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第十章_第1节_国际贸易理论演变.html" class="chapter-item done">
+    <span class="chapter-num">第10章</span>
+    <span class="chapter-name">国际贸易理论和政策</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十章_第2节_国际贸易政策.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十章_第3节_净出口函数与贸易乘数.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
     </div>
   </div>
-
-  <!-- 模块二：财政 -->
   <div class="module">
     <div class="module-header">
       <span class="module-title">二、财政（第11-17章）</span>
-      <span class="module-progress"><span class="done-count">0</span>/7 章</span>
+      <span class="module-progress"><span class="done-count">7</span>/7 章</span>
     </div>
     <div class="chapter-list">
-      <div class="chapter-item pending"><span class="chapter-num">第11章</span><span class="chapter-name">公共物品与财政职能</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第12章</span><span class="chapter-name">财政支出</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第13章</span><span class="chapter-name">财政收入</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第14章</span><span class="chapter-name">税收制度</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第15章</span><span class="chapter-name">政府预算</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第16章</span><span class="chapter-name">财政管理体制</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第17章</span><span class="chapter-name">财政政策</span><span class="chapter-status status-pending">未开始</span></div>
+  <a href="经济师学习_第十一章_第1节_公共物品的定义及其融资与生产.html" class="chapter-item done">
+    <span class="chapter-num">第11章</span>
+    <span class="chapter-name">公共物品与财政职能</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十一章_第2节_市场与政府的经济活动范围.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十一章_第3节_财政的基本职能.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第十二章_第1节_财政支出及其分类.html" class="chapter-item done">
+    <span class="chapter-num">第12章</span>
+    <span class="chapter-name">财政支出</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十二章_第2节_财政支出规模及其增长趋势.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十二章_第3节_财政支出效益分析.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十二章_第4节_购买性支出与转移性支出.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第十三章_第1节_财政收入和财政集中度.html" class="chapter-item done">
+    <span class="chapter-num">第13章</span>
+    <span class="chapter-name">财政收入</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十三章_第2节_税收.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十三章_第3节_税负转嫁.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十三章_第4节_国债.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第十四章_第1节_税制要素与税收分类.html" class="chapter-item done">
+    <span class="chapter-num">第14章</span>
+    <span class="chapter-name">税收制度</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十四章_第2节_货物和劳务税类.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十四章_第3节_所得税类.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十四章_第4节_财产税类与深化税收征管改革.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第十五章_第1节_政府预算的职能与原则.html" class="chapter-item done">
+    <span class="chapter-num">第15章</span>
+    <span class="chapter-name">政府预算</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十五章_第2节_预算管理职权划分与预算体系.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十五章_第3节_政府预算编制和执行制度.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十五章_第4节_深化预算管理制度改革.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第十六章_第1节_财政管理体制内容与类型.html" class="chapter-item done">
+    <span class="chapter-num">第16章</span>
+    <span class="chapter-name">财政管理体制</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十六章_第2节_分税制财政管理体制.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十六章_第3节_财政转移支付制度.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十六章_第4节_建立现代财政制度与事权划分改革.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第十七章_第1节_财政政策功能与目标.html" class="chapter-item done">
+    <span class="chapter-num">第17章</span>
+    <span class="chapter-name">财政政策</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十七章_第2节_财政政策工具与类型.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十七章_第3节_财政政策乘数与时滞.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
     </div>
   </div>
-
-  <!-- 模块三：货币与金融 -->
   <div class="module">
     <div class="module-header">
       <span class="module-title">三、货币与金融（第18-22章）</span>
-      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+      <span class="module-progress"><span class="done-count">5</span>/5 章</span>
     </div>
     <div class="chapter-list">
-      <div class="chapter-item pending"><span class="chapter-num">第18章</span><span class="chapter-name">货币供求与货币均衡</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第19章</span><span class="chapter-name">中央银行与货币政策</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第20章</span><span class="chapter-name">商业银行与金融市场</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第21章</span><span class="chapter-name">金融风险与金融监管</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第22章</span><span class="chapter-name">对外金融关系与政策</span><span class="chapter-status status-pending">未开始</span></div>
+  <a href="经济师学习_第十八章_第1节_货币需求.html" class="chapter-item done">
+    <span class="chapter-num">第18章</span>
+    <span class="chapter-name">货币供求与货币均衡</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十八章_第2节_货币供给.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十八章_第3节_货币均衡与通货膨胀.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第十九章_第1节_中央银行.html" class="chapter-item done">
+    <span class="chapter-num">第19章</span>
+    <span class="chapter-name">中央银行与货币政策</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第十九章_第2节_货币政策.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第二十章_第1节_商业银行的运营与管理.html" class="chapter-item done">
+    <span class="chapter-num">第20章</span>
+    <span class="chapter-name">商业银行与金融市场</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十章_第2节_金融市场.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第二十一章_第1节_金融风险与金融危机.html" class="chapter-item done">
+    <span class="chapter-num">第21章</span>
+    <span class="chapter-name">金融风险与金融监管</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十一章_第2节_金融监管理论与监管体制.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十一章_第3节_巴塞尔协议与国际金融监管协调.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第二十二章_第1节_汇率制度.html" class="chapter-item done">
+    <span class="chapter-num">第22章</span>
+    <span class="chapter-name">对外金融关系与政策</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十二章_第2节_国际储备.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十二章_第3节_国际货币体系与人民币跨境使用.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
     </div>
   </div>
-
-  <!-- 模块四：统计 -->
   <div class="module">
     <div class="module-header">
       <span class="module-title">四、统计（第23-27章）</span>
-      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+      <span class="module-progress"><span class="done-count">5</span>/5 章</span>
     </div>
     <div class="chapter-list">
-      <div class="chapter-item pending"><span class="chapter-num">第23章</span><span class="chapter-name">统计与统计数据</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第24章</span><span class="chapter-name">描述统计</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第25章</span><span class="chapter-name">抽样调查</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第26章</span><span class="chapter-name">回归分析</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第27章</span><span class="chapter-name">时间序列分析</span><span class="chapter-status status-pending">未开始</span></div>
+  <a href="经济师学习_第二十三章_第1节_统计基本概念.html" class="chapter-item done">
+    <span class="chapter-num">第23章</span>
+    <span class="chapter-name">统计与数据科学</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十三章_第2节_统计调查与数据质量.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第二十四章_第1节_集中趋势的测度.html" class="chapter-item done">
+    <span class="chapter-num">第24章</span>
+    <span class="chapter-name">描述统计</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十四章_第2节_离散程度的测度.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第二十五章_第1节_抽样调查基本概念与概率抽样.html" class="chapter-item done">
+    <span class="chapter-num">第25章</span>
+    <span class="chapter-name">抽样调查</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十五章_第2节_估计量与抽样误差.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
+  <a href="经济师学习_第二十六章_第1节_回归模型与最小二乘估计.html" class="chapter-item done">
+    <span class="chapter-num">第26章</span>
+    <span class="chapter-name">回归分析</span>
+    <div class="section-links"><span class="section-link">第1节</span></div>
+  </a>
+  <a href="经济师学习_第二十七章_第1节_水平与速度分析.html" class="chapter-item done">
+    <span class="chapter-num">第27章</span>
+    <span class="chapter-name">时间序列分析</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十七章_第2节_时间序列的分解.html'" style="background:var(--accent);">第2节</span></div>
+  </a>
     </div>
   </div>
-
-  <!-- 模块五：会计 -->
   <div class="module">
     <div class="module-header">
       <span class="module-title">五、会计（第28-32章）</span>
-      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+      <span class="module-progress"><span class="done-count">5</span>/5 章</span>
     </div>
     <div class="chapter-list">
-      <div class="chapter-item pending"><span class="chapter-num">第28章</span><span class="chapter-name">会计概论</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第29章</span><span class="chapter-name">会计循环</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第30章</span><span class="chapter-name">会计报表</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第31章</span><span class="chapter-name">财务报表分析</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第32章</span><span class="chapter-name">政府会计</span><span class="chapter-status status-pending">未开始</span></div>
+  <a href="经济师学习_第二十八章_第1节_会计基本概念与会计目标.html" class="chapter-item done">
+    <span class="chapter-num">第28章</span>
+    <span class="chapter-name">会计概论</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十八章_第2节_会计要素与会计恒等式.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十八章_第3节_会计要素确认和计量基本原则.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十八章_第4节_会计基本前提、信息质量要求与会计法规.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第二十九章_第1节_会计确认与会计计量.html" class="chapter-item done">
+    <span class="chapter-num">第29章</span>
+    <span class="chapter-name">会计循环</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十九章_第2节_会计记录与复式记账（借贷记账法）.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第二十九章_第3节_会计循环环节与账务处理程序.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第三十章_第1节_会计报表概述与编制要求.html" class="chapter-item done">
+    <span class="chapter-num">第30章</span>
+    <span class="chapter-name">会计报表</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十章_第2节_资产负债表.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十章_第3节_利润表.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十章_第4节_现金流量表与会计报表附注.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第三十一章_第1节_财务报表分析的意义、内容与方法.html" class="chapter-item done">
+    <span class="chapter-num">第31章</span>
+    <span class="chapter-name">财务报表分析</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十一章_第2节_偿债能力分析指标.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十一章_第3节_营运能力分析指标.html'" style="background:var(--accent);">第3节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十一章_第4节_盈利能力分析指标.html'" style="background:var(--accent);">第4节</span></div>
+  </a>
+  <a href="经济师学习_第三十二章_第1节_政府会计的概念与特点.html" class="chapter-item done">
+    <span class="chapter-num">第32章</span>
+    <span class="chapter-name">政府会计</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十二章_第2节_政府财务会计要素与政府预算会计要素.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十二章_第3节_政府会计报告（决算报告与财务报告）.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
     </div>
   </div>
-
-  <!-- 模块六：法律 -->
   <div class="module">
     <div class="module-header">
       <span class="module-title">六、法律（第33-37章）</span>
-      <span class="module-progress"><span class="done-count">0</span>/5 章</span>
+      <span class="module-progress"><span class="done-count">5</span>/5 章</span>
     </div>
     <div class="chapter-list">
-      <div class="chapter-item pending"><span class="chapter-num">第33章</span><span class="chapter-name">法律对经济关系的调整</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第34章</span><span class="chapter-name">物权法律制度</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第35章</span><span class="chapter-name">合同法律制度</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第36章</span><span class="chapter-name">公司法律制度</span><span class="chapter-status status-pending">未开始</span></div>
-      <div class="chapter-item pending"><span class="chapter-num">第37章</span><span class="chapter-name">其他法律制度</span><span class="chapter-status status-pending">未开始</span></div>
+  <a href="经济师学习_第三十三章_第1节_“调整经济的法”与“经济法”.html" class="chapter-item done">
+    <span class="chapter-num">第33章</span>
+    <span class="chapter-name">法律对经济关系的调整</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十三章_第2节_调整社会主义市场经济的法律体系.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十三章_第3节_优化营商环境的制度与实践.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第三十四章_第1节_物权概述.html" class="chapter-item done">
+    <span class="chapter-num">第34章</span>
+    <span class="chapter-name">物权法律概述</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十四章_第2节_所有权.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十四章_第3节_用益物权与担保物权.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第三十五章_第1节_合同的订立（要约与承诺）.html" class="chapter-item done">
+    <span class="chapter-num">第35章</span>
+    <span class="chapter-name">合同法律制度</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十五章_第2节_合同的效力与履行、保全.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十五章_第3节_合同的担保、转让、变更解除与违约责任.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第三十六章_第1节_公司与公司法概述、公司登记与设立.html" class="chapter-item done">
+    <span class="chapter-num">第36章</span>
+    <span class="chapter-name">公司法律制度</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十六章_第2节_公司的组织机构与股东权利.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十六章_第3节_董监高义务、股份发行转让与合并分立清算.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
+  <a href="经济师学习_第三十七章_第1节_工业产权法律制度（专利与商标）.html" class="chapter-item done">
+    <span class="chapter-num">第37章</span>
+    <span class="chapter-name">其他法律制度</span>
+    <div class="section-links"><span class="section-link">第1节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十七章_第2节_劳动合同法律制度.html'" style="background:var(--accent);">第2节</span><span class="section-link" onclick="event.preventDefault();window.location.href='经济师学习_第三十七章_第3节_消费者权益、反垄断与反不正当竞争.html'" style="background:var(--accent);">第3节</span></div>
+  </a>
     </div>
   </div>
-
 </div>
 
 <!-- ========== 工商管理专业 ========== -->
@@ -541,6 +616,33 @@
 
 </div>
 
+<!-- ========== 真题题库 ========== -->
+<div class="subject-panel" id="panel-past">
+  <div class="module">
+    <div class="module-header">
+      <span class="module-title">真题题库（近5年 · 考生回忆版）</span>
+      <span class="module-progress"><span class="done-count">10</span>/10 套</span>
+    </div>
+    <div class="chapter-list" style="margin-bottom:10px">
+      <div style="font-weight:700;color:var(--primary);margin:6px 0 8px;font-size:14px;">《经济基础知识》</div>
+      <a href="真题_2021_经济基础知识.html" class="chapter-item done"><span class="chapter-num">2021年</span><span class="chapter-name">经济基础知识 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2022_经济基础知识.html" class="chapter-item done"><span class="chapter-num">2022年</span><span class="chapter-name">经济基础知识 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2023_经济基础知识.html" class="chapter-item done"><span class="chapter-num">2023年</span><span class="chapter-name">经济基础知识 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2024_经济基础知识.html" class="chapter-item done"><span class="chapter-num">2024年</span><span class="chapter-name">经济基础知识 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2025_经济基础知识.html" class="chapter-item done"><span class="chapter-num">2025年</span><span class="chapter-name">经济基础知识 真题</span><span class="chapter-status status-done">已收录</span></a>
+    </div>
+    <div class="chapter-list" style="margin-bottom:10px">
+      <div style="font-weight:700;color:var(--primary);margin:6px 0 8px;font-size:14px;">《工商管理》</div>
+      <a href="真题_2021_工商管理.html" class="chapter-item done"><span class="chapter-num">2021年</span><span class="chapter-name">工商管理 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2022_工商管理.html" class="chapter-item done"><span class="chapter-num">2022年</span><span class="chapter-name">工商管理 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2023_工商管理.html" class="chapter-item done"><span class="chapter-num">2023年</span><span class="chapter-name">工商管理 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2024_工商管理.html" class="chapter-item done"><span class="chapter-num">2024年</span><span class="chapter-name">工商管理 真题</span><span class="chapter-status status-done">已收录</span></a>
+      <a href="真题_2025_工商管理.html" class="chapter-item done"><span class="chapter-num">2025年</span><span class="chapter-name">工商管理 真题</span><span class="chapter-status status-done">已收录</span></a>
+    </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--text-light);padding:0 4px;">说明：真题为考生回忆版（来源 233网校/环球网校/希赛/高顿等），答案与解析依 2024/2025 版官方教材校订；标注【典型题·非回忆原题】者为补充题。</p>
+</div>
+
 <div class="footer-note">
   📖 学习资料持续更新中 · 每学完一节解锁对应链接<br>
   经济基础 37章 + 工商管理 11章 = 全部考点覆盖
@@ -549,10 +651,11 @@
 <script>
 function switchSubject(subject) {
   document.querySelectorAll('.subject-tab').forEach(function(tab, i) {
-    tab.classList.toggle('active', (subject === 'economics' && i === 0) || (subject === 'business' && i === 1));
+    tab.classList.toggle('active', (subject === 'economics' && i === 0) || (subject === 'business' && i === 1) || (subject === 'past' && i === 2));
   });
   document.getElementById('panel-economics').classList.toggle('active', subject === 'economics');
   document.getElementById('panel-business').classList.toggle('active', subject === 'business');
+  document.getElementById('panel-past').classList.toggle('active', subject === 'past');
 }
 </script>
 

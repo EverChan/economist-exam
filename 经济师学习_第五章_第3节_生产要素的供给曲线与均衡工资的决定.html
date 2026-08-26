@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第5章：生产要素的供给曲线与均衡工资的决定</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第5章</span>
+  <h1>第五章 生产要素市场理论</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 生产要素的供给曲线与均衡工资的决定 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第五章_第2节_完全竞争生产者对生产要素的需求.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：完全竞争生产者对生产要素的需求</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>理解劳动的供给原则（收入效应与替代效应相等） <span class="hot">必考</span></li>
+    <li>掌握劳动供给曲线向后弯曲的特征及原因 <span class="hot">高频考点 · 多选题</span></li>
+    <li>了解土地与资本供给曲线的形状及均衡工资的决定</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、劳动供给曲线（向后弯曲）</h2>
+  <p>劳动供给涉及<strong>劳动与闲暇</strong>的选择。工资上升产生两种效应：</p>
+  <ul>
+    <li><strong>替代效应</strong>：工资↑→闲暇变贵→增加劳动、减少闲暇。</li>
+    <li><strong>收入效应</strong>：工资↑→收入↑→更愿享受闲暇→减少劳动。</li>
+  </ul>
+  <p>当工资较低时替代效应 &gt; 收入效应，劳动供给随工资上升而增加；当工资很高时<strong>收入效应 &gt; 替代效应</strong>，劳动供给随工资上升而减少，故劳动供给曲线<strong>向后弯曲</strong>。</p>
+  <table class="compare-table">
+    <tr><th style="width:30%">阶段</th><th style="width:35%">主导效应</th><th>劳动供给曲线</th></tr>
+    <tr><td>工资较低阶段</td><td>替代效应 &gt; 收入效应</td><td>向右上方倾斜</td></tr>
+    <tr><td>工资较高阶段</td><td>收入效应 &gt; 替代效应</td><td>向后弯曲（向左上）</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>劳动供给原则——<strong>收入效应 = 替代效应</strong>（即增加一单位劳动的收入增量带来的效用 = 减少一单位闲暇的效用损失）。</div>
+</div>
+
+<div class="section">
+  <h2>二、土地与资本的供给曲线</h2>
+  <ul>
+    <li><strong>土地</strong>：数量固定，供给曲线是一条<strong>垂直线</strong>（价格变动不影响供给量）。</li>
+    <li><strong>资本</strong>：短期内数量固定，供给曲线近似垂直；长期内可调节，呈现一定弹性。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>三、均衡工资的决定</h2>
+  <p>均衡工资由<strong>劳动市场需求曲线与供给曲线的交点</strong>决定。劳动需求源于 VMP（边际产品价值），劳动供给由上述向后弯曲曲线给出。</p>
+  <div class="example"><strong>例子：</strong>某行业需求扩张使劳动需求曲线右移，在供给曲线较陡（收入效应强）区间，工资大幅上升但就业增加有限。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>劳动的供给曲线在工资较高阶段向后弯曲，主要原因是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 替代效应大于收入效应</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 收入效应大于替代效应</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 工资上涨使劳动成为劣质品</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 劳动需求曲线向左移动</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：工资较高时<strong>收入效应 &gt; 替代效应</strong>，劳动者更愿享受闲暇，劳动供给随工资上升而减少，曲线向后弯曲。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>土地的供给曲线在一般情况下是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 向右上方倾斜</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 向右下方倾斜</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 一条垂直线</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 向后弯曲</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：C</span></p><p>解析：土地数量固定，其供给曲线是一条<strong>垂直线</strong>，价格（地租）变动不影响供给量。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>关于劳动的供给原则，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 劳动的供给涉及劳动与闲暇的选择</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 工资上升同时产生替代效应和收入效应</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 劳动供给原则是收入效应等于替代效应</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 替代效应总是大于收入效应</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 均衡工资由劳动供求交点决定</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCE</span></p><p>解析：劳动供给在劳动与闲暇间权衡，工资上升有替代与收入双重效应，均衡时二者相等；均衡工资由供求交点决定。D 错：两效应大小随工资水平变化，并非总是替代效应更大。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>根据劳动的供给原则，当工资率较低时，劳动供给量随工资上升而增加，是因为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 收入效应大于替代效应</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 替代效应大于收入效应</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 闲暇变为正常品</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 劳动需求曲线垂直</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：工资较低时<strong>替代效应 &gt; 收入效应</strong>，闲暇变"贵"，劳动者增加劳动供给，曲线向右上方倾斜。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>关于生产要素的供给曲线，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 劳动供给曲线向后弯曲</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 土地供给曲线是垂直线</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 资本在短期内供给近似垂直</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 完全竞争生产者要素供给曲线是水平线</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 劳动的供给曲线始终向右上方倾斜</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCD</span></p><p>解析：劳动供给曲线<strong>向后弯曲</strong>（A 对、E 错"始终"）；土地供给垂直（B）；资本短期近似垂直（C）；完全竞争生产者面对的要素供给曲线水平（D，指生产者作为要素需求方面对的市场供给）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第六章_第1节_资源最优配置标准与帕累托最优状态.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：资源最优配置标准与帕累托最优状态</h3>
+  <p>下一节：市场失灵和政府的干预 · 资源最优配置标准与帕累托最优状态</p>
+</a>
+</body>
+</html>

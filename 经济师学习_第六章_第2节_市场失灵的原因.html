@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第6章：市场失灵的原因</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第6章</span>
+  <h1>第六章 市场失灵和政府的干预</h1>
+  <p class="subtitle">第 2 节 / 共 3 节 · 市场失灵的原因 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:67%"></div></div>
+  <p class="progress-text">本章进度 2/3</p>
+</div>
+<a href="经济师学习_第六章_第1节_资源最优配置标准与帕累托最优状态.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 1 节：资源最优配置标准与帕累托最优状态</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握市场失灵的四大原因：垄断、外部性、公共物品、信息不对称 <span class="hot">必考</span></li>
+    <li>区分外部经济与外部不经济</li>
+    <li>理解公共物品的非竞争性与非排他性 <span class="hot">高频考点 · 多选题</span></li>
+    <li>辨识信息不对称导致的逆向选择与道德风险</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、垄断与市场失灵</h2>
+  <p>不完全竞争（尤其垄断）使价格 &gt; 边际成本，市场机制不能充分发挥作用，资源无法实现最优配置。</p>
+</div>
+
+<div class="section">
+  <h2>二、外部性与市场失灵 <span class="hot">高频考点</span></h2>
+  <p>外部性指某人/某企业的经济活动对他人造成影响却未付出代价或得到收益。</p>
+  <table class="compare-table">
+    <tr><th style="width:26%">类型</th><th style="width:37%">含义</th><th>对产出的影响</th></tr>
+    <tr><td><strong>外部经济</strong><br>（正外部性）</td><td>活动使他人受益却无法补偿</td><td>私人收益 &lt; 社会收益 → 产出低于社会最优</td></tr>
+    <tr><td><strong>外部不经济</strong><br>（负外部性）</td><td>活动使他人受损却不补偿</td><td>边际私人成本 &lt; 边际社会成本 → 产出高于社会最优</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>三、公共物品与市场失灵</h2>
+  <p>公共物品具有<strong>非竞争性</strong>（增加一人消费边际成本为零）和<strong>非排他性</strong>（排除额外消费者成本过高或不可行）。非竞争性是主要特征，非排他性是派生特征。由于存在"免费搭车"，市场不愿提供，导致供给不足。</p>
+</div>
+
+<div class="section">
+  <h2>四、信息不对称与市场失灵</h2>
+  <table class="compare-table">
+    <tr><th style="width:34%">表现</th><th>说明</th></tr>
+    <tr><td><strong>逆向选择</strong></td><td>交易前信息不对称，劣质品驱逐优质品（如"柠檬市场"）</td></tr>
+    <tr><td><strong>道德风险</strong></td><td>交易后信息不对称，一方行为不被察觉而损害对方（如投保后疏于防范）</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>市场失灵四因——<strong>垄断、外部性、公共物品、信息不对称</strong>。公共物品两特征——非竞争性、非排他性。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>市场机制不能充分发挥作用而导致资源配置缺乏效率或失当，称为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 帕累托改进</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 市场失灵</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 一般均衡</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 瓦尔拉斯均衡</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：<strong>市场失灵</strong>即市场机制不能充分发挥作用导致资源配置缺乏效率或失当。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>公共物品的两个基本特征是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 竞争性与排他性</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 非竞争性与非排他性</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 竞争性与非排他性</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 非竞争性与排他性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：公共物品具有<strong>非竞争性</strong>（主要特征）和<strong>非排他性</strong>（派生特征）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>导致市场失灵的原因主要有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 垄断</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 外部性</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 公共物品</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 信息不对称</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 完全竞争</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCD</span></p><p>解析：市场失灵四大原因：<strong>垄断、外部性、公共物品、信息不对称</strong>。完全竞争是实现帕累托最优的条件，不是失灵原因（E 错）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>在二手车市场中，卖方比买方更了解车况，劣质车将优质车挤出市场，这属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 道德风险</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 逆向选择</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 外部经济</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 免费搭车</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：交易<strong>前</strong>信息不对称、劣质品驱逐优质品是<strong>逆向选择</strong>；道德风险发生在交易后（如投保后放松防范）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>关于外部不经济，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 某企业的经济活动使他人受损却未补偿</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 边际私人成本低于边际社会成本</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 生产者倾向扩大生产，产出高于社会最优</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 私人收益小于社会收益</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 属于负外部性</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCE</span></p><p>解析：外部不经济（负外部性）使他人受损未补偿（A、E），私人成本 &lt; 社会成本（B），产出过多（C）。D 是<strong>外部经济</strong>（正外部性）的特征，错误。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第六章_第3节_政府对市场的干预.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 3 节：政府对市场的干预</h3>
+  <p>下一节：市场失灵和政府的干预 · 政府对市场的干预</p>
+</a>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第14章：所得税类</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第14章</span>
+  <h1>第十四章 税收制度</h1>
+  <p class="subtitle">第 3 节 / 共 4 节 · 所得税类 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:75%"></div></div>
+  <p class="progress-text">本章进度 3/4</p>
+</div>
+<a href="经济师学习_第十四章_第2节_货物和劳务税类.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：货物和劳务税类</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>掌握企业所得税法定税率与适用范围 <span class="hot">必考</span></li>
+    <li>掌握个人所得税综合所得的范围与税率 <span class="hot">高频考点 · 多选题</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、企业所得税 <span class="hot">高频考点</span></h2>
+  <ul>
+    <li><strong>法定税率 25%</strong>：适用于居民企业、非居民企业境内设有机构场所且所得与机构相关。</li>
+    <li>所得来源：销售货物、提供劳务、转让财产、股息红利、利息、租金、特许权使用费、接受捐赠等。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、个人所得税 <span class="hot">必考 · 多选题</span></h2>
+  <table class="compare-table">
+    <tr><th style="width:30%">所得类型</th><th>计税方式</th><th>税率</th></tr>
+    <tr><td><strong>综合所得</strong></td><td>按年合并：工资薪金、劳务报酬、稿酬、特许权使用费</td><td>3%~45% 七级超额累进</td></tr>
+    <tr><td><strong>经营所得</strong></td><td>个体工商户等</td><td>5%~35% 五级超额累进</td></tr>
+    <tr><td><strong>其他所得</strong></td><td>利息股息红利、财产租赁/转让、偶然所得</td><td>20% 比例税率</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>综合所得"四项"=工资薪金+劳务报酬+稿酬+特许权使用费，3%-45%；经营所得 5%-35%；利息股息等 20%。</div>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>我国企业所得税的法定基本税率是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 15%</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 20%</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 25%</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 33%</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：C</span></p><p>解析：企业所得税<strong>法定税率 25%</strong>（高新技术企业等优惠税率另定）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（多选）</span>下列个人所得中，纳入"综合所得"按年汇算清缴的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q2"> A. 工资薪金所得</label><br>
+      <label class="option"><input type="checkbox" name="q2"> B. 劳务报酬所得</label><br>
+      <label class="option"><input type="checkbox" name="q2"> C. 稿酬所得</label><br>
+      <label class="option"><input type="checkbox" name="q2"> D. 特许权使用费所得</label><br>
+      <label class="option"><input type="checkbox" name="q2"> E. 利息股息红利所得</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：ABCD</span></p><p>解析：综合所得=工资薪金+劳务报酬+稿酬+特许权使用费四项；利息股息红利按 20% 单独计征，不并入综合所得。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>综合所得适用的个人所得税税率为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 5%~35% 五级超额累进</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 3%~45% 七级超额累进</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 20% 比例税率</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 10%~40% 超额累进</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：综合所得适用<strong>3%~45% 七级超额累进</strong>税率；经营所得为 5%~35% 五级。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>个人取得利息、股息、红利所得，适用税率为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 3%~45%</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 5%~35%</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 20%</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 25%</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：利息、股息、红利、财产租赁/转让、偶然所得等适用 <strong>20% 比例税率</strong>。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（真题风格）（多选）</span>关于所得税，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 企业所得税法定税率 25%</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 经营所得适用 5%~35% 五级超额累进</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 综合所得含稿酬所得</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 个人所得税均按月计征</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 企业所得税属直接税</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCE</span></p><p>解析：企业所得税 25%、经营所得 5%-35%、综合所得含稿酬、企业所得税为直接税均正确；综合所得按年汇算（D错）。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第十四章_第4节_财产税类与深化税收征管改革.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 4 节：财产税类与深化税收征管改革</h3>
+  <p>下一节：税收制度 · 财产税类与深化税收征管改革</p>
+</a>
+</body>
+</html>

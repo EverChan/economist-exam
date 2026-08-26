@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济基础知识 · 第6章：政府对市场的干预</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">经济基础知识 · 第6章</span>
+  <h1>第六章 市场失灵和政府的干预</h1>
+  <p class="subtitle">第 3 节 / 共 3 节 · 政府对市场的干预 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+  <p class="progress-text">本章进度 3/3</p>
+</div>
+<a href="经济师学习_第六章_第2节_市场失灵的原因.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：市场失灵的原因</h3>
+</a>
+
+<div class="section">
+  <h2>本节学习目标</h2>
+  <ul>
+    <li>了解政府消除垄断、提供公共物品、解决信息不对称的措施</li>
+    <li>掌握消除外部性的途径，特别是科斯定理 <span class="hot">必考</span></li>
+    <li>理解科斯定理的适用条件及其政策含义</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>一、政府对垄断的干预</h2>
+  <ul>
+    <li>法律手段：制定《反垄断法》《反不正当竞争法》限制垄断。</li>
+    <li>公共管制：对垄断行业价格进行管制（限价或规定利润率）。</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>二、政府对外部性的干预 <span class="hot">必考</span></h2>
+  <p><strong>传统方法：</strong>①税收和补贴；②将相关企业合并使外部性内部化。</p>
+  <p><strong>重要途径：明晰产权</strong>——科斯定理。许多外部性源于产权不清晰。</p>
+  <table class="compare-table">
+    <tr><th style="width:34%">要点</th><th>内容</th></tr>
+    <tr><td><strong>科斯定理</strong></td><td>只要财产权明确，且交易成本为零或很小，无论初始产权赋予谁，市场均衡结果都有效率，实现帕累托最优</td></tr>
+    <tr><td>若交易成本 &gt; 0</td><td>不同产权制度导致不同资源配置效率</td></tr>
+  </table>
+  <div class="keypoint"><strong>记忆：</strong>消除外部性三法——税收补贴、企业合并、<strong>明晰产权（科斯定理）</strong>。科斯定理两个前提：产权明确 + 交易成本为零/很小。</div>
+</div>
+
+<div class="section">
+  <h2>三、政府对公共物品与信息不对称的干预</h2>
+  <ul>
+    <li><strong>公共物品</strong>：由<strong>政府</strong>提供（纯公共物品只能政府提供，如国防、治安）。</li>
+    <li><strong>信息不对称</strong>：通过质量标志认证、信息披露、健全合同法律等解决。</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>科斯定理认为，解决外部性问题的关键前提是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 政府对产量直接管制</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 财产权明确且交易成本为零或很小</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 征收高额税收</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 企业强制合并</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：<strong>科斯定理</strong>：只要产权明确且交易成本为零或很小，无论初始产权给谁，市场均衡都有效率。这是通过市场机制解决外部性的思路。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>政府对垄断行业产品进行限价或规定利润率，属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 公共管制</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 税收补贴</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 明晰产权</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 企业合并</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：A</span></p><p>解析：对垄断行业价格管制（限价、规定利润率）是<strong>公共管制</strong>，属于政府消除垄断的干预方式之一。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>消除外部性的传统方法包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 税收和补贴</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 将相关企业合并使外部性内部化</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 明晰产权（科斯定理）</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 规定垄断利润率</label><br>
+      <label class="option"><input type="checkbox" name="q3"> E. 政府直接定价</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABC</span></p><p>解析：消除外部性的途径：①税收和补贴；②企业合并内部化；③<strong>明晰产权</strong>（科斯定理，重要途径）。D、E 属于对垄断的公共管制，不针对外部性。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>国防、治安等最典型的纯公共物品，通常由：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 市场自发提供</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 政府提供</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 私人企业垄断提供</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 国际组织提供</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：纯公共物品具有非排他性，存在免费搭车，市场不愿提供，只能由<strong>政府</strong>提供（如国防、治安）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（多选）</span>关于政府干预市场的方式，下列说法正确的有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q5"> A. 通过反垄断法限制垄断</label><br>
+      <label class="option"><input type="checkbox" name="q5"> B. 通过税收补贴消除外部性</label><br>
+      <label class="option"><input type="checkbox" name="q5"> C. 政府提供公共物品</label><br>
+      <label class="option"><input type="checkbox" name="q5"> D. 通过信息披露解决信息不对称</label><br>
+      <label class="option"><input type="checkbox" name="q5"> E. 完全取消市场竞争</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：ABCD</span></p><p>解析：政府干预包括反垄断（A）、消除外部性（B）、提供公共物品（C）、解决信息不对称如信息披露（D）。E 错：干预是为弥补市场失灵，而非取消竞争。</p></div>
+  </div>
+</div>
+<a href="经济师学习_第七章_第1节_国民收入核算.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 1 节：国民收入核算</h3>
+  <p>下一节：国民收入核算和简单的宏观经济模型 · 国民收入核算</p>
+</a>
+</body>
+</html>
