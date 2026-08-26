@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第四章：渠道运营管理</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理 · 第4章</span>
+  <h1>第四章 分销渠道管理</h1>
+  <p class="subtitle">第 1 节 / 共 3 节 · 渠道运营管理 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:33%"></div></div>
+  <p class="progress-text">本章进度 1/3</p>
+</div>
+<a href="工商学习_第三章_第2节_目标市场战略与品牌管理.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第三章 第2节：目标市场战略与品牌管理</h3>
+</a>
+
+<div class="section">
+  <h2>一、分销渠道的概念与功能</h2>
+  <p>分销渠道是指某种商品和服务从生产者向消费者转移过程中，取得这种商品和服务所有权或帮助所有权转移的所有企业和个人。<span class="hot">高频考点</span></p>
+  <ul>
+    <li><b>渠道功能</b>：市场调研、沟通、谈判、物流、融资、风险承担、所有权转移、付款（共8项）</li>
+    <li><b>渠道长度</b>（按中间商层数）：零级渠道（生产者→消费者，直接）、一级（零售商）、二级（批发+零售）、三级（代理+批发+零售）</li>
+  </ul>
+  <table class="compare-table">
+    <tr><th>对比项</th><th>直接渠道</th><th>间接渠道</th></tr>
+    <tr><td>中间商</td><td>无</td><td>有（批发/零售等）</td></tr>
+    <tr><td>适用</td><td>工业品、定制、鲜活</td><td>消费品为主</td></tr>
+    <tr><td>控制力</td><td>强</td><td>弱</td></tr>
+  </table>
+</div>
+<div class="section">
+  <h2>二、渠道成员与渠道权力、冲突</h2>
+  <p><b>渠道成员</b>：批发商（购进并转售）、零售商（直接面向消费者）。</p>
+  <p><b>渠道权力基础</b>：强制、奖赏、法定、专家、参照（认同）五种。</p>
+  <p><b>渠道冲突类型</b><span class="hot">高频考点</span>：</p>
+  <ul>
+    <li><b>垂直冲突</b>：同一渠道不同层级之间（如制造商 vs 零售商）</li>
+    <li><b>水平冲突</b>：同一层级成员之间（如两家零售商）</li>
+    <li><b>多渠道冲突</b>：同一企业使用多条渠道时相互冲突</li>
+  </ul>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>生产者直接把商品销售给最终消费者的渠道是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 一级渠道</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 零级渠道</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 二级渠道</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 三级渠道</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：零级渠道即直接渠道，没有中间商，生产者→消费者。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>下列冲突中，属于同一渠道不同层级之间的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 水平冲突</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 垂直冲突</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 多渠道冲突</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 交叉冲突</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：垂直冲突是不同层级（如制造商与零售商）之间的冲突；水平冲突是同层级（如两家零售商）。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>分销渠道的功能包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. 沟通与谈判</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 物流与融资</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 风险承担</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 所有权转移</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCD</span></p><p>解析：渠道功能共8项，含市场调研、沟通、谈判、物流、融资、风险承担、所有权转移、付款，全选。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>制造商基于品牌影响力使零售商配合销售，这种渠道权力属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 强制权力</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 奖赏权力</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. 参照（认同）权力</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. 法定权力</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：C</span></p><p>解析：参照权力源于被影响者对被影响方的认同与模仿（如强势品牌），选C。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>下列最适宜采用直接渠道的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 日用快消品</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 大型工业设备</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 普通零食</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 报纸</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：大型工业设备单价高、定制强、用户少，适合直接渠道（零级）。</p></div>
+  </div>
+</div>
+<a href="工商学习_第四章_第2节_分销渠道系统评估.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：分销渠道系统评估</h3>
+  <p>垂直、水平、多渠道系统有何不同？渠道评估看哪些指标？</p>
+</a>
+</body>
+</html>

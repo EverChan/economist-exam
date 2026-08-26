@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第六章：仓储与库存管理</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理 · 第6章</span>
+  <h1>第六章 物流管理</h1>
+  <p class="subtitle">第 3 节 / 共 4 节 · 仓储与库存管理 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:75%"></div></div>
+  <p class="progress-text">本章进度 3/4</p>
+</div>
+<a href="工商学习_第六章_第2节_包装、装卸搬运与流通加工.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第 2 节：包装、装卸搬运与流通加工</h3>
+</a>
+
+<div class="section">
+  <h2>一、仓储与库存管理</h2>
+  <p>仓储是物流的节点，库存是缓冲。<span class="hot">高频考点</span></p>
+  <ul>
+    <li><b>库存控制方法</b>：ABC分类法（按价值/金额分重点）、经济订货批量（EOQ）、定量订货、定期订货</li>
+    <li><b>EOQ</b>：使 total 订货成本+持有成本最小的批量</li>
+  </ul>
+  <table class="compare-table">
+    <tr><th>方法</th><th>要点</th></tr>
+    <tr><td>ABC分类</td><td>A类重点严管，C类宽松</td></tr>
+    <tr><td>经济批量EOQ</td><td>平衡订货与持有成本</td></tr>
+    <tr><td>定量订货</td><td>库存降至再订货点即订固定量</td></tr>
+    <tr><td>定期订货</td><td>固定周期盘点订货</td></tr>
+  </table>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（单选）</span>按金额价值把库存分为重点管理的方法是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. EOQ</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. ABC分类法</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 定量订货</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 定期订货</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：ABC分类法按价值金额分级管理。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>使订货成本与持有成本之和最小的批量是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 再订货点</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 经济订货批量EOQ</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 安全库存</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 最高库存</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：EOQ使订货+持有总成本最小。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（多选）</span>库存控制方法包括：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q3"> A. ABC分类法</label><br>
+      <label class="option"><input type="checkbox" name="q3"> B. 经济订货批量</label><br>
+      <label class="option"><input type="checkbox" name="q3"> C. 定量订货</label><br>
+      <label class="option"><input type="checkbox" name="q3"> D. 定期订货</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：ABCD</span></p><p>解析：四种均为常用库存控制方法。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（单选）</span>库存降到某水平即订固定量，属于：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q4" value="a"> A. 定期订货</label><br>
+      <label class="option"><input type="radio" name="q4" value="b"> B. 定量订货</label><br>
+      <label class="option"><input type="radio" name="q4" value="c"> C. ABC分类</label><br>
+      <label class="option"><input type="radio" name="q4" value="d"> D. EOQ</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：B</span></p><p>解析：定量订货是降至再订货点订固定量。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>ABC分类中，应重点严格管理的是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. A类</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. B类</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. C类</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 全部同等</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：A</span></p><p>解析：A类价值高，重点严管。</p></div>
+  </div>
+</div>
+<a href="工商学习_第六章_第4节_运输与配送管理.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 4 节：运输与配送管理</h3>
+  <p>五种运输方式怎么选？配送中心怎么运作？</p>
+</a>
+</body>
+</html>

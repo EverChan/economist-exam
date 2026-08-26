@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工商管理 · 第九章：财务管理基本价值观念</title>
+<style>  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #f5f6f8;
+    color: #2c2c2a;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .header {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e5;
+  }
+  .header .label {
+    display: inline-block;
+    font-size: 12px;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888780;
+  }
+  .progress-bar {
+    margin-top: 16px;
+    height: 6px;
+    background: #f0f0ed;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: #185FA5;
+    border-radius: 3px;
+  }
+  .progress-text {
+    font-size: 12px;
+    color: #888780;
+    margin-top: 6px;
+  }
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+  }
+  .section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0C447C;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .section p {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 10px;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  .section li {
+    font-size: 14px;
+    color: #444441;
+    margin-bottom: 6px;
+  }
+  .hot {
+    display: inline-block;
+    font-size: 11px;
+    color: #854F0B;
+    background: #FAEEDA;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .example {
+    background: #f9f9f6;
+    border-left: 3px solid #B4B2A9;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #5F5E5A;
+  }
+  .example strong { color: #444441; }
+  .keypoint {
+    background: #E6F1FB;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #0C447C;
+  }
+  .keypoint strong { color: #185FA5; }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .compare-table th {
+    background: #E6F1FB;
+    color: #0C447C;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #B5D4F4;
+  }
+  .compare-table td {
+    padding: 10px 12px;
+    border: 1px solid #e8e8e5;
+    color: #444441;
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .summary {
+    background: linear-gradient(135deg, #E6F1FB 0%, #f0f7fd 100%);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #B5D4F4;
+  }
+  .summary h2 {
+    font-size: 16px;
+    color: #0C447C;
+    margin-bottom: 12px;
+    border: none;
+    padding: 0;
+  }
+  .summary ul { margin-left: 18px; }
+  .summary li { font-size: 13px; color: #0C447C; margin-bottom: 8px; }
+  .quiz {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+  }
+  .quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1F5EE;
+  }
+  .quiz-q { margin-bottom: 20px; }
+  .quiz-q .q-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .quiz-q .q-text .num { color: #0F6E56; margin-right: 6px; }
+  .quiz-q .options { margin-left: 8px; }
+  .quiz-q .option {
+    font-size: 13px;
+    color: #444441;
+    padding: 4px 0;
+    cursor: pointer;
+  }
+  .quiz-q .option input { margin-right: 6px; }
+  .answer {
+    background: #E1F5EE;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #085041;
+    display: none;
+  }
+  .answer.show { display: block; }
+  .answer .label { font-weight: 600; color: #0F6E56; }
+  .btn-reveal {
+    font-size: 12px;
+    color: #0F6E56;
+    background: #E1F5EE;
+    border: 1px solid #9FE1CB;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-reveal:hover { background: #9FE1CB; }
+  .next-preview {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px dashed #B4B2A9;
+  }
+  .next-preview .label { font-size: 12px; color: #888780; margin-bottom: 6px; }
+  .next-preview h3 { font-size: 15px; color: #1a1a1a; margin-bottom: 4px; }
+  .next-preview p { font-size: 13px; color: #888780; }
+  .nav-back {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 999;
+    background: rgba(44, 95, 127, 0.92);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-back:hover {
+    background: rgba(44, 95, 127, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
+</style>
+</head>
+<body>
+<a href="index.html" class="nav-back">← 目录总览</a>
+
+<div class="header">
+  <span class="label">工商管理 · 第9章</span>
+  <h1>第九章 企业投融资决策及并购重组</h1>
+  <p class="subtitle">第 1 节 / 共 4 节 · 财务管理基本价值观念 | 预计学习时长 35-45 分钟</p>
+  <div class="progress-bar"><div class="fill" style="width:25%"></div></div>
+  <p class="progress-text">本章进度 1/4</p>
+</div>
+<a href="工商学习_第八章_第3节_薪酬管理.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第八章 第3节：薪酬管理</h3>
+</a>
+
+<div class="section">
+  <h2>一、财务管理的基本价值观念</h2>
+  <p><b>货币时间价值</b>：今天的1元比未来的1元更值钱。<span class="hot">高频考点</span></p>
+  <ul>
+    <li><b>复利终值</b> F = P(1+i)ⁿ；<b>复利现值</b> P = F/(1+i)ⁿ</li>
+    <li><b>年金</b>：等额系列收付款。普通年金终值/现值、年金现值系数(P/A,i,n)</li>
+    <li><b>风险与报酬</b>：风险越高要求报酬率越高；系统风险（市场，不可分散）、非系统风险（公司特有，可分散）</li>
+  </ul>
+  <table class="compare-table">
+    <tr><th>概念</th><th>公式要点</th></tr>
+    <tr><td>复利终值</td><td>F=P(1+i)ⁿ</td></tr>
+    <tr><td>复利现值</td><td>P=F/(1+i)ⁿ</td></tr>
+    <tr><td>年金现值</td><td>P=A×(P/A,i,n)</td></tr>
+  </table>
+</div>
+
+<div class="quiz">
+  <h2>练习题（5题）</h2>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">1.（计算）</span>将100元按年利率10%存3年（复利），终值约为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q1" value="a"> A. 130元</label><br>
+      <label class="option"><input type="radio" name="q1" value="b"> B. 133.1元</label><br>
+      <label class="option"><input type="radio" name="q1" value="c"> C. 110元</label><br>
+      <label class="option"><input type="radio" name="q1" value="d"> D. 121元</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a1').classList.add('show')">查看答案</button>
+    <div class="answer" id="a1"><p><span class="label">答案：B</span></p><p>解析：F=100×(1.1)³=100×1.331=133.1元。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">2.（单选）</span>下列可通过组合分散的风险是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q2" value="a"> A. 系统风险</label><br>
+      <label class="option"><input type="radio" name="q2" value="b"> B. 非系统风险</label><br>
+      <label class="option"><input type="radio" name="q2" value="c"> C. 市场风险</label><br>
+      <label class="option"><input type="radio" name="q2" value="d"> D. 利率风险</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a2').classList.add('show')">查看答案</button>
+    <div class="answer" id="a2"><p><span class="label">答案：B</span></p><p>解析：非系统风险是公司特有、可分散；系统风险不可分散。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">3.（单选）</span>等额、固定间隔的系列收付款称为：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q3" value="a"> A. 复利</label><br>
+      <label class="option"><input type="radio" name="q3" value="b"> B. 年金</label><br>
+      <label class="option"><input type="radio" name="q3" value="c"> C. 现值</label><br>
+      <label class="option"><input type="radio" name="q3" value="d"> D. 终值</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a3').classList.add('show')">查看答案</button>
+    <div class="answer" id="a3"><p><span class="label">答案：B</span></p><p>解析：年金是等额系列收付款。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">4.（多选）</span>货币时间价值相关概念有：</p>
+    <div class="options">
+      <label class="option"><input type="checkbox" name="q4"> A. 复利终值</label><br>
+      <label class="option"><input type="checkbox" name="q4"> B. 复利现值</label><br>
+      <label class="option"><input type="checkbox" name="q4"> C. 年金</label><br>
+      <label class="option"><input type="checkbox" name="q4"> D. 杠杆</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a4').classList.add('show')">查看答案</button>
+    <div class="answer" id="a4"><p><span class="label">答案：ABC</span></p><p>解析：终值、现值、年金均属货币时间价值；杠杆属筹资决策。</p></div>
+  </div>
+  <div class="quiz-q">
+    <p class="q-text"><span class="num">5.（单选）</span>风险与报酬的一般关系是：</p>
+    <div class="options">
+      <label class="option"><input type="radio" name="q5" value="a"> A. 风险越高报酬越低</label><br>
+      <label class="option"><input type="radio" name="q5" value="b"> B. 风险越高要求报酬越高</label><br>
+      <label class="option"><input type="radio" name="q5" value="c"> C. 二者无关</label><br>
+      <label class="option"><input type="radio" name="q5" value="d"> D. 风险越低报酬越高</label>
+    </div>
+    <button class="btn-reveal" onclick="document.getElementById('a5').classList.add('show')">查看答案</button>
+    <div class="answer" id="a5"><p><span class="label">答案：B</span></p><p>解析：高风险高报酬，风险与报酬正相关。</p></div>
+  </div>
+</div>
+<a href="工商学习_第九章_第2节_筹资决策.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第 2 节：筹资决策</h3>
+  <p>资本成本率怎么算？经营杠杆、财务杠杆是什么？</p>
+</a>
+</body>
+</html>

@@ -277,10 +277,27 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.22);
   }
+  .prev-link {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #e8e8e5;
+    text-decoration: none;
+    display: block;
+    color: #444441;
+  }
+  .prev-link .label { font-size: 12px; color: #888780; }
+  .prev-link h3 { font-size: 15px; color: #185FA5; margin-top: 4px; }
 </style>
 </head>
 <body>
 <a href="index.html" class="nav-back">← 目录总览</a>
+<a href="经济师学习_第一章_第1节_需求与供给.html" class="prev-link">
+  <p class="label">← 上节回顾</p>
+  <h3>第一章 第1节 需求与供给</h3>
+</a>
+
 
 <div class="header">
   <span class="badge">第一章 · 第2节 / 共3节</span>
@@ -658,5 +675,10 @@ document.querySelectorAll('.quiz-options li').forEach(function(li) {
 });
 </script>
 
+<a href="经济师学习_第一章_第3节_弹性理论.html" class="prev-link" style="border-style:solid;border-color:#B5D4F4;">
+  <p class="label">下节预告 →</p>
+  <h3>第一章 第3节 弹性理论</h3>
+  <p>需求价格弹性怎么算？哪些因素让它更富弹性、更缺弹性？</p>
+</a>
 </body>
 </html>
