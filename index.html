@@ -264,6 +264,10 @@
     真题题库
     <div class="tab-sub">近5年真题</div>
   </div>
+  <div class="subject-tab" onclick="switchSubject('qbank')">
+    刷题题库
+    <div class="tab-sub">自测+背题</div>
+  </div>
 </div>
 
 <!-- ========== 经济基础知识 ========== -->
@@ -661,14 +665,27 @@
   经济基础 37章 + 工商管理 11章 = 全部考点覆盖
 </div>
 
+<div class="subject-panel" id="panel-qbank">
+  <div class="module" style="max-width:780px;margin:40px auto;text-align:center;">
+    <div class="module-header" style="justify-content:center;">
+      <span class="module-title">智能刷题题库</span>
+    </div>
+    <div style="background:var(--card,#fff);border:1px solid var(--border,#eee);border-radius:14px;padding:36px 28px;margin-top:18px;box-shadow:0 6px 24px rgba(0,0,0,.05);">
+      <p style="color:var(--muted,#888);line-height:1.9;margin:0 0 22px;">收录 SVIP 资料包真题、章节千题与模拟押题共 <b>2493</b> 题，按 年份 / 月份 / 批次 归类。<br>支持 <b>自测模式</b>（考试倒计时 + 自动评分）与 <b>背题模式</b>（直接看解析）。</p>
+      <a href="qbank.html" style="display:inline-block;background:linear-gradient(135deg,#C9A86A,#A6823E);color:#fff;padding:14px 38px;border-radius:30px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(166,130,62,.3);">进入刷题题库 &rarr;</a>
+    </div>
+  </div>
+</div>
+
 <script>
 function switchSubject(subject) {
   document.querySelectorAll('.subject-tab').forEach(function(tab, i) {
-    tab.classList.toggle('active', (subject === 'economics' && i === 0) || (subject === 'business' && i === 1) || (subject === 'past' && i === 2));
+    tab.classList.toggle('active', (subject === 'economics' && i === 0) || (subject === 'business' && i === 1) || (subject === 'past' && i === 2) || (subject === 'qbank' && i === 3));
   });
   document.getElementById('panel-economics').classList.toggle('active', subject === 'economics');
   document.getElementById('panel-business').classList.toggle('active', subject === 'business');
   document.getElementById('panel-past').classList.toggle('active', subject === 'past');
+  document.getElementById('panel-qbank').classList.toggle('active', subject === 'qbank');
 }
 </script>
 
